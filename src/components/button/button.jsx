@@ -1,7 +1,7 @@
 function CustomButton({ children, variant = "primary", className = "" }) {
   const buttonClasses = `
-         rounded-[20px] bg-btn text-white
-        ${variant === "primary" ? "py-2 px-6" : ""}
+  py-2.5 px-6 rounded-[20px] bg-btn text-white text-[14px]
+        ${variant === "primary" ? " w-fit" : ""}
         ${variant === "secondary" ? "w-full" : ""}
         ${className}
     `;

@@ -11,7 +11,7 @@ import Link from "next/link";
 
 function Footer() {
   return (
-    <footer className="mt-16 text-[14px] w-[90%] my-0 mx-auto">
+    <footer className="text-[14px] w-[90%] my-0 mx-auto">
       <div className="grid grid-cols-4 gap-x-16  text-primarytext">
         <div className="flex flex-col justify-between">
           <div className="flex">

@@ -28,6 +28,11 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+.ptag{
+  /* font-size: 14px; */
+  color: #3F3F3F;
+}
+
 /* @layer utilities {
   .text-balance {
     text-wrap: balance;
