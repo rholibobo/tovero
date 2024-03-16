@@ -18,6 +18,7 @@ module.exports = {
         Headertext: "#2B2424",
         primarytext: "#3F3F3F",
         prigreentext: "#0A4F25",
+        cardbg: "#F9F9F9"
       },
       fontFamily: {
         "header": ['Bricolage Grotesque']
