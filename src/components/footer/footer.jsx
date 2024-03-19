@@ -116,9 +116,10 @@ function Footer() {
         </div>
       </div>
         <br />
+        <br />
       <hr />
-      <br />
-      <div className="flex justify-between">
+      
+      <div className="flex justify-between py-6">
         <p className="text-[#c0c0c0]">
           Copyright <span className="text-[#828282]">Tovero Energy Ltd. 2024</span>
         </p>

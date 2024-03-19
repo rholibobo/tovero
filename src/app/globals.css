@@ -32,6 +32,9 @@ body {
   /* font-size: 14px; */
   color: #3F3F3F;
 }
+.bxshadow{
+  box-shadow: -1px -1px 7px 3px rgba(227,223,227,0.64);
+}
 
 /* @layer utilities {
   .text-balance {

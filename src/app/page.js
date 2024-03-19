@@ -11,6 +11,7 @@ import chooseUs from "@/data_models/why_choose_us";
 import aicess from "../../public/images/home/aicess.png";
 import tonipash from "../../public/images/home/tonipash.png";
 import green from "../../public/images/home/green.png";
+import ltgreen from "../../public/images/home/ltgreen.png";
 import amber from "../../public/images/home/amber.png";
 import red from "../../public/images/home/red.png";
 import mecs from "../../public/images/home/mecs.png"
@@ -29,7 +30,7 @@ export default function Home() {
             <h1>Solving Carbon Problems</h1>
           </div>
 
-          <p className="ptag text-justify">
+          <p className="ptag text-justify mb-2">
             Tovero Energy has strategically positioned itself as a dependable
             partner as we lead discussions on how we can develop energy systems
             that are both resilient to prevailing climatic conditions, and
@@ -39,7 +40,7 @@ export default function Home() {
           <br />
           <CustomButton variant="primary">SEE EVENTS</CustomButton>
           <br />
-          <div className="flex gap-2 items-center">
+          <div className="flex gap-2 items-center mt-2">
             <Image src={Rean} alt="logo" />
             <div>
               <p className="ptag">Tovero Energy Ltd is a member of </p>
@@ -208,7 +209,7 @@ export default function Home() {
                   Storage
                 </p>
                 <br />
-                <div className="flex justify-between items-center shadow-md bg-cardbg rounded-full w-full h-12 p-3 mb-2">
+                <div className="flex justify-between items-center bg-cardbg rounded-full w-full h-12 p-3 mb-2">
                   <div className="w-[60%] flex items-center gap-1">
                     {/* <div className="w-3 h-3 bg-red-500 rounded-full"></div> */}
                     <Image src={red} alt="" className="w-3" />
@@ -262,7 +263,7 @@ export default function Home() {
                 <div className="flex justify-between items-center bg-cardbg rounded-full w-full h-12 p-3 mb-2">
                   <div className="w-[60%] flex  items-center gap-1">
                     {/* <div className="w-5 h-5 bg-orange-500 rounded-[50%]"></div> */}
-                    <Image src={green} alt="" className="w-3" />
+                    <Image src={ltgreen} alt="" className="w-3" />
                     <p className="text-sm">Date</p>
                   </div>
 
