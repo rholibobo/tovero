@@ -5,6 +5,7 @@ import { ChevronDown } from "lucide-react";
 import Image from "next/image";
 import hdrElipses from "../../../public/images/home/ellipse.png";
 import CustomButton from "../button/button";
+import Link from "next/link";
 
 function Header() {
   const [showServDropdown, setServShowDropdown] = useState(false);
@@ -112,13 +113,14 @@ function Header() {
           <p>Publications</p>
           <p>Solutions</p>
         </div>
-        <div className="flex items-center w-1/3">
+        
+        <Link href="/" className="flex items-center w-1/3">
           <p className="text-lg text-primarytext">
             Tovero{" "}
             <span className="text-redtext font-extrabold text-xl">Energy</span>
           </p>
           <Image src={hdrElipses} alt="header ellipses" className="-ml-6" />
-        </div>
+        </Link>
 
         <CustomButton variant="primary">Contact Us</CustomButton>
       </div>
