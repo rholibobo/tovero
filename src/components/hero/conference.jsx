@@ -22,9 +22,9 @@ function ConferenceHero({ HeroImg, title, description, image }) {
           </div>
           <br />
 
-          <div className="flex justify-between">
-            <CustomButton variant="primary" className="w-[35%]">Register</CustomButton>
-            <div className="w-[60%] gap-2 flex items-center bg-cardbg px-3">
+          <div className="flex gap-4">
+            <CustomButton variant="primary">Register</CustomButton>
+            <div className="gap-2 flex items-center bg-cardbg px-3">
               <Image src={clockIcon} alt="clock icon" />
               <p className="text-sm font-bold text-prigreentext">250 Days: 28 hours: 33 Minutes</p>
             </div>

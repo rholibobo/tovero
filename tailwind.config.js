@@ -21,7 +21,8 @@ module.exports = {
         cardbg: "#F9F9F9"
       },
       fontFamily: {
-        "header": ['Bricolage Grotesque']
+        "header": ['Bricolage Grotesque'],
+        "aicess": ['Overlock SC']
       }
     },
   },

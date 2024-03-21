@@ -1,0 +1,31 @@
+import { aicess } from "@/data_models/conferences";
+import Image from "next/image";
+
+export function ConferencesInfo({ title, paragraph1, paragraph2 }) {
+  return (
+    <div>
+      <h1 className="text-4xl font-header">{title}</h1>
+      <br />
+      <p className="ptag text-justify">{paragraph1}</p>
+      <br />
+      <p className="ptag text-justify">{paragraph1}</p>
+    </div>
+  );
+}
+
+export function ConferenceStats() {
+  return (
+    <div className="w-[35%] grid grid-cols-2">
+      {aicess["aicessStats"].map((item, index) => (
+        <div key={index} className="flex flex-col justify-end items-center gap-2">
+          <Image src={item.logo} />
+          <h1 className="text-2xl font-bold">{item.number}</h1>
+          <p className="text-[12px] text-primarytext">{item.description}</p>
+          
+        </div>
+      ))}
+    </div>
+  );
+}
+
+// export default {ConferencesInfo, ConferenceStats};
