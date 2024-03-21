@@ -4,6 +4,7 @@ import aicessImg from "../../../public/images/aicess/aicess_aicess.png";
 import {
   ConferencesInfo,
   ConferenceStats,
+  ConferenceStatsAicess,
 } from "@/components/conferences/conferences";
 import { aicess } from "@/data_models/conferences";
 import Sponsors from "@/components/conferences/sponsors";
@@ -37,7 +38,7 @@ function Aicess() {
             </div>
           ))}
 
-          <ConferenceStats />
+          <ConferenceStatsAicess />
         </div>
         <br />
         <br />
