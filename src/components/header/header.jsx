@@ -6,8 +6,13 @@ import Image from "next/image";
 import hdrElipses from "../../../public/images/home/ellipse.png";
 import CustomButton from "../button/button";
 import Link from "next/link";
+import { useNavigationContext } from "@/context/navContext";
+import { useRouter } from "next/navigation";
 
 function Header() {
+  const { setActiveIndex, setSelectedIndex, swiperRef } =
+    useNavigationContext();
+  const router = useRouter();
   const [showServDropdown, setServShowDropdown] = useState(false);
   const [showConDropdown, setConShowDropdown] = useState(false);
   const headerRef = useRef(null);
@@ -23,6 +28,13 @@ function Header() {
     document.addEventListener("click", handleClickOutside);
     return () => document.removeEventListener("click", handleClickOutside);
   }, []);
+
+  const handleNav = (index) => {
+    setActiveIndex(index);
+    setSelectedIndex(index);
+    swiperRef.current?.swiper?.slideTo(index);
+    router.push("/services");
+  };
 
   return (
     <header
@@ -47,32 +59,62 @@ function Header() {
                   showServDropdown ? "block" : "hidden"
                 } bg-white shadow-md pt-6 pb-10 px-6 absolute top-12 rounded-t-2xl`}
               >
-                <div className="w-fit group py-2 mb-2">
+                <div
+                  onClick={() => {
+                    handleNav(0);
+                  }}
+                  className="w-fit group py-2 h-10 mb-2"
+                >
                   Energy Planning & Audit
                   <div className="group-hover:block hidden w-full h-1 bg-prigreentext"></div>
                 </div>
 
-                <div className="w-fit group py-1 mb-2">
+                <div
+                  onClick={() => {
+                    handleNav(1);
+                  }}
+                  className="w-fit group py-2 h-10 mb-2"
+                >
                   Energy Advisory
                   <div className="group-hover:block hidden w-full h-1 bg-prigreentext"></div>
                 </div>
 
-                <div className="w-fit group py-1 mb-2">
+                <div
+                  onClick={() => {
+                    handleNav(2);
+                  }}
+                  className="w-fit group py-2 h-10 mb-2"
+                >
                   Mini-grid Design
                   <div className="group-hover:block hidden w-full h-1 bg-prigreentext"></div>
                 </div>
 
-                <div className="w-fit group py-1 mb-2">
+                <div
+                  onClick={() => {
+                    handleNav(3);
+                  }}
+                  className="w-fit group py-2 h-10 mb-2"
+                >
                   Clean Cooking Solutions
                   <div className="group-hover:block hidden w-full h-1 bg-prigreentext"></div>
                 </div>
 
-                <div className="w-fit group py-1 mb-2">
+                <div
+                  onClick={() => {
+                    handleNav(4);
+                  }}
+                  className="w-fit group py-2 h-10 mb-2"
+                >
                   Energy Systems Design & Development
                   <div className="group-hover:block hidden w-full h-1 bg-prigreentext"></div>
                 </div>
 
-                <div className="w-fit group py-1">
+                <div
+                  onClick={() => {
+                    handleNav(5);
+                  }}
+                  className="w-fit group py-2 h-10"
+                >
                   Energy Education & Advocacy
                   <div className="group-hover:block hidden w-full h-1 bg-prigreentext"></div>
                 </div>
@@ -95,13 +137,13 @@ function Header() {
                   showConDropdown ? "block" : "hidden"
                 } bg-white shadow-md pt-6 pb-12 px-6 absolute top-12 rounded-t-2xl `}
               >
-                <div className="w-fit group">
+                <div className="w-fit group h-16">
                   Africa International Conference on Clean Energy and Energy
                   Storage (AICCEES){" "}
                   <div className="group-hover:block hidden w-full h-1 bg-prigreentext"></div>
                 </div>
                 <br />
-                <div className="w-fit group">
+                <div className="w-fit group h-10">
                   Tonipash Sustainable Talk (TSET){" "}
                   <div className="group-hover:block hidden w-full h-1 bg-prigreentext"></div>
                 </div>
@@ -113,7 +155,7 @@ function Header() {
           <p>Publications</p>
           <p>Solutions</p>
         </div>
-        
+
         <Link href="/" className="flex items-center w-1/3">
           <p className="text-lg text-primarytext">
             Tovero{" "}

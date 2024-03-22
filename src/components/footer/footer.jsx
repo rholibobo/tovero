@@ -33,11 +33,11 @@ function Footer() {
           <div>
             <div className="flex justify-between ">
               <div>
-                <p className="text-[10px]">Email</p>
+                <p className="text-[12px]">Email</p>
                 <p className="text-[12px]">info@toveroenergy.com</p>
               </div>
               <div>
-                <p className="text-[10px]">Phone number</p>
+                <p className="text-[12px]">Phone number</p>
                 <p className="text-[12px]">+2348133426978</p>
               </div>
             </div>

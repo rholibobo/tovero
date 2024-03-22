@@ -10,26 +10,28 @@ import { Pagination, Scrollbar, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/bundle";
 import IdenticalHero from "./hero/hero";
+import { useNavigationContext } from "@/context/navContext";
 
 function Services() {
+  
   const title = "OUR SERVICES";
   const description =
     "From renewable sources to cutting-edge technologies, we strive to deliver reliable and efficient energy services that empower your success while safeguarding the planet for future generations.";
 
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [selectedIndex, setSelectedIndex] = useState(0);
-  const swiperRef = useRef(null);
+  // const [activeIndex, setActiveIndex] = useState(0);
+  // const [selectedIndex, setSelectedIndex] = useState(0);
+  // const swiperRef = useRef(null);
 
-  const incr = 0;
-  const isActive = (index) => {
-    setActiveIndex(index);
-    setSelectedIndex(index);
-    swiperRef.current?.swiper.slideTo(index);
-  };
-  const handleSwiperSlideChange = (swiper) => {
-    setSelectedIndex(swiper.activeIndex);
-    setActiveIndex(swiper.activeIndex);
-  };
+  // const isActive = (index) => {
+  //   setActiveIndex(index);
+  //   setSelectedIndex(index);
+  //   swiperRef.current?.swiper.slideTo(index);
+  // };
+  // const handleSwiperSlideChange = (swiper) => {
+  //   setSelectedIndex(swiper.activeIndex);
+  //   setActiveIndex(swiper.activeIndex);
+  // };
+  const {activeIndex, swiperRef, isActive, handleSwiperSlideChange} = useNavigationContext()
   return (
     <main>
       
@@ -79,7 +81,7 @@ function Services() {
                     <Image src={item.image} />
                   </div>
 
-                  <div className="w-[58%] flex flex-col justify-center gap-3">
+                  <div id={item.description} className="w-[58%] flex flex-col justify-center gap-3">
                     <h1 className="font-header text-3xl font-bold">
                       {item.title}
                     </h1>

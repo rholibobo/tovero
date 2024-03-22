@@ -59,7 +59,7 @@ function Publications() {
             {publisherMore.map((card, index) => (
               <div className="bxshadow py-2 px-3 relative">
                 <div key={index} className=" flex justify-end ">
-                  <div className="flex  bg-cardbg rounded-full gap-2 py-1 px-2">
+                  <div className="flex bg-cardbg rounded-full gap-2 py-1 px-2">
                     <Image src={card.color} className="w-4" />
                     <p className="text-[12px]">{card.text}</p>
                   </div>
@@ -73,7 +73,7 @@ function Publications() {
                 {/* <br /> */}
                 <Link
                   href={card.link}
-                  className="absolute right-0 bottom-1 text-redtext underline text-[12px]"
+                  className="absolute right-2 bottom-1 text-redtext underline text-[12px]"
                 >
                   <p>Download</p>
                 </Link>
