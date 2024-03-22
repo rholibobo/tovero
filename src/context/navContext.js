@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React, { createContext, useContext, useRef, useState } from "react";
 
@@ -6,7 +6,7 @@ const NavigationContext = createContext();
 
 export const useNavigationContext = () => useContext(NavigationContext);
 
-export const NavigationContextProvider = ({children}) => {
+export const NavigationContextProvider = ({ children }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [selectedIndex, setSelectedIndex] = useState(0);
   const swiperRef = useRef(null);
@@ -16,6 +16,7 @@ export const NavigationContextProvider = ({children}) => {
     setSelectedIndex(index);
     swiperRef.current?.swiper?.slideTo(index);
   };
+  
   const handleSwiperSlideChange = (swiper) => {
     setSelectedIndex(swiper.activeIndex);
     setActiveIndex(swiper.activeIndex);

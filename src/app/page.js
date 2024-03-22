@@ -49,7 +49,7 @@ export default function Home() {
           </div>
         </div>
         <div className="flex justify-end">
-          <Image src={HeroImg} alt="Hero Image" className="" />
+          <Image src={HeroImg} alt="Hero Image" loading="lazy" className="" />
         </div>
       </div>
       <br />

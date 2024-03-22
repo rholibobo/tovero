@@ -7,12 +7,17 @@ import hdrElipses from "../../../public/images/home/ellipse.png";
 import CustomButton from "../button/button";
 import Link from "next/link";
 import { useNavigationContext } from "@/context/navContext";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 
 function Header() {
-  const { setActiveIndex, setSelectedIndex, swiperRef } =
-    useNavigationContext();
+  const {
+    setActiveIndex,
+    setSelectedIndex,
+    swiperRef,
+    handleSwiperSlideChange,
+  } = useNavigationContext();
   const router = useRouter();
+  const pathname = usePathname();
   const [showServDropdown, setServShowDropdown] = useState(false);
   const [showConDropdown, setConShowDropdown] = useState(false);
   const headerRef = useRef(null);
@@ -29,11 +34,20 @@ function Header() {
     return () => document.removeEventListener("click", handleClickOutside);
   }, []);
 
+  useEffect(() => {
+    if (pathname === "/services") {
+      window.scrollTo({ top: 580, behavior: "smooth" });
+    }
+  }, [pathname]);
+
   const handleNav = (index) => {
+    router.push("/services");
+
     setActiveIndex(index);
     setSelectedIndex(index);
-    swiperRef.current?.swiper?.slideTo(index);
-    router.push("/services");
+    if (swiperRef.current?.swiper) {
+      swiperRef.current.swiper.slideTo(index);
+    }
   };
 
   return (
@@ -41,7 +55,10 @@ function Header() {
       ref={headerRef}
       className="w-[90%] fixed z-50 left-1/2 -translate-x-[50%] top-4 my-0 mx-auto py-2 px-4 rounded-full bg-white shadow-lg"
     >
-      <div className="flex justify-between items-center text-primarytext text-sm">
+      <div
+        ref={swiperRef}
+        className="flex justify-between items-center text-primarytext text-sm"
+      >
         <div className="w-1/3 flex items-center justify-between relative">
           <div
             onClick={() => {
@@ -137,23 +154,31 @@ function Header() {
                   showConDropdown ? "block" : "hidden"
                 } bg-white shadow-md pt-6 pb-12 px-6 absolute top-12 rounded-t-2xl `}
               >
-                <div className="w-fit group h-16">
-                  Africa International Conference on Clean Energy and Energy
-                  Storage (AICCEES){" "}
-                  <div className="group-hover:block hidden w-full h-1 bg-prigreentext"></div>
-                </div>
+                <Link href="/aiccess">
+                  <div className="w-fit group h-16">
+                    Africa International Conference on Clean Energy and Energy
+                    Storage (AICCEES){" "}
+                    <div className="group-hover:block hidden w-full h-1 bg-prigreentext"></div>
+                  </div>
+                </Link>
                 <br />
-                <div className="w-fit group h-10">
-                  Tonipash Sustainable Talk (TSET){" "}
-                  <div className="group-hover:block hidden w-full h-1 bg-prigreentext"></div>
-                </div>
-                <br />
+                <Link href="/tovero">
+                  <div className="w-fit group h-10">
+                    Tonipash Sustainable Talk (TSET){" "}
+                    <div className="group-hover:block hidden w-full h-1 bg-prigreentext"></div>
+                  </div>
+                  <br />
+                </Link>
               </div>
             }
           </div>
 
-          <p>Publications</p>
-          <p>Solutions</p>
+          <Link href="/publications">
+            <p>Publications</p>
+          </Link>
+          <Link href="/solutions">
+            <p>Solutions</p>
+          </Link>
         </div>
 
         <Link href="/" className="flex items-center w-1/3">

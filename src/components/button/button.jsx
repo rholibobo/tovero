@@ -4,6 +4,7 @@ function CustomButton({ children, variant = "primary", className = "" }) {
         ${variant === "primary" ? " w-fit" : ""}
         ${variant === "secondary" ? "w-full" : ""}
         ${className}
+        
     `;
   return <button className={buttonClasses}>{children}</button>;
 }
