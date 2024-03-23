@@ -48,16 +48,17 @@ function Services() {
         <div className="grid grid-cols-6 gap-4 mb-2">
           {serviceHeaders.map((item, index) => (
             <div
-              key={index}
+              key={item.id}
               onClick={() => isActive(index)}
               className={`bxshadow w-full h-12 flex p-2 justify-center items-center rounded-md cursor-pointer ${
-                activeIndex === index
+                index === activeIndex
                   ? "border-b-red-500 border-4 text-ltgreentext"
                   : "text-primarytext"
               }`}
             >
+              
               <p className="text-[12px] font-bold text-center text-wrap">
-                {item}
+                {item.header}
               </p>
             </div>
           ))}
@@ -70,7 +71,7 @@ function Services() {
           slidesPerView={1}
         >
           {serviceInfo.map((item, index) => (
-            <div key={index}>
+            <div key={item.id}>
               <SwiperSlide>
                 <div className="flex justify-between">
                   <div
@@ -78,10 +79,11 @@ function Services() {
                       activeIndex === 3 ? "order-2" : ""
                     }${activeIndex === 5 ? "order-2" : ""}`}
                   >
-                    <Image src={item.image} />
+                    <Image src={item.image} alt="image slide" />
                   </div>
 
                   <div id={item.description} className="w-[58%] flex flex-col justify-center gap-3">
+                    <p>{item.id}</p>
                     <h1 className="font-header text-3xl font-bold">
                       {item.title}
                     </h1>

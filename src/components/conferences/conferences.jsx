@@ -17,7 +17,7 @@ export function ConferenceStatsAicess() {
   return (
     <div className="w-[35%] grid grid-cols-2">
       {aicess["aicessStats"].map((item, index) => (
-        <div key={index} className="flex flex-col justify-end items-center gap-2">
+        <div key={item.id} className="flex flex-col justify-end items-center gap-2">
           <Image src={item.logo} />
           <h1 className="text-2xl font-bold">{item.number}</h1>
           <p className="text-[12px] text-primarytext">{item.description}</p>
@@ -31,7 +31,7 @@ export function ConferenceStatsTovero() {
   return (
     <div className="w-[35%] grid grid-cols-2">
       {tovero["toveroStats"].map((item, index) => (
-        <div key={index} className="flex flex-col justify-end items-center gap-2">
+        <div key={item.id} className="flex flex-col justify-end items-center gap-2">
           <Image src={item.logo} />
           <h1 className="text-2xl font-bold">{item.number}</h1>
           <p className="text-[12px] text-primarytext">{item.description}</p>

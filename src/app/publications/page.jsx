@@ -27,7 +27,7 @@ function Publications() {
           <div className="grid grid-cols-3 gap-x-4 gap-y-4">
             {publisherInfo.map((card, index) => (
               <div
-                key={index}
+                key={card.id}
                 className="bg-cardbg flex justify-between py-2 px-4"
               >
                 <div className="flex items-center gap-2">
@@ -58,7 +58,7 @@ function Publications() {
           <div className="grid grid-cols-4 gap-x-4 ">
             {publisherMore.map((card, index) => (
               <div className="bxshadow py-2 px-3 relative">
-                <div key={index} className=" flex justify-end ">
+                <div key={card.id} className=" flex justify-end ">
                   <div className="flex bg-cardbg rounded-full gap-2 py-1 px-2">
                     <Image src={card.color} className="w-4" />
                     <p className="text-[12px]">{card.text}</p>

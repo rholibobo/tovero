@@ -6,16 +6,19 @@ import CustomButton from "../button/button";
 
 const info = [
   {
+    id: 1,
     image: red,
     text: "Abstract/Full Paper Submission",
     date: "Sept. 17th 2024",
   },
   {
+    id: 2,
     image: amber,
     text: "Abstract/Full Paper Submission Deadline",
     date: "Sept. 17th 2024",
   },
   {
+    id: 3,
     image: green,
     text: "Conference Date",
     date: "Sept. 17th 2024",
@@ -34,9 +37,9 @@ function Submissions() {
         <br />
 
         <div className="grid grid-cols-3 gap-x-3">
-          {info.map((item, index) => (
+          {info.map((item) => (
             <div
-              key={index}
+              key={item.id}
               className="flex items-center justify-between bg-white rounded-full h-14  text-primarytext px-3"
             >
               <div className="w-[70%] flex items-center gap-1">

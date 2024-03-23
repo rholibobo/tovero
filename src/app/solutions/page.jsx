@@ -32,8 +32,8 @@ function Solutions() {
           </div>
         </div>
         <div className="grid grid-cols-4 gap-5 h-auto">
-          {solutionsData.map((card, index) => (
-            <div key={index} className="relative bxshadow rounded-md">
+          {solutionsData.map((card) => (
+            <div key={card.id} className="relative bxshadow rounded-md">
               <Image src={card.image} alt={`solutions ${card.title}`} className="rounded-t-md" />
               <div className="flex flex-col justify-between py-4 px-6 ">
                 <div className="h-[17rem]">

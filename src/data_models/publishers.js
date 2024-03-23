@@ -3,56 +3,67 @@ import amber from "../../public/images/home/amber.png"
 
 export const publisherInfo = [
   {
+    id: 1,
     icon: bookIcon,
     text: "TSET-REPORT - First Edition",
     link: "https://www.google.com",
   },
   {
+    id: 2,
     icon: bookIcon,
     text: "TSET-REPORT - Second Edition",
     link: "https://www.google.com",
   },
   {
+    id: 3,
     icon: bookIcon,
     text: "TSET-REPORT - Third Edition",
     link: "https://www.google.com",
   },
   {
+    id: 4,
     icon: bookIcon,
     text: "TSET-REPORT - Fourth Edition",
     link: "https://www.google.com",
   },
   {
+    id: 5,
     icon: bookIcon,
     text: "TSET-REPORT - Fifth Edition",
     link: "https://www.google.com",
   },
   {
+    id: 6,
     icon: bookIcon,
     text: "TSET-REPORT - Sixth Edition",
     link: "https://www.google.com",
   },
   {
+    id: 7,
     icon: bookIcon,
     text: "TSET-REPORT - First Edition",
     link: "https://www.google.com",
   },
   {
+    id: 8,
     icon: bookIcon,
     text: "TSET-REPORT - First Edition",
     link: "https://www.google.com",
   },
   {
+    id: 9,
     icon: bookIcon,
     text: "TSET-REPORT - First Edition",
     link: "https://www.google.com",
   },
   {
+    id: 10,
     icon: bookIcon,
     text: "TSET-REPORT - First Edition",
     link: "https://www.google.com",
   },
   {
+    id: 11,
     icon: bookIcon,
     text: "TSET-REPORT - First Edition",
     link: "https://www.google.com",
@@ -61,6 +72,7 @@ export const publisherInfo = [
 
 export const publisherMore = [
     {
+      id: 1,
         icon: bookIcon,
         color: amber,
         text: "Abstract",
@@ -69,6 +81,7 @@ export const publisherMore = [
         link: "https://www.google.com",
     },
     {
+      id: 2,
         icon: bookIcon,
         color: amber,
         text: "Full Paper",
@@ -77,6 +90,7 @@ export const publisherMore = [
         link: "https://www.google.com",
     },
     {
+      id: 3,
         icon: bookIcon,
         color: amber,
         text: "Full Paper",
@@ -85,6 +99,7 @@ export const publisherMore = [
         link: "https://www.google.com",
     },
     {
+      id: 4,
         icon: bookIcon,
         color: amber,
         text: "Full Paper",

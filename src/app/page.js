@@ -14,8 +14,8 @@ import green from "../../public/images/home/green.png";
 import ltgreen from "../../public/images/home/ltgreen.png";
 import amber from "../../public/images/home/amber.png";
 import red from "../../public/images/home/red.png";
-import mecs from "../../public/images/home/mecs.png"
-import asteven from "../../public/images/home/asteven.png"
+import mecs from "../../public/images/home/mecs.png";
+import asteven from "../../public/images/home/asteven.png";
 
 export default function Home() {
   return (
@@ -144,7 +144,7 @@ export default function Home() {
           <div className="grid grid-cols-2 gap-x-3 gap-y-3">
             {home_services.map((card, index) => (
               <div
-                key={index}
+                key={card.id}
                 className="bg-drkgreencard p-3 flex gap-2 rounded"
               >
                 <Image src={card.image} alt="services image 1" />
@@ -168,13 +168,14 @@ export default function Home() {
           <div className="w-[80%] bg-redbg grid grid-cols-2 text-white py-16 pl-4 pr-24 relative">
             {chooseUs.map((item, index) => (
               <div
+                key={item.id}
                 className={`p-6 border-whote ${
                   index === 0 ? "border-r border-b" : ""
                 }${index === 1 ? "border-l border-b" : ""}${
                   index === 2 ? "border-t border-r" : ""
                 }${index === 3 ? "border-l border-t" : ""}`}
               >
-                <Image src={item.image} />
+                <Image src={item.image} alt="choose" />
                 <h1 className="text-xl font-bold">{item.title}</h1>
                 <p className="text-sm">{item.description}</p>
               </div>
@@ -293,8 +294,8 @@ export default function Home() {
         <h1 className="text-2xl font-header ml-16">OUR PARTNERS</h1>
         <br />
         <div className="bg-cardbg w-full h-[20vh] flex justify-center items-center gap-24 ">
-            <Image src={mecs} alt="MECS" />
-            <Image src={asteven} alt="ASTEVEN" />
+          <Image src={mecs} alt="MECS" />
+          <Image src={asteven} alt="ASTEVEN" />
         </div>
       </section>
       <br />

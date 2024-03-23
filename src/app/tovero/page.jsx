@@ -20,7 +20,7 @@ function Tovero() {
   //   const description = "AICCEES 2024";
   return (
     <main className="w-full">
-      <div className="h-screen flex">
+      <div className="h-screen flex relative">
         <div className="w-[50%] flex flex-col items-center justify-center">
           <Image src={toveroImg} alt="tovero image logo" />
           <br />
@@ -40,6 +40,7 @@ function Tovero() {
         <div className="w-[50%] flex justify-end">
           <Image src={HeroImg} alt=" hero image" />
         </div>
+        <div className="w-[50%] h-5 bg-red-600 absolute bottom-0 pr-16"></div>
       </div>
       <br />
       <br />

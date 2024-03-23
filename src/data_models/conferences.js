@@ -17,31 +17,37 @@ export const aicess = {
   ],
   aicessStats: [
     {
+        id: 1,
         logo: logo1,
         number: "670",
         description: "Participant",
       },
       {
+        id: 2,
         logo: logo2,
         number: "39",
         description: "Abstract Submissions",
       },
       {
+        id: 3,
         logo: logo3,
         number: "21",
         description: "Full Paper Accepted",
       },
       {
+        id: 4,
         logo: logo4,
         number: "17",
         description: "Paper Presentation",
       },
       {
+        id: 5,
         logo: logo5,
         number: "4",
         description: "Panel Sessions",
       },
       {
+        id: 6,
         logo: logo6,
         number: "2",
         description: "Keynote Speakers",
@@ -60,32 +66,38 @@ export const tovero = {
     },
   ],
   toveroStats: [
-    {
+    { 
+        id: 1,
         logo: logo1,
         number: "30K",
         description: "Participant",
       },
       {
+        id: 2,
         logo: logo2,
         number: "36",
         description: "Speakers",
       },
       {
+        id: 3,
         logo: logo3,
         number: "18",
         description: "Reports",
       },
       {
+        id: 4,
         logo: logo4,
         number: "17",
         description: "Paper Presentation",
       },
       {
+        id: 5,
         logo: logo5,
         number: "21",
         description: "Full Paper Accepted",
       },
       {
+        id: 6,
         logo: logo6,
         number: "4",
         description: "Panel Sessions",

@@ -10,12 +10,8 @@ import { useNavigationContext } from "@/context/navContext";
 import { useRouter, usePathname } from "next/navigation";
 
 function Header() {
-  const {
-    setActiveIndex,
-    setSelectedIndex,
-    swiperRef,
-    handleSwiperSlideChange,
-  } = useNavigationContext();
+  const { isActive, swiperRef, handleSwiperSlideChange } =
+    useNavigationContext();
   const router = useRouter();
   const pathname = usePathname();
   const [showServDropdown, setServShowDropdown] = useState(false);
@@ -42,23 +38,17 @@ function Header() {
 
   const handleNav = (index) => {
     router.push("/services");
-
-    setActiveIndex(index);
-    setSelectedIndex(index);
-    if (swiperRef.current?.swiper) {
-      swiperRef.current.swiper.slideTo(index);
-    }
+    isActive(index);
   };
-
+  const handleSlide = (index) => {
+    handleSwiperSlideChange({ activeIndex: index });
+  };
   return (
     <header
       ref={headerRef}
       className="w-[90%] fixed z-50 left-1/2 -translate-x-[50%] top-4 my-0 mx-auto py-2 px-4 rounded-full bg-white shadow-lg"
     >
-      <div
-        ref={swiperRef}
-        className="flex justify-between items-center text-primarytext text-sm"
-      >
+      <div className="flex justify-between items-center text-primarytext text-sm">
         <div className="w-1/3 flex items-center justify-between relative">
           <div
             onClick={() => {
@@ -79,6 +69,7 @@ function Header() {
                 <div
                   onClick={() => {
                     handleNav(0);
+                    handleSlide(0);
                   }}
                   className="w-fit group py-2 h-10 mb-2"
                 >
@@ -89,6 +80,7 @@ function Header() {
                 <div
                   onClick={() => {
                     handleNav(1);
+                    handleSlide(1);
                   }}
                   className="w-fit group py-2 h-10 mb-2"
                 >
