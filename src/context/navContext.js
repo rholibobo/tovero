@@ -7,8 +7,8 @@ const NavigationContext = createContext();
 export const useNavigationContext = () => useContext(NavigationContext);
 
 export const NavigationContextProvider = ({ children }) => {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [selectedIndex, setSelectedIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(1);
+  const [selectedIndex, setSelectedIndex] = useState(1);
   const swiperRef = useRef(null);
 
   const isActive = (index) => {

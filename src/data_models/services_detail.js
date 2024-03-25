@@ -12,19 +12,14 @@ const generateId = () => {
 };
 
 export const serviceHeaders = [
-  { id: 1, header: "EVENT PLANNING & AUDIT" },
-  { id: 2, header: "ENERGY ADVISORY" },
-  { id: 3, header: "MINI-GRID DESIGN" },
-  { id: 4, header: "CLEAN COOKING SOLUTIONS" },
-  { id: 5, header: "ENERGY SYSTEMS DESIGN & DEVELOPMENT" },
-  { id: 6, header: "ENERGY EDUCATION & ADVOCACY" },
+  "EVENT PLANNING & AUDIT",
+  "ENERGY ADVISORY",
+  "MINI-GRID DESIGN",
+  "CLEAN COOKING SOLUTIONS",
+  "ENERGY SYSTEMS DESIGN & DEVELOPMENT",
+  "ENERGY EDUCATION & ADVOCACY",
 ];
 
-const link = (
-  <a href="https://www.youtube.com/@toveroenergy3932/videos">
-    https://www.youtube.com/@toveroenergy3932/videos
-  </a>
-);
 export const serviceInfo = [
   {
     id: 1,

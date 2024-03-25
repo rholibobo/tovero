@@ -8,13 +8,14 @@ import {
   IoLogoInstagram,
 } from "react-icons/io";
 import Link from "next/link";
+import FooterLogo from "../../../public/logo_footer.png"
 
 function Footer() {
   return (
     <footer className="text-[14px] w-[90%] my-0 mx-auto">
       <div className="grid grid-cols-4 gap-x-16  text-primarytext">
         <div className="flex flex-col justify-between">
-          <div className="flex">
+          {/* <div className="flex">
             <div className="pt-2">
               <p className="text-2xl text-primarytext">
                 Tovero{" "}
@@ -28,7 +29,8 @@ function Footer() {
               </p>
             </div>
             <Image src={hdrElipses} alt="header ellipses" className="-ml-6" />
-          </div>
+          </div> */}
+          <Image src={FooterLogo} alt="footer logo" />
 
           <div>
             <div className="flex justify-between ">
@@ -43,21 +45,21 @@ function Footer() {
             </div>
             <br />
             <div className="flex justify-between">
-              <div className="p-3 rounded-full bg-[#E7E7E7] border border-[#C9C9C9]">
+              <Link href="https://www.linkedin.com/company/76421340/admin/feed/posts/" className="p-3 rounded-full bg-[#E7E7E7] border border-[#C9C9C9]">
                 <IoLogoLinkedin />
-              </div>
-              <div className="p-3 rounded-full bg-[#E7E7E7] border border-[#C9C9C9]">
+              </Link>
+              <Link href="https://x.com/ToveroEnergy?s=09" className="p-3 rounded-full bg-[#E7E7E7] border border-[#C9C9C9]">
                 <IoLogoTwitter />
-              </div>
-              <div className="p-3 rounded-full bg-[#E7E7E7] border border-[#C9C9C9]">
+              </Link>
+              <Link href="https://www.youtube.com/@toveroenergy3932/streams" className="p-3 rounded-full bg-[#E7E7E7] border border-[#C9C9C9]">
                 <IoLogoYoutube />
-              </div>
-              <div className="p-3 rounded-full bg-[#E7E7E7] border border-[#C9C9C9]">
+              </Link>
+              <Link href="https://x.com/ToveroEnergy?s=09" className="p-3 rounded-full bg-[#E7E7E7] border border-[#C9C9C9]">
                 <IoLogoFacebook />
-              </div>
-              <div className="p-3 rounded-full bg-[#E7E7E7] border border-[#C9C9C9]">
+              </Link>
+              <Link href="" className="p-3 rounded-full bg-[#E7E7E7] border border-[#C9C9C9]">
                 <IoLogoInstagram />
-              </div>
+              </Link>
             </div>
           </div>
         </div>

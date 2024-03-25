@@ -48,39 +48,7 @@ function Publications() {
         <br />
         <br />
 
-        <div>
-          <p className="ptag font-bold">
-            Africa International Conference on Clean Energy and Energy Storage
-            (AICCEES) - Abstracts & Full Paper
-          </p>
-          <br />
-
-          <div className="grid grid-cols-4 gap-x-4 ">
-            {publisherMore.map((card, index) => (
-              <div className="bxshadow py-2 px-3 relative">
-                <div key={card.id} className=" flex justify-end ">
-                  <div className="flex bg-cardbg rounded-full gap-2 py-1 px-2">
-                    <Image src={card.color} className="w-4" />
-                    <p className="text-[12px]">{card.text}</p>
-                  </div>
-                </div>
-                <div className="text-sm">
-                  <Image src={card.icon} />
-                  <p>{card.description}</p>
-                  <p className="ptag text-[12px] mt-3">{card.writer}</p>
-                </div>
-                <br />
-                {/* <br /> */}
-                <Link
-                  href={card.link}
-                  className="absolute right-2 bottom-1 text-redtext underline text-[12px]"
-                >
-                  <p>Download</p>
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
+        
         <br />
         <br />
         <br />

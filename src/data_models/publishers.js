@@ -1,72 +1,84 @@
 import bookIcon from "../../public/images/publishers/book.png";
 import amber from "../../public/images/home/amber.png"
-
+"1TQTxeYwrQJ0WfOvsl-fGcLOlhl0VoKcZ"
 export const publisherInfo = [
   {
     id: 1,
     icon: bookIcon,
     text: "TSET-REPORT - First Edition",
-    link: "https://www.google.com",
+    link: "https://drive.google.com/uc?export=download&id=1TQTxeYwrQJ0WfOvsl-fGcLOlhl0VoKcZ",
   },
   {
     id: 2,
     icon: bookIcon,
     text: "TSET-REPORT - Second Edition",
-    link: "https://www.google.com",
+    link: "https://drive.google.com/uc?export=download&id=15mVPr_9HRVaw2o0eNMLM_-wMvgPSe3yt",
   },
   {
     id: 3,
     icon: bookIcon,
     text: "TSET-REPORT - Third Edition",
-    link: "https://www.google.com",
+    link: "https://drive.google.com/uc?export=download&id=1Wo_ob6ic_Cvd4hbSAYnrMaMyL5wQDL6x",
   },
   {
     id: 4,
     icon: bookIcon,
     text: "TSET-REPORT - Fourth Edition",
-    link: "https://www.google.com",
+    link: "https://drive.google.com/uc?export=download&id=1SwUS4ZCbUKmrwWsUX_0OEBRUQxXATMhV",
   },
   {
     id: 5,
     icon: bookIcon,
     text: "TSET-REPORT - Fifth Edition",
-    link: "https://www.google.com",
+    link: "https://drive.google.com/uc?export=download&id=1yA9pz09uTJRNMWiNEW88JnrrOiyd0TbT",
   },
   {
     id: 6,
     icon: bookIcon,
     text: "TSET-REPORT - Sixth Edition",
-    link: "https://www.google.com",
+    link: "https://drive.google.com/uc?export=download&id=1xQc3xlT7uxXPbaLijkwLhzsbjtph1QGE",
   },
   {
     id: 7,
     icon: bookIcon,
-    text: "TSET-REPORT - First Edition",
-    link: "https://www.google.com",
+    text: "TSET-REPORT - Seventh Edition",
+    link: "https://drive.google.com/uc?export=download&id=1KBVfypJiv_eZqRSkfPPsvocZchvrUgl6",
   },
   {
     id: 8,
     icon: bookIcon,
-    text: "TSET-REPORT - First Edition",
-    link: "https://www.google.com",
+    text: "TSET-REPORT -Eighth Edition",
+    link: "https://drive.google.com/uc?export=download&id=10HV8di5PS6sdEk46BVHzwAYryL-an0Sh",
   },
   {
     id: 9,
     icon: bookIcon,
-    text: "TSET-REPORT - First Edition",
-    link: "https://www.google.com",
+    text: "TSET-REPORT - Ninth Edition",
+    link: "https://drive.google.com/uc?export=download&id=1WvplfOIL_bNUs01WYfbJzAr1wItTHVsz",
   },
   {
     id: 10,
     icon: bookIcon,
-    text: "TSET-REPORT - First Edition",
-    link: "https://www.google.com",
+    text: "TSET-REPORT - Tenth Edition",
+    link: "https://drive.google.com/uc?export=download&id=1eLAmVnHKryG5DfuEsFcdSQLxX7spKfEV",
   },
   {
     id: 11,
     icon: bookIcon,
-    text: "TSET-REPORT - First Edition",
-    link: "https://www.google.com",
+    text: "TSET-REPORT - Eleventh Edition",
+    link: "https://drive.google.com/uc?export=download&id=1VZ9t2hY4D1BgXXQinVJtpnG1LDPcCw6K",
+  },
+  {
+    id: 12,
+    icon: bookIcon,
+    text: "TSET-REPORT - Twelfth Edition",
+    link: "https://drive.google.com/uc?export=download&id=1mavGXaFCk1rY-oKZY7Zj_k0Dle_XkHjh",
+  },
+  {
+    id: 13,
+    icon: bookIcon,
+    text: "TSET-REPORT - Thirteenth Edition",
+    link: "https://drive.google.com/uc?export=download&id=157yQij6lP1eGNbuKXDg2BhCPOYtQ6mCg",
   },
 ];
 

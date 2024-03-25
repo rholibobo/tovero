@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
 import { NavigationContextProvider } from "@/context/navContext";
+import ToastContainer from "@/utils/toast";
 
 const inter = Inter({ subsets: ["latin"] });
 const urbanist = Urbanist({
@@ -27,6 +28,7 @@ export default function RootLayout({ children }) {
           {children}
           <Footer />
         </NavigationContextProvider>
+        <ToastContainer />
       </body>
     </html>
   );

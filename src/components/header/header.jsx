@@ -1,13 +1,15 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, X } from "lucide-react";
 import Image from "next/image";
-import hdrElipses from "../../../public/images/home/ellipse.png";
 import CustomButton from "../button/button";
 import Link from "next/link";
 import { useNavigationContext } from "@/context/navContext";
 import { useRouter, usePathname } from "next/navigation";
+import Logo from "../../../public/logo.png";
+import { Menu } from "lucide-react";
+import MobileNavBar from "./mobilenav";
 
 function Header() {
   const { isActive, swiperRef, handleSwiperSlideChange } =
@@ -16,7 +18,12 @@ function Header() {
   const pathname = usePathname();
   const [showServDropdown, setServShowDropdown] = useState(false);
   const [showConDropdown, setConShowDropdown] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const headerRef = useRef(null);
+
+  const openNav = () => {
+    setIsOpen(!isOpen);
+  };
 
   const handleClickOutside = (event) => {
     if (headerRef.current && !headerRef.current.contains(event.target)) {
@@ -43,13 +50,15 @@ function Header() {
   const handleSlide = (index) => {
     handleSwiperSlideChange({ activeIndex: index });
   };
+
+  
   return (
     <header
       ref={headerRef}
-      className="w-[90%] fixed z-50 left-1/2 -translate-x-[50%] top-4 my-0 mx-auto py-2 px-4 rounded-full bg-white shadow-lg"
+      className="w-[95%] md:w-[90%] fixed z-50 left-1/2 -translate-x-[50%] top-4 my-0 mx-auto py-2 px-4 rounded-full bg-white shadow-lg"
     >
-      <div className="flex justify-between items-center text-primarytext text-sm">
-        <div className="w-1/3 flex items-center justify-between relative">
+      <div className="hidden md:flex justify-between items-center text-primarytext text-sm">
+        <div className="w-1/3 hidden md:flex items-center justify-between relative">
           <div
             onClick={() => {
               setServShowDropdown(!showServDropdown);
@@ -156,7 +165,7 @@ function Header() {
                 <br />
                 <Link href="/tovero">
                   <div className="w-fit group h-10">
-                    Tonipash Sustainable Talk (TSET){" "}
+                    Tovero Sustainable Talk (TSET){" "}
                     <div className="group-hover:block hidden w-full h-1 bg-prigreentext"></div>
                   </div>
                   <br />
@@ -173,15 +182,25 @@ function Header() {
           </Link>
         </div>
 
-        <Link href="/" className="flex items-center w-1/3">
-          <p className="text-lg text-primarytext">
-            Tovero{" "}
-            <span className="text-redtext font-extrabold text-xl">Energy</span>
-          </p>
-          <Image src={hdrElipses} alt="header ellipses" className="-ml-6" />
+        <Link href="/" className="flex md:items-center w-1/3">
+          <Image src={Logo} alt="Tovero logo" />
         </Link>
 
-        <CustomButton variant="primary">Contact Us</CustomButton>
+        <Link href="/contact-us" className="hidden md:block">
+          <CustomButton variant="primary">Contact Us</CustomButton>
+        </Link>
+      </div>
+
+      <div className="flex justify-between items-center md:hidden relative">
+        <Link href="/" className="w-[65%] flex justify-end">
+          <Image src={Logo} alt="Tovero logo" className="w-32" />
+        </Link>
+
+        {isOpen ? <X onClick={openNav}/> : <Menu onClick={openNav} />}
+        <div className="w-full bg-white absolute top-10 px-4">
+          {isOpen ? <MobileNavBar /> : ""}
+        </div>
+        
       </div>
     </header>
   );

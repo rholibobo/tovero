@@ -16,6 +16,8 @@ import amber from "../../public/images/home/amber.png";
 import red from "../../public/images/home/red.png";
 import mecs from "../../public/images/home/mecs.png";
 import asteven from "../../public/images/home/asteven.png";
+import enerprro from "../../public/images/home/enerprro.jpg";
+import energyaccess from "../../public/images/home/trans.jpg";
 
 export default function Home() {
   return (
@@ -293,9 +295,13 @@ export default function Home() {
       <section>
         <h1 className="text-2xl font-header ml-16">OUR PARTNERS</h1>
         <br />
-        <div className="bg-cardbg w-full h-[20vh] flex justify-center items-center gap-24 ">
-          <Image src={mecs} alt="MECS" />
-          <Image src={asteven} alt="ASTEVEN" />
+        <div className="bg-cardbg w-full h-[20vh] flex items-center">
+          <div className="w-[90%] mx-auto my-0 flex justify-between items-center">
+            <Image src={mecs} alt="MECS" className="w-40" />
+            <Image src={asteven} alt="ASTEVEN" className="w-48" />
+            <Image src={enerprro} alt="ENERPRRO" className="w-48" />
+            <Image src={energyaccess} alt="ENERGY ACCESS" className="w-48" />
+          </div>
         </div>
       </section>
       <br />

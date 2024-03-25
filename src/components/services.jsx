@@ -48,7 +48,7 @@ function Services() {
         <div className="grid grid-cols-6 gap-4 mb-2">
           {serviceHeaders.map((item, index) => (
             <div
-              key={item.id}
+              key={index}
               onClick={() => isActive(index)}
               className={`bxshadow w-full h-12 flex p-2 justify-center items-center rounded-md cursor-pointer ${
                 index === activeIndex

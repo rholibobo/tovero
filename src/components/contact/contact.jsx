@@ -3,6 +3,7 @@
 import { useState, useRef } from "react";
 import CustomButton from "../button/button";
 import emailjs from "@emailjs/browser";
+import { toast } from "sonner";
 
 function ContactForm() {
   const [formData, setFormData] = useState({
@@ -23,6 +24,16 @@ function ContactForm() {
         () => {
           console.log(form.current);
           console.log("SUCCESS!");
+          toast.success("Email sent Successfully!");
+          const formElements = form.current.elements;
+          for (let i = 0; i < formElements.length; i++) {
+            if (
+              formElements[i].nodeName === "INPUT" ||
+              formElements[i].nodeName === "TEXTAREA"
+            ) {
+              formElements[i].value = "";
+            }
+          }
         },
         (error) => {
           console.log("FAILED...", error.text);

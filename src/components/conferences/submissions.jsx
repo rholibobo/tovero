@@ -3,6 +3,7 @@ import amber from "../../../public/images/home/amber.png";
 import green from "../../../public/images/home/green.png";
 import Image from "next/image";
 import CustomButton from "../button/button";
+import Link from "next/link";
 
 const info = [
   {
@@ -52,9 +53,9 @@ function Submissions() {
         </div>
         <br />
         <br />
-        <div className="flex justify-center">
-          <CustomButton variant="primary">DOWNLOAD BROCHURE</CustomButton>
-        </div>
+        <Link href="https://drive.google.com/uc?export=download&id=1ELqJouaYKzQEUku8cHR0K_rup48C5I0B" className="flex justify-center">
+          <CustomButton variant="primary">DOWNLOAD BROCHURE </CustomButton>
+        </Link>
       </div>
     </div>
   );
