@@ -18,21 +18,30 @@ import mecs from "../../public/images/home/mecs.png";
 import asteven from "../../public/images/home/asteven.png";
 import enerprro from "../../public/images/home/enerprro.jpg";
 import energyaccess from "../../public/images/home/trans.jpg";
+import mobile_enerprro from "../../public/images/home/mob_ener.png";
+import mobile_energyaccess from "../../public/images/home/mob_tech.png";
 
 export default function Home() {
   return (
     <main className="">
       {/* hero section */}
-      <div className="h-screen flex justify-between">
-        <div className="w-1/2 flex flex-col justify-center px-16">
-          <div className="font-header text-4xl mb-2">
-            <h1>
+      <br className="lg:hidden" />
+      <br className="lg:hidden" />
+      <br className="lg:hidden" />
+      <br className="lg:hidden" />
+      <br className="lg:hidden" />
+      <div className="w-[95%] lg:w-full mx-auto md:mx-0 my-0 h-auto lg:h-screen flex-col lg:flex-row flex justify-between">
+        <div className="w-full lg:w-1/2 flex flex-col justify-center md:px-16">
+          <div className="w-full font-header text-4xl mb-2">
+            <h1 className="text-center md:text-left">
               Healing<span className="text-ltgreentext"> Earth,</span>
             </h1>
-            <h1>Solving Carbon Problems</h1>
+            <h1 className="text-center md:text-left">
+              Solving Carbon Problems
+            </h1>
           </div>
 
-          <p className="ptag text-justify mb-2">
+          <p className="ptag text-center md:text-justify mb-2">
             Tovero Energy has strategically positioned itself as a dependable
             partner as we lead discussions on how we can develop energy systems
             that are both resilient to prevailing climatic conditions, and
@@ -40,9 +49,12 @@ export default function Home() {
             clean and sustainable.
           </p>
           <br />
-          <CustomButton variant="primary">SEE EVENTS</CustomButton>
+          <div className="flex justify-center md:justify-start">
+            <CustomButton variant="primary">SEE EVENTS</CustomButton>
+          </div>
+
           <br />
-          <div className="flex gap-2 items-center mt-2">
+          <div className="flex gap-2 items-center justify-center md:justify-start mt-2 mb-6 lg:mb-0">
             <Image src={Rean} alt="logo" />
             <div>
               <p className="ptag">Tovero Energy Ltd is a member of </p>
@@ -57,12 +69,14 @@ export default function Home() {
       <br />
       <br />
       <br />
-      <div className="w-[90%] my-0 mx-auto">
+      <div className="w-[95%] md:w-[90%] my-0 mx-auto">
         {/* about-us section */}
-        <section className="relative h-screen">
-          <div className="flex justify-between">
-            <h3 className="font-header text-4xl">ABOUT US</h3>
-            <div className="w-3/4 ptag ">
+        <section className="relative h-auto lg:h-screen">
+          <div className="flex flex-col md:flex-row justify-between">
+            <h3 className="font-header text-center md:text-left text-4xl mb-2 md:mb-0">
+              ABOUT US
+            </h3>
+            <div className="w-full md:w-3/4 ptag ">
               <p className="ptag text-justify">
                 At Tovero Energy Ltd, our mission is to empower futures through
                 sustainable energy solutions. As international organizations and
@@ -84,9 +98,13 @@ export default function Home() {
           <br />
           <br />
           <div>
-            <Image src={SolarImg} alt="solar image" />
+            <Image
+              src={SolarImg}
+              alt="solar image"
+              className="hidden md:block"
+            />
 
-            <div className="w-1/2 h-[286px] absolute -bottom-20 right-0 bg-cardbg flex justify-between p-4 z-10 rounded-md border-white border-4">
+            <div className="hidden w-1/2 h-[286px] absolute -bottom-20 right-0 bg-cardbg md:flex justify-between p-4 z-10 rounded-md border-white border-4">
               <div className="w-[45%] flex items-end text-[14px]">
                 <div>
                   <p className="text-redtext font-header text-xl font-bold mb-3">
@@ -113,6 +131,29 @@ export default function Home() {
                 </div>
               </div>
             </div>
+            <div className="md:hidden">
+              <div className="bg-cardbg mb-4 text-center px-6 py-4">
+                <p className="text-redtext font-header text-xl font-bold mb-3">
+                  OUR MISSION
+                </p>
+
+                <p className="ptag ">
+                  To empower individuals, communities, and industries by
+                  delivering tailored and innovative sustainable energy
+                  solutions that drive positive environmental impact, economic
+                  growth, and social progress
+                </p>
+              </div>
+              <div className="bg-cardbg text-center px-6 py-4">
+                <p className="text-prigreentext font-header text-xl  font-bold mb-3">
+                  OUR VISION
+                </p>
+
+                <p className="ptag ">
+                  Empowering Futures Through Sustainable Energy Solutions
+                </p>
+              </div>
+            </div>
           </div>
         </section>
         <br />
@@ -122,20 +163,20 @@ export default function Home() {
         <br />
 
         {/*services section */}
-        <section className="bg-drkgreenbg text-white pt-4 pb-12 px-4">
+        <section className="bg-drkgreenbg text-white pt-6 md:pt-4 pb-12 px-4">
           <div className="flex justify-between">
-            <div className="w-[40%]">
+            <div className="w-full md:w-[40%] text-center md:text-left">
               <h1 className="font-header text-3xl">OUR SERVICES</h1>
               <p className="text-sm">
                 We offer a wide range of integrated energy solutions tailored to
                 meet the unique requirements of our clients
               </p>
             </div>
-            <div className="flex items-center gap-2">
+            <div className="hidden md:flex items-center gap-2">
               <div className="flex justify-center items-center w-8 h-8 border border-white rounded-[50%]">
                 <ArrowUpRight size={16} />
               </div>
-              <Link href="#" className="text-sm underline">
+              <Link href="/services" className="text-sm underline">
                 SEE MORE
               </Link>
             </div>
@@ -143,14 +184,14 @@ export default function Home() {
           <br />
           <br />
 
-          <div className="grid grid-cols-2 gap-x-3 gap-y-3">
-            {home_services.map((card, index) => (
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-3 gap-y-3">
+            {home_services.map((card) => (
               <div
                 key={card.id}
                 className="bg-drkgreencard p-3 flex gap-2 rounded"
               >
-                <Image src={card.image} alt="services image 1" />
-                <div>
+                <Image src={card.image} alt="services image 1" className="hidden md:block" />
+                <div className="text-center md:text-left">
                   <h1 className="mb-2 font-header text-xl">{card.title}</h1>
                   <p className="text-sm">{card.description}</p>
                 </div>
@@ -164,30 +205,32 @@ export default function Home() {
 
         {/* ?? choose us */}
         <section className="relative">
-          <h1 className="text-2xl font-header">WHY CHOOSE US</h1>
+          <h1 className="text-2xl font-header text-center md:text-left">WHY CHOOSE US</h1>
           <br />
 
-          <div className="w-[80%] bg-redbg grid grid-cols-2 text-white py-16 pl-4 pr-24 relative">
+          <div className="w-full lg:w-[80%] bg-redbg grid grid-cols-1 lg:grid-cols-2 text-white py-6 md:py-16 pl-4 pr-0 md:pr-24 relative mb-4 lg:mb-0">
             {chooseUs.map((item, index) => (
               <div
                 key={item.id}
-                className={`p-6 border-whote ${
-                  index === 0 ? "border-r border-b" : ""
-                }${index === 1 ? "border-l border-b" : ""}${
-                  index === 2 ? "border-t border-r" : ""
-                }${index === 3 ? "border-l border-t" : ""}`}
+                className={`p-6 border-white ${
+                  index === 0 ? "border-r-0 lg:border-r border-b" : ""
+                }${index === 1 ? "border-l-0 lg:border-l border-b" : ""}${
+                  index === 2 ? "lg:border-t lg:border-r" : ""
+                }${index === 3 ? "lg:border-l border-t" : ""}`}
               >
-                <Image src={item.image} alt="choose" />
-                <h1 className="text-xl font-bold">{item.title}</h1>
-                <p className="text-sm">{item.description}</p>
+                <div className="flex justify-center md:justify-start mb-1"><Image src={item.image} alt="choose" /></div>
+                
+                <h1 className="text-xl font-bold text-center md:text-left mb-1">{item.title}</h1>
+                <p className="text-sm text-center md:text-left mb-1">{item.description}</p>
               </div>
             ))}
           </div>
           <Image
             src={ChooseUs}
             alt="why choose us image"
-            className="absolute bottom-7 right-0 w-80"
+            className="hidden lg:block absolute bottom-7 right-0 w-80"
           />
+          <Image src={ChooseUs} alt="why choose us image" className="block lg:hidden" />
         </section>
         <br />
         <br />
@@ -195,10 +238,10 @@ export default function Home() {
 
         {/* upcoming events */}
         <section>
-          <h1 className="text-2xl font-header">UPCOMING EVENTS</h1>
+          <h1 className="text-2xl font-header text-center md:text-left">UPCOMING EVENTS</h1>
           <br />
 
-          <div className="w-2/3 grid grid-cols-2 gap-x-4 bg-cardbg p-1">
+          <div className="w-full lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-6 bg-cardbg p-1">
             <div className="">
               <div className="flex justify-center ">
                 <Image src={aicess} alt="aicess image" />
@@ -293,14 +336,16 @@ export default function Home() {
       </div>
       {/* our partners */}
       <section>
-        <h1 className="text-2xl font-header ml-16">OUR PARTNERS</h1>
+        <h1 className="text-2xl font-header text-center md:text-left ml-0 md:ml-16">OUR PARTNERS</h1>
         <br />
-        <div className="bg-cardbg w-full h-[20vh] flex items-center">
-          <div className="w-[90%] mx-auto my-0 flex justify-between items-center">
-            <Image src={mecs} alt="MECS" className="w-40" />
-            <Image src={asteven} alt="ASTEVEN" className="w-48" />
-            <Image src={enerprro} alt="ENERPRRO" className="w-48" />
-            <Image src={energyaccess} alt="ENERGY ACCESS" className="w-48" />
+        <div className="bg-cardbg w-full h-[10vh] md:h-[20vh] flex items-center">
+          <div className="w-full md:w-[90%] mx-auto my-0 flex justify-between items-center">
+            <Image src={mecs} alt="MECS" className="w-[25%]"  />
+            <Image src={asteven} alt="ASTEVEN" className="w-[25%]"    />
+            <Image src={enerprro} alt="ENERPRRO" className="w-[25%] md:w-40 hidden md:block" />
+            <Image src={energyaccess} alt="ENERGY ACCESS" className="w-[25%] md:w-40 hidden md:block" />
+            <Image src={mobile_enerprro} alt="ENERGY ACCESS" className="w-[25%] block md:hidden" />
+            <Image src={mobile_energyaccess} alt="ENERGY ACCESS" className="w-[25%] block md:hidden" />
           </div>
         </div>
       </section>

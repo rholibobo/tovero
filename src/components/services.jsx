@@ -13,7 +13,6 @@ import IdenticalHero from "./hero/hero";
 import { useNavigationContext } from "@/context/navContext";
 
 function Services() {
-  
   const title = "OUR SERVICES";
   const description =
     "From renewable sources to cutting-edge technologies, we strive to deliver reliable and efficient energy services that empower your success while safeguarding the planet for future generations.";
@@ -31,10 +30,15 @@ function Services() {
   //   setSelectedIndex(swiper.activeIndex);
   //   setActiveIndex(swiper.activeIndex);
   // };
-  const {activeIndex, swiperRef, isActive, handleSwiperSlideChange} = useNavigationContext()
+  const { activeIndex, swiperRef, isActive, handleSwiperSlideChange } =
+    useNavigationContext();
   return (
     <main>
-      
+      <br className="lg:hidden" />
+      <br className="lg:hidden" />
+      <br className="lg:hidden" />
+      <br className="lg:hidden" />
+      <br className="lg:hidden" />
       <IdenticalHero
         title={title}
         description={description}
@@ -44,62 +48,86 @@ function Services() {
       <br />
       <br />
 
-      <div className="w-[90%] my-0 mx-auto">
-        <div className="grid grid-cols-6 gap-4 mb-2">
-          {serviceHeaders.map((item, index) => (
-            <div
-              key={index}
-              onClick={() => isActive(index)}
-              className={`bxshadow w-full h-12 flex p-2 justify-center items-center rounded-md cursor-pointer ${
-                index === activeIndex
-                  ? "border-b-red-500 border-4 text-ltgreentext"
-                  : "text-primarytext"
-              }`}
-            >
-              
-              <p className="text-[12px] font-bold text-center text-wrap">
-                {item.header}
-              </p>
-            </div>
-          ))}
-        </div>
-        <br />
-        <Swiper
-          ref={swiperRef}
-          onSlideChange={handleSwiperSlideChange}
-          modules={[Pagination, Scrollbar, Navigation]}
-          slidesPerView={1}
-        >
-          {serviceInfo.map((item, index) => (
-            <div key={item.id}>
-              <SwiperSlide>
-                <div className="flex justify-between">
-                  <div
-                    className={`w-[40%] ${activeIndex === 1 ? "order-2" : ""}${
-                      activeIndex === 3 ? "order-2" : ""
-                    }${activeIndex === 5 ? "order-2" : ""}`}
-                  >
-                    <Image src={item.image} alt="image slide" />
-                  </div>
+      <div className="w-[95%] md:w-[90%] h-auto my-0 mx-auto">
+        <div className="h-fit">
+          <div className="hidden md:grid grid-cols-6 gap-4 mb-2 ">
+            {serviceHeaders.map((item, index) => (
+              <div
+                key={index}
+                onClick={() => isActive(index)}
+                className={`bxshadow w-full h-12 flex p-2 justify-center items-center rounded-md cursor-pointer ${
+                  activeIndex === index
+                    ? "border-b-red-500 border-4 text-ltgreentext"
+                    : "text-primarytext"
+                }`}
+              >
+                <p className="text-[12px] font-bold text-center text-wrap">
+                  {item}
+                </p>
+              </div>
+            ))}
+          </div>
 
-                  <div id={item.description} className="w-[58%] flex flex-col justify-center gap-3">
-                    <p>{item.id}</p>
-                    <h1 className="font-header text-3xl font-bold">
-                      {item.title}
-                    </h1>
-                    <p className="ptag">{item.description}</p>
-                    {/* <p dangerouslySetInnerHTML={} /> */}
+          <div className="flex md:hidden w-full gap-4 mb-2 overflow-x-auto">
+            {serviceHeaders.map((item, index) => (
+              <div
+                key={index}
+                onClick={() => isActive(index)}
+                className={`bxshadow w-full h-16 md:h-12 flex p-2 justify-center items-center rounded-md cursor-pointer ${
+                  activeIndex === index
+                    ? "border-b-red-500 border-4 text-ltgreentext"
+                    : "text-primarytext"
+                }`}
+              >
+                <p className="text-[12px] font-bold text-center w-[200px] md:w-auto">
+                  {item}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <br />
+          <Swiper
+            ref={swiperRef}
+            onSlideChange={handleSwiperSlideChange}
+            modules={[Pagination, Scrollbar, Navigation]}
+            slidesPerView={1}
+          >
+            {serviceInfo.map((item) => (
+              <div className="h-auto" key={item.id}>
+                <SwiperSlide>
+                  <div className="flex flex-col md:flex-row justify-between">
+                    <div
+                      className={`w-full lg:w-[40%] mb-4 md:mb-0${
+                        activeIndex === 1 ? "order-2" : ""
+                      }${activeIndex === 3 ? "order-2" : ""}${
+                        activeIndex === 5 ? "order-2" : ""
+                      }`}
+                    >
+                      <Image
+                        src={item.image}
+                        alt="image slide"
+                        className="w-full"
+                      />
+                    </div>
+
+                    <div className="w-full md:w-[58%] flex flex-col justify-center gap-3">
+                      <h1 className="font-header text-3xl font-bold mb-2 md:mb-0">
+                        {item.title}
+                      </h1>
+                      <p className="ptag">{item.description}</p>
+                    </div>
                   </div>
-                </div>
-              </SwiperSlide>
-            </div>
-          ))}
-        </Swiper>
+                </SwiperSlide>
+              </div>
+            ))}
+          </Swiper>
+        </div>
       </div>
 
-      <br />
-      <br />
-      <br />
+      <br className="hidden lg:block" />
+      <br className="hidden lg:block" />
+      <br className="hidden lg:block" />
     </main>
   );
 }

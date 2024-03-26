@@ -57,7 +57,7 @@ function Header() {
       ref={headerRef}
       className="w-[95%] md:w-[90%] fixed z-50 left-1/2 -translate-x-[50%] top-4 my-0 mx-auto py-2 px-4 rounded-full bg-white shadow-lg"
     >
-      <div className="hidden md:flex justify-between items-center text-primarytext text-sm">
+      <div className="hidden lg:flex justify-between items-center text-primarytext text-sm">
         <div className="w-1/3 hidden md:flex items-center justify-between relative">
           <div
             onClick={() => {
@@ -191,7 +191,7 @@ function Header() {
         </Link>
       </div>
 
-      <div className="flex justify-between items-center md:hidden relative">
+      <div className="flex justify-between items-center lg:hidden relative">
         <Link href="/" className="w-[65%] flex justify-end">
           <Image src={Logo} alt="Tovero logo" className="w-32" />
         </Link>

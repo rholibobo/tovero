@@ -8,32 +8,17 @@ import {
   IoLogoInstagram,
 } from "react-icons/io";
 import Link from "next/link";
-import FooterLogo from "../../../public/logo_footer.png"
+import FooterLogo from "../../../public/logo_footer.png";
 
 function Footer() {
   return (
-    <footer className="text-[14px] w-[90%] my-0 mx-auto">
-      <div className="grid grid-cols-4 gap-x-16  text-primarytext">
-        <div className="flex flex-col justify-between">
-          {/* <div className="flex">
-            <div className="pt-2">
-              <p className="text-2xl text-primarytext">
-                Tovero{" "}
-                <span className="text-redtext font-extrabold text-3xl">
-                  Energy
-                </span>
-              </p>
-
-              <p className="text-[10px] -mt-1 text-right font-[500]">
-                Energy to power your dreams
-              </p>
-            </div>
-            <Image src={hdrElipses} alt="header ellipses" className="-ml-6" />
-          </div> */}
+    <footer className="text-base md:text-[14px] w-[95%] lg:w-[90%] my-0 mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-16 md:gap-y-8 gap-y-6 text-primarytext">
+        <div className="flex flex-col items-center md:items-start justify-between">
           <Image src={FooterLogo} alt="footer logo" />
 
-          <div>
-            <div className="flex justify-between ">
+          <div className="hidden md:block">
+            <div className="flex justify-between gap-6">
               <div>
                 <p className="text-[12px]">Email</p>
                 <p className="text-[12px]">info@toveroenergy.com</p>
@@ -44,27 +29,42 @@ function Footer() {
               </div>
             </div>
             <br />
-            <div className="flex justify-between">
-              <Link href="https://www.linkedin.com/company/76421340/admin/feed/posts/" className="p-3 rounded-full bg-[#E7E7E7] border border-[#C9C9C9]">
+            <div className="hidden md:flex justify-between">
+              <Link
+                href="https://www.linkedin.com/company/76421340/admin/feed/posts/"
+                className="p-3 rounded-full bg-[#E7E7E7] border border-[#C9C9C9]"
+              >
                 <IoLogoLinkedin />
               </Link>
-              <Link href="https://x.com/ToveroEnergy?s=09" className="p-3 rounded-full bg-[#E7E7E7] border border-[#C9C9C9]">
+              <Link
+                href="https://x.com/ToveroEnergy?s=09"
+                className="p-3 rounded-full bg-[#E7E7E7] border border-[#C9C9C9]"
+              >
                 <IoLogoTwitter />
               </Link>
-              <Link href="https://www.youtube.com/@toveroenergy3932/streams" className="p-3 rounded-full bg-[#E7E7E7] border border-[#C9C9C9]">
+              <Link
+                href="https://www.youtube.com/@toveroenergy3932/streams"
+                className="p-3 rounded-full bg-[#E7E7E7] border border-[#C9C9C9]"
+              >
                 <IoLogoYoutube />
               </Link>
-              <Link href="https://x.com/ToveroEnergy?s=09" className="p-3 rounded-full bg-[#E7E7E7] border border-[#C9C9C9]">
+              <Link
+                href="https://x.com/ToveroEnergy?s=09"
+                className="p-3 rounded-full bg-[#E7E7E7] border border-[#C9C9C9]"
+              >
                 <IoLogoFacebook />
               </Link>
-              <Link href="" className="p-3 rounded-full bg-[#E7E7E7] border border-[#C9C9C9]">
+              <Link
+                href=""
+                className="p-3 rounded-full bg-[#E7E7E7] border border-[#C9C9C9]"
+              >
                 <IoLogoInstagram />
               </Link>
             </div>
           </div>
         </div>
 
-        <div>
+        <div className="flex flex-col items-center md:items-start">
           <h3 className="text-xl font-bold text-Headertext font-header">
             Our Services
           </h3>
@@ -89,7 +89,7 @@ function Footer() {
           </Link>
         </div>
 
-        <div>
+        <div className="flex flex-col items-center md:items-start">
           <h3 className="text-xl font-bold font-header text-Headertext">
             Quick Links
           </h3>
@@ -105,33 +105,85 @@ function Footer() {
           </Link>
         </div>
 
-        <div>
+        <div className="flex flex-col items-center md:items-start">
           <h3 className="text-xl font-bold font-header text-Headertext">
             Location
           </h3>
           <br />
 
-          <p className="mb-2 text-justify">
+          <p className="w-1/2 md:w-full mb-2 text-center md:text-justify">
             4 Pius Chuku Street, off Eze Nvuigwe Avenue, Woji, Port Harcourt,
             Rivers State, Nigeria.
           </p>
         </div>
+        <hr className="md:hidden" />
+        <div className="block md:hidden">
+          <div className="flex justify-between">
+            <div>
+              <p>Email</p>
+              <p>info@toveroenergy.com</p>
+            </div>
+            <div>
+              <p>Phone number</p>
+              <p>+2348133426978</p>
+            </div>
+          </div>
+          <br />
+          <div className="flex md:hidden justify-between">
+            <Link
+              href="https://www.linkedin.com/company/76421340/admin/feed/posts/"
+              className="p-3 rounded-full bg-[#E7E7E7] border border-[#C9C9C9]"
+            >
+              <IoLogoLinkedin />
+            </Link>
+            <Link
+              href="https://x.com/ToveroEnergy?s=09"
+              className="p-3 rounded-full bg-[#E7E7E7] border border-[#C9C9C9]"
+            >
+              <IoLogoTwitter />
+            </Link>
+            <Link
+              href="https://www.youtube.com/@toveroenergy3932/streams"
+              className="p-3 rounded-full bg-[#E7E7E7] border border-[#C9C9C9]"
+            >
+              <IoLogoYoutube />
+            </Link>
+            <Link
+              href="https://x.com/ToveroEnergy?s=09"
+              className="p-3 rounded-full bg-[#E7E7E7] border border-[#C9C9C9]"
+            >
+              <IoLogoFacebook />
+            </Link>
+            <Link
+              href=""
+              className="p-3 rounded-full bg-[#E7E7E7] border border-[#C9C9C9]"
+            >
+              <IoLogoInstagram />
+            </Link>
+          </div>
+        </div>
       </div>
-        <br />
-        <br />
-      <hr />
+      <br />
       
-      <div className="flex justify-between py-6">
-        <p className="text-[#c0c0c0]">
-          Copyright <span className="text-[#828282]">Tovero Energy Ltd. 2024</span>
-        </p>
-        <div className="flex justify-between gap-4 text-[#828282]">
+      <hr />
+
+      <div className="w-full flex flex-col md:flex-row py-6">
+        <div className="flex justify-center md:justify-start">
+          <p className="text-[#c0c0c0]">
+            Copyright{" "}
+            <span className="text-[#828282]">Tovero Energy Ltd. 2024</span>
+          </p>
+        </div>
+
+        <div className="flex justify-between items-center text-[#828282] text-[14px]">
           <Link href="#">
             <p>Terms and Conditions </p>
           </Link>
+
           <Link href="#">
-            <p>Privacy Terms</p>
+            <p>Privacy Statement </p>
           </Link>
+
           <Link href="#">
             <p>Data Protection </p>
           </Link>

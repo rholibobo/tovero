@@ -25,7 +25,7 @@ function MobileNavBar() {
 
   return (
     <div className="text-primarytext pb-4">
-      <div>
+      <div className="mb-8">
         <div
           onClick={() => {
             setServShowDropdown(!showServDropdown);
@@ -38,28 +38,28 @@ function MobileNavBar() {
         </div>
 
         <div className={`${showServDropdown ? "block" : "hidden"} pl-4`}>
-          <div className="mb-2">
+          <div className="mb-4">
             <p>Energy Planning & Audit</p>
           </div>
-          <div className="mb-2">
+          <div className="mb-4">
             <p>Energy Advisory</p>
           </div>
-          <div className="mb-2">
+          <div className="mb-4">
             <p>Mini-grid Design</p>
           </div>
-          <div className="mb-2">
+          <div className="mb-4">
             <p>Clean Cooking Solutions</p>
           </div>
-          <div className="mb-2">
+          <div className="mb-4">
             <p>Energy Systems Design & Development</p>
           </div>
-          <div className="mb-2">
+          <div className="mb-4">
             <p>Energy Education & Advocacy</p>
           </div>
         </div>
       </div>
 
-      <div>
+      <div className="mb-8">
         <div
           onClick={() => {
             setConShowDropdown(!showConDropdown);
@@ -71,7 +71,7 @@ function MobileNavBar() {
           <ChevronDown size={15} />
         </div>
         <div className={`${showConDropdown ? "block" : "hidden"} pl-4`}>
-          <div className="mb-2">
+          <div className="mb-4">
             <Link href="/aiccess">
               <p>
                 Africa International Conference on Clean Energy and Energy
@@ -80,20 +80,20 @@ function MobileNavBar() {
             </Link>
           </div>
 
-          <div className="mb-2">
+          <div className="mb-4">
             <Link href="/tovero">
               <p>Tovero Sustainable Talk (TSET) </p>
             </Link>
           </div>
         </div>
       </div>
-      <div className="mb-4">
+      <div className="mb-8">
         <Link href="/publications">
           <p>Publications</p>
         </Link>
       </div>
 
-      <Link href="/solutions" className="mb-4">
+      <Link href="/solutions" className="mb-8">
         <p>Solutions</p>
       </Link>
       <br />
