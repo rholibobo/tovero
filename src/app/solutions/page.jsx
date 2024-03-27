@@ -10,6 +10,11 @@ function Solutions() {
     "By embracing innovation and collaboration, we're working to create a more sustainable future for all. Join us on our journey to a brighter, cleaner, and more sustainable tomorrow. Together, we can harness the power of energy solutions to build a better world for generations to come.";
   return (
     <main>
+      <br className="md:hidden" />
+      <br className="md:hidden" />
+      <br className="md:hidden" />
+      <br className="md:hidden" />
+      <br className="md:hidden" />
       <IdenticalHero
         title={title}
         description={description}
@@ -17,13 +22,13 @@ function Solutions() {
       />
       <br />
       <div className="w-[90%] my-0 mx-auto">
-        <div className="bg-cardbg flex justify-between items-center gap-2 py-8 px-4 mb-4">
-          <div className="w-[20%] text-prigreentext font-header border-r border-r-prigreentext font-extrabold text-2xl">
-            <h1>CLEAN COOKING</h1>
-            <h1>SOLUTIONS</h1>
+        <div className="bg-cardbg flex flex-col lg:flex-row justify-between items-center gap-2 py-8 px-4 mb-4">
+          <div className="w-full lg:w-[20%] text-prigreentext font-header border-r border-r-prigreentext font-extrabold text-2xl">
+            <h1 className="text-center md:text-start">CLEAN COOKING</h1>
+            <h1 className="text-center md:text-start">SOLUTIONS</h1>
           </div>
-          <div className="w-[80%]">
-            <p className="ptag">
+          <div className="w-full lg:w-[80%]">
+            <p className="ptag text-center md:text-start">
               Our clean cooking solutions offer environmentally friendly and
               efficient alternatives to traditional cooking methods, promoting
               healthier cooking practices and reducing environmental impact. We
@@ -31,22 +36,29 @@ function Solutions() {
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-4 gap-5 h-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 h-auto">
           {solutionsData.map((card) => (
             <div key={card.id} className="relative bxshadow rounded-md">
-              <Image src={card.image} alt={`solutions ${card.title}`} className="rounded-t-md" />
+              <Image
+                src={card.image}
+                alt={`solutions ${card.title}`}
+                className="rounded-t-md"
+              />
               <div className="flex flex-col justify-between py-4 px-6 ">
                 <div className="h-[17rem]">
-                  <h1 className="text-xl font-bold text-prigreentext">{card.title}</h1>
-                  <p className="ptag text-sm">{card.description}</p>
+                  <h1 className="text-xl font-bold text-prigreentext text-center lg:text-start">
+                    {card.title}
+                  </h1>
+                  <p className="ptag text-sm text-center md:text-start">{card.description}</p>
                 </div>
                 <br />
                 {/* <br /> */}
-                <CustomButton className="absolute bottom-4">
-                  REQUEST FOR PURCHASE
-                </CustomButton>
+                <div className="flex justify-center md:justify-start">
+                  <CustomButton className="absolute bottom-4">
+                    REQUEST FOR PURCHASE
+                  </CustomButton>
+                </div>
               </div>
-              
             </div>
           ))}
         </div>

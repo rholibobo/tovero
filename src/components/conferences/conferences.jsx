@@ -15,13 +15,15 @@ export function ConferencesInfo({ title, paragraph1, paragraph2 }) {
 
 export function ConferenceStatsAicess() {
   return (
-    <div className="w-[35%] grid grid-cols-2">
+    <div className="w-full lg:w-[35%] grid grid-cols-2 gap-y-4 lg:gap-y-0 mt-4 lg:mt-0">
       {aicess["aicessStats"].map((item, index) => (
-        <div key={item.id} className="flex flex-col justify-end items-center gap-2">
+        <div
+          key={item.id}
+          className="flex flex-col justify-between md:justify-end items-center gap-2"
+        >
           <Image src={item.logo} />
           <h1 className="text-2xl font-bold">{item.number}</h1>
           <p className="text-[12px] text-primarytext">{item.description}</p>
-          
         </div>
       ))}
     </div>
@@ -29,17 +31,17 @@ export function ConferenceStatsAicess() {
 }
 export function ConferenceStatsTovero() {
   return (
-    <div className="w-[35%] grid grid-cols-2">
-      {tovero["toveroStats"].map((item, index) => (
-        <div key={item.id} className="flex flex-col justify-end items-center gap-2">
+    <div className="w-full lg:w-[35%] grid grid-cols-2 gap-y-4 lg:gap-y-0 mt-4 lg:mt-0">
+      {tovero["toveroStats"].map((item) => (
+        <div
+          key={item.id}
+          className="flex flex-col justify-between md:justify-end items-center gap-2"
+        >
           <Image src={item.logo} />
           <h1 className="text-2xl font-bold">{item.number}</h1>
           <p className="text-[12px] text-primarytext">{item.description}</p>
-          
         </div>
       ))}
     </div>
   );
 }
-
-

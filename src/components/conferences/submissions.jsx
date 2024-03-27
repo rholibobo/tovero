@@ -28,7 +28,7 @@ const info = [
 
 function Submissions() {
   return (
-    <div className="bg-[#0A4F25] h-[50vh] py-5">
+    <div className="bg-[#0A4F25] h-auto lg:h-[50vh] py-5">
       <div className="w-[85%] my-0 mx-auto text-white">
         <p className="text-[12px] text-center">AICCEES 2024</p>
         <h1 className="text-2xl font-bold text-center font-header">
@@ -37,7 +37,7 @@ function Submissions() {
         <br />
         <br />
 
-        <div className="grid grid-cols-3 gap-x-3">
+        <div className="hidden lg:grid grid-cols-3 gap-x-3">
           {info.map((item) => (
             <div
               key={item.id}
@@ -51,8 +51,9 @@ function Submissions() {
             </div>
           ))}
         </div>
-        <br />
-        <br />
+        <br className="hidden md:block" />
+        <br className="hidden md:block" />
+        
         <Link href="https://drive.google.com/uc?export=download&id=1ELqJouaYKzQEUku8cHR0K_rup48C5I0B" className="flex justify-center">
           <CustomButton variant="primary">DOWNLOAD BROCHURE </CustomButton>
         </Link>

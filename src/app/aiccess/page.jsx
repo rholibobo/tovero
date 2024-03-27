@@ -17,6 +17,11 @@ function Aicess() {
   const description = "AICCEES 2024";
   return (
     <main>
+      <br className="md:hidden" />
+      <br className="md:hidden" />
+      <br className="md:hidden" />
+      <br className="md:hidden" />
+      <br className="md:hidden" />
       <ConferenceHero
         HeroImg={HeroImg}
         image={aicessImg}
@@ -27,9 +32,9 @@ function Aicess() {
       <br />
 
       <div className="w-[90%] my-0 mx-auto">
-        <div className="flex justify-between">
+        <div className="flex flex-col md:flex-row justify-between">
           {aicess["aicessInfo"].map((info, index) => (
-            <div key={index} className="w-[60%]">
+            <div key={index} className="w-full lg:w-[60%]">
               <ConferencesInfo
                 title={info.title}
                 paragraph1={info.paragraph1}

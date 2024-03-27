@@ -167,15 +167,15 @@ function Footer() {
       
       <hr />
 
-      <div className="w-full flex flex-col md:flex-row py-6">
-        <div className="flex justify-center md:justify-start">
+      <div className="w-full flex flex-col lg:flex-row justify-between py-6">
+        <div className="flex justify-center lg:justify-start">
           <p className="text-[#c0c0c0]">
             Copyright{" "}
             <span className="text-[#828282]">Tovero Energy Ltd. 2024</span>
           </p>
         </div>
 
-        <div className="flex justify-between items-center text-[#828282] text-[14px]">
+        <div className="w-full lg:w-[40%] flex justify-between items-center text-[#828282] text-[14px]">
           <Link href="#">
             <p>Terms and Conditions </p>
           </Link>

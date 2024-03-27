@@ -65,8 +65,8 @@ const deets = [
 function DetailsItemized() {
   return (
     <div>
-      <div className="w-[70%]">
-        <h1 className="text-prigreentext text-3xl font-extrabold">AICCEES 2024</h1>
+      <div className="w-full md:w-[70%]">
+        <h1 className="text-prigreentext text-3xl font-extrabold ">AICCEES 2024</h1>
         <br />
         <p className="ptag">
           The scope of the conference is both contemporary and original
@@ -76,7 +76,7 @@ function DetailsItemized() {
       </div>
       <br />
 
-      <div className="grid grid-cols-3 gap-y-7 gap-x-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-7 gap-x-5">
         {deets.map((card) => (
           <div
             key={card.id}

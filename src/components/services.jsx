@@ -50,7 +50,7 @@ function Services() {
 
       <div className="w-[95%] md:w-[90%] h-auto my-0 mx-auto">
         <div className="h-fit">
-          <div className="hidden md:grid grid-cols-6 gap-4 mb-2 ">
+          <div className="hidden lg:grid grid-cols-6 gap-4 mb-2 ">
             {serviceHeaders.map((item, index) => (
               <div
                 key={index}
@@ -68,7 +68,7 @@ function Services() {
             ))}
           </div>
 
-          <div className="flex md:hidden w-full gap-4 mb-2 overflow-x-auto">
+          <div className="flex lg:hidden w-full gap-4 mb-2 overflow-x-auto">
             {serviceHeaders.map((item, index) => (
               <div
                 key={index}
@@ -79,7 +79,7 @@ function Services() {
                     : "text-primarytext"
                 }`}
               >
-                <p className="text-[12px] font-bold text-center w-[200px] md:w-auto">
+                <p className="text-[12px] font-bold text-center w-[200px] lg:w-auto">
                   {item}
                 </p>
               </div>
@@ -96,9 +96,9 @@ function Services() {
             {serviceInfo.map((item) => (
               <div className="h-auto" key={item.id}>
                 <SwiperSlide>
-                  <div className="flex flex-col md:flex-row justify-between">
+                  <div className="flex flex-col lg:flex-row justify-between">
                     <div
-                      className={`w-full lg:w-[40%] mb-4 md:mb-0${
+                      className={`w-full lg:w-[40%] mb-4 lg:mb-0${
                         activeIndex === 1 ? "order-2" : ""
                       }${activeIndex === 3 ? "order-2" : ""}${
                         activeIndex === 5 ? "order-2" : ""
@@ -111,8 +111,8 @@ function Services() {
                       />
                     </div>
 
-                    <div className="w-full md:w-[58%] flex flex-col justify-center gap-3">
-                      <h1 className="font-header text-3xl font-bold mb-2 md:mb-0">
+                    <div className="w-full lg:w-[58%] flex flex-col justify-center gap-3 order-1">
+                      <h1 className="font-header text-3xl font-bold mb-2 lg:mb-0">
                         {item.title}
                       </h1>
                       <p className="ptag">{item.description}</p>

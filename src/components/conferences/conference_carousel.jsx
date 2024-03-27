@@ -1,12 +1,13 @@
-"use client";
-
+import { useState } from "react";
 import Image from "next/image";
 import Scientific from "../../../public/images/aicess/Scientific.png";
 import redarrow from "../../../public/images/aicess/redarrow.png";
 import Link from "next/link";
-import Conference_Carousel from "./conference_carousel";
+import { Pagination, Scrollbar, Navigation } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css/bundle";
 
-function Sponsors() {
+function Conference_Carousel() {
   const links = [
     {
       id: 1,
@@ -24,10 +25,16 @@ function Sponsors() {
       link: "https://drive.google.com/uc?export=download&id=1lE93VeauJnyykfAe1ogiYFDLHE_V4KDD",
     },
   ];
+
   return (
-    <>
-      <div className="w-full md:w-[80%] hidden md:flex justify-between gap-4 md:gap-6 overflow-x-auto">
-        <div className="w-[1000px] md:w-[50%] bg-cardbg hidden md:flex justify-between items-center px-2 md:px-8 py-6">
+    <Swiper
+      modules={[Pagination, Scrollbar, Navigation]}
+      slidesPerView={1}
+      pagination={{ clickable: true }}
+    //   scrollbar={{ draggable: true }}
+    >
+      <SwiperSlide>
+        <div className="w-full md:w-[50%] h-36 md:h-auto bg-cardbg flex justify-between items-center px-2 md:px-8 py-6">
           <h1 className="font-aicess text-[#651E00] text-2xl">Publisher</h1>
 
           <div>
@@ -37,7 +44,9 @@ function Sponsors() {
             </p>
           </div>
         </div>
-        <div className="hidden md:block w-full md:w-[50%] bg-cardbg p-6">
+      </SwiperSlide>
+      <SwiperSlide>
+        <div className="w-full md:w-[50%] bg-cardbg p-6">
           <h1 className="font-header text-center font-bold text-2xl">
             AICESS 2023
           </h1>
@@ -60,13 +69,9 @@ function Sponsors() {
             ))}
           </div>
         </div>
-      </div>
-
-      <div className="block md:hidden">
-        <Conference_Carousel />
-      </div>
-    </>
+      </SwiperSlide>
+    </Swiper>
   );
 }
 
-export default Sponsors;
+export default Conference_Carousel;
