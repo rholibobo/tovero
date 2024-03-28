@@ -11,19 +11,19 @@ const info = [
     id: 1,
     image: red,
     text: "Abstract/Full Paper Submission",
-    date: "Sept. 17th 2024",
+    date: "Feb. 1st 2024",
   },
   {
     id: 2,
     image: amber,
     text: "Abstract/Full Paper Submission Deadline",
-    date: "Sept. 17th 2024",
+    date: "Jul. 31st 2024",
   },
   {
     id: 3,
     image: green,
     text: "Conference Date",
-    date: "Sept. 17th 2024",
+    date: "Sept. 26th & 27th 2024",
   },
 ];
 

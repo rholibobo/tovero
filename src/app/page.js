@@ -52,9 +52,11 @@ export default function Home() {
             clean and sustainable.
           </p>
           <br />
-          <div className="flex justify-center md:justify-start">
-            <CustomButton variant="primary">SEE EVENTS</CustomButton>
-          </div>
+          <Link href="/aiccees">
+            <div className="flex justify-center md:justify-start">
+              <CustomButton variant="primary">SEE EVENTS</CustomButton>
+            </div>
+          </Link>
 
           <br />
           <div className="flex gap-2 items-center justify-center md:justify-start mt-2 mb-6 lg:mb-0">
@@ -192,14 +194,15 @@ export default function Home() {
                 meet the unique requirements of our clients
               </p>
             </div>
-            <div className="hidden md:flex items-center gap-2">
+            <Link href="/services" className="text-sm underline hover:text-ltgreentext">
+            <div className="hidden md:flex items-center gap-2 hover:text-ltgreentext">
               <div className="flex justify-center items-center w-8 h-8 border border-white rounded-[50%]">
                 <ArrowUpRight size={16} />
               </div>
-              <Link href="/services" className="text-sm underline">
-                SEE MORE
-              </Link>
-            </div>
+              
+                <h1>SEE MORE</h1>
+              
+            </div></Link>
           </div>
           <br />
           <br />
@@ -311,7 +314,7 @@ export default function Home() {
                     <p className="text-sm">Abstract/Full Paper Submission</p>
                   </div>
 
-                  <p className="font-bold text-sm">Sept. 17th, 2024</p>
+                  <p className="font-bold text-sm">Feb. 1st, 2024</p>
                 </div>
                 <div className="flex justify-between items-center bg-cardbg rounded-full w-full h-12 p-3 mb-2">
                   <div className="w-[60%] flex  items-center gap-1">
@@ -322,22 +325,22 @@ export default function Home() {
                     </p>
                   </div>
 
-                  <p className="font-bold text-sm">Sept. 17th, 2024</p>
+                  <p className="font-bold text-sm">Jul. 31st, 2024</p>
                 </div>
                 <div className="flex justify-between items-center bg-cardbg rounded-full w-full h-12 p-3 mb-2">
-                  <div className="w-[60%] flex  items-center gap-1">
+                  <div className="w-[30%] flex  items-center gap-1">
                     {/* <div className="w-3 h-3 bg-green-700 rounded-full"></div> */}
                     <Image src={green} alt="" className="w-3" />
                     <p className="text-sm">Conference </p>
                   </div>
 
-                  <p className="font-bold text-sm">Sept. 17th, 2024</p>
+                  <p className="font-bold text-sm">Sept. 26th & 27th, 2024</p>
                 </div>
                 <br />
                 <CustomButton variant="secondary">Register</CustomButton>
               </div>
             </div>
-            <div className="">
+            {/* <div className="">
               <div className="flex justify-center ">
                 <Image src={tonipash} alt="aicess image" />
               </div>
@@ -353,11 +356,11 @@ export default function Home() {
                   Prospects
                 </p>
                 <br />
-                {/* <br /> */}
+                
 
                 <div className="flex justify-between items-center bg-cardbg rounded-full w-full h-12 p-3 mb-2">
                   <div className="w-[60%] flex  items-center gap-1">
-                    {/* <div className="w-5 h-5 bg-orange-500 rounded-[50%]"></div> */}
+                    
                     <Image src={ltgreen} alt="" className="w-3" />
                     <p className="text-sm">Date</p>
                   </div>
@@ -366,7 +369,7 @@ export default function Home() {
                 </div>
                 <div className="flex justify-between items-center bg-cardbg rounded-full w-full h-12 p-3 mb-2">
                   <div className="w-[60%] flex  items-center gap-1">
-                    {/* <div className="w-3 h-3 bg-green-700 rounded-full"></div> */}
+                   
                     <Image src={amber} alt="" className="w-3" />
                     <p className="text-sm">Venue </p>
                   </div>
@@ -375,8 +378,8 @@ export default function Home() {
                 </div>
                 <br />
                 <CustomButton variant="secondary">Register</CustomButton>
-              </div>
-            </div>
+              </div> 
+            </div> */}
           </div>
         </motion.div>
         <br />

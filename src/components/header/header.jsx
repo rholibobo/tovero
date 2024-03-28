@@ -168,7 +168,7 @@ function Header() {
                     showConDropdown ? "block" : "hidden"
                   } bg-white shadow-md pt-6 pb-12 px-6 absolute top-12 rounded-t-2xl `}
                 >
-                  <Link href="/aiccess">
+                  <Link href="/aiccees">
                     <div className="w-fit group h-16">
                       Africa International Conference on Clean Energy and Energy
                       Storage (AICCEES){" "}
@@ -176,13 +176,13 @@ function Header() {
                     </div>
                   </Link>
                   <br />
-                  <Link href="/tovero">
+                  {/* <Link href="/tovero">
                     <div className="w-fit group h-10">
                       Tovero Sustainable Talk (TSET){" "}
                       <div className="group-hover:block hidden w-full h-1 bg-prigreentext"></div>
                     </div>
                     <br />
-                  </Link>
+                  </Link> */}
                 </div>
               }
             </div>

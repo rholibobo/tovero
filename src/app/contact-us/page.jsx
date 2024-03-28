@@ -62,7 +62,7 @@ function ContactUs() {
                 <Image src={gis} alt="" width={27} />
 
                 <p className="text-justify">
-                  4 Pius Chuku Street, off Eze Nvuigwe Avenue, Woji, Port
+                  4 Pius Chuku Close, off Eze Nvuigwe Avenue, Woji, Port
                   Harcourt, Rivers State, Nigeria.
                 </p>
               </div>

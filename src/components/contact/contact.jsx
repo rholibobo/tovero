@@ -6,12 +6,6 @@ import { toast } from "sonner";
 import { motion } from "framer-motion";
 
 function ContactForm() {
-  const [formData, setFormData] = useState({
-    fullName: "",
-    phoneNumber: "",
-    email: "",
-    message: "",
-  });
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -87,6 +81,19 @@ function ContactForm() {
             id="email"
             className="border outline-0 font-semibold rounded-lg w-full p-2.5 focus:border-prigreentext focus:ring-1 focus:ring-prigreentext"
             placeholder="johndoe@email.com"
+            required=""
+          />
+        </div>
+        <div className="mb-8">
+          <label htmlFor="subject" className="mb-4 text-border">
+            Subject
+          </label>
+          <input
+            type="text"
+            name="subject"
+            id="subject"
+            className="border outline-0 font-semibold rounded-lg w-full p-2.5 focus:border-prigreentext focus:ring-1 focus:ring-prigreentext"
+            placeholder="Message Subject"
             required=""
           />
         </div>

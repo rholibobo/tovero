@@ -100,9 +100,9 @@ function Footer() {
           <Link href="/aiccess">
             <p className="mb-2">AICCESS</p>
           </Link>
-          <Link href="/tovero">
+          {/* <Link href="/tovero">
             <p className="mb-2">TSET</p>
-          </Link>
+          </Link> */}
           
         </div>
 
@@ -113,7 +113,7 @@ function Footer() {
           <br />
 
           <p className="w-1/2 md:w-full mb-2 text-center md:text-justify">
-            4 Pius Chuku Street, off Eze Nvuigwe Avenue, Woji, Port Harcourt,
+            4 Pius Chuku Close, off Eze Nvuigwe Avenue, Woji, Port Harcourt,
             Rivers State, Nigeria.
           </p>
         </div>

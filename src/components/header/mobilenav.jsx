@@ -134,11 +134,11 @@ function MobileNavBar({ closeNav }) {
             </Link>
           </div>
 
-          <div className="mb-4">
+          {/* <div className="mb-4">
             <Link href="/tovero">
               <p onClick={closeNav}>Tovero Sustainable Talk (TSET) </p>
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="mb-8">
