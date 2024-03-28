@@ -5,6 +5,7 @@ import Scientific from "../../../public/images/aicess/Scientific.png";
 import redarrow from "../../../public/images/aicess/redarrow.png";
 import Link from "next/link";
 import Conference_Carousel from "./conference_carousel";
+import { motion } from "framer-motion";
 
 function Sponsors() {
   const links = [
@@ -25,8 +26,16 @@ function Sponsors() {
     },
   ];
   return (
-    <>
-      <div className="w-full md:w-[80%] hidden md:flex justify-between gap-4 md:gap-6 overflow-x-auto">
+    <motion.div
+    initial={{ opacity: 0, y: 50 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6, delay: 0.4 }}
+    viewport={{ once: false }}>
+      <div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          viewport={{ once: false }} className="w-full md:w-[80%] hidden md:flex justify-between gap-4 md:gap-6 overflow-x-auto">
         <div className="w-[1000px] md:w-[50%] bg-cardbg hidden md:flex justify-between items-center px-2 md:px-8 py-6">
           <h1 className="font-aicess text-[#651E00] text-2xl">Publisher</h1>
 
@@ -65,7 +74,7 @@ function Sponsors() {
       <div className="block md:hidden">
         <Conference_Carousel />
       </div>
-    </>
+    </motion.div>
   );
 }
 

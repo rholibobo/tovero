@@ -1,3 +1,5 @@
+"use client"
+
 import ConferenceHero from "@/components/hero/conference";
 import HeroImg from "../../../public/images/aicess/aicess_hero.png";
 import aicessImg from "../../../public/images/aicess/aicess_aicess.png";
@@ -10,6 +12,7 @@ import { aicess } from "@/data_models/conferences";
 import Sponsors from "@/components/conferences/sponsors";
 import DetailsItemized from "@/components/conferences/itemized";
 import Submissions from "@/components/conferences/submissions";
+import { motion } from "framer-motion";
 
 function Aicess() {
   const title =
@@ -32,7 +35,13 @@ function Aicess() {
       <br />
 
       <div className="w-[90%] my-0 mx-auto">
-        <div className="flex flex-col md:flex-row justify-between">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          viewport={{ once: false }}
+          className="flex flex-col md:flex-row justify-between"
+        >
           {aicess["aicessInfo"].map((info, index) => (
             <div key={index} className="w-full lg:w-[60%]">
               <ConferencesInfo
@@ -44,7 +53,7 @@ function Aicess() {
           ))}
 
           <ConferenceStatsAicess />
-        </div>
+        </motion.div>
         <br />
         <br />
         <Sponsors />
@@ -58,7 +67,6 @@ function Aicess() {
       <Submissions />
       <br />
       <br />
-      
     </main>
   );
 }

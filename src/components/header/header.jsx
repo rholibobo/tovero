@@ -40,16 +40,10 @@ function Header() {
   useEffect(() => {
     if (pathname === "/services") {
       window.scrollTo({ top: 580, behavior: "smooth" });
+      
     }
   }, [pathname]);
 
-  const handleNav = (index) => {
-    router.push("/services");
-    isActive(index);
-  };
-  const handleSlide = (index) => {
-    handleSwiperSlideChange({ activeIndex: index });
-  };
 
   
   return (
@@ -77,8 +71,9 @@ function Header() {
               >
                 <div
                   onClick={() => {
-                    handleNav(0);
-                    handleSlide(0);
+                    isActive(0);
+                    router.push("/services")
+                    // handleSlide(0);
                   }}
                   className="w-fit group py-2 h-10 mb-2"
                 >
@@ -88,8 +83,10 @@ function Header() {
 
                 <div
                   onClick={() => {
-                    handleNav(1);
-                    handleSlide(1);
+                    isActive(1);
+                    router.push("/services")
+                    // handleNav(1);
+                    // handleSlide(1);
                   }}
                   className="w-fit group py-2 h-10 mb-2"
                 >
@@ -99,7 +96,9 @@ function Header() {
 
                 <div
                   onClick={() => {
-                    handleNav(2);
+                    isActive(2);
+                    router.push("/services")
+                    // handleNav(2);
                   }}
                   className="w-fit group py-2 h-10 mb-2"
                 >
@@ -109,7 +108,9 @@ function Header() {
 
                 <div
                   onClick={() => {
-                    handleNav(3);
+                    isActive(3);
+                    router.push("/services")
+                    // handleNav(3);
                   }}
                   className="w-fit group py-2 h-10 mb-2"
                 >
@@ -119,7 +120,9 @@ function Header() {
 
                 <div
                   onClick={() => {
-                    handleNav(4);
+                    isActive(4);
+                    router.push("/services")
+                    // handleNav(4);
                   }}
                   className="w-fit group py-2 h-10 mb-2"
                 >
@@ -129,7 +132,9 @@ function Header() {
 
                 <div
                   onClick={() => {
-                    handleNav(5);
+                    isActive(5);
+                    router.push("/services")
+                    // handleNav(5);
                   }}
                   className="w-fit group py-2 h-10"
                 >
@@ -198,7 +203,7 @@ function Header() {
 
         {isOpen ? <X onClick={openNav}/> : <Menu onClick={openNav} />}
         <div className="w-full bg-white absolute top-10 px-4">
-          {isOpen ? <MobileNavBar /> : ""}
+          {isOpen ? <MobileNavBar closeNav={setIsOpen(!isOpen)} /> : ""}
         </div>
         
       </div>

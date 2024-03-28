@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import HeroImg from "../../public/images/home/hero_img.png";
 import Rean from "../../public/images/home/rean.png";
@@ -20,6 +22,7 @@ import enerprro from "../../public/images/home/enerprro.jpg";
 import energyaccess from "../../public/images/home/trans.jpg";
 import mobile_enerprro from "../../public/images/home/mob_ener.png";
 import mobile_energyaccess from "../../public/images/home/mob_tech.png";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
@@ -72,7 +75,13 @@ export default function Home() {
       <div className="w-[95%] md:w-[90%] my-0 mx-auto">
         {/* about-us section */}
         <section className="relative h-auto lg:h-screen">
-          <div className="flex flex-col md:flex-row justify-between">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            viewport={{ once: false }}
+            className="flex flex-col md:flex-row justify-between"
+          >
             <h3 className="font-header text-center md:text-left text-4xl mb-2 md:mb-0">
               ABOUT US
             </h3>
@@ -94,10 +103,15 @@ export default function Home() {
                 through innovative energy technologies and services.
               </p>
             </div>
-          </div>
+          </motion.div>
           <br />
           <br />
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            viewport={{ once: false }}
+          >
             <Image
               src={SolarImg}
               alt="solar image"
@@ -154,7 +168,7 @@ export default function Home() {
                 </p>
               </div>
             </div>
-          </div>
+          </motion.div>
         </section>
         <br />
         <br />
@@ -163,7 +177,13 @@ export default function Home() {
         <br />
 
         {/*services section */}
-        <section className="bg-drkgreenbg text-white pt-6 md:pt-4 pb-12 px-4">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          viewport={{ once: false }}
+          className="bg-drkgreenbg text-white pt-6 md:pt-4 pb-12 px-4"
+        >
           <div className="flex justify-between">
             <div className="w-full md:w-[40%] text-center md:text-left">
               <h1 className="font-header text-3xl">OUR SERVICES</h1>
@@ -190,7 +210,11 @@ export default function Home() {
                 key={card.id}
                 className="bg-drkgreencard p-3 flex gap-2 rounded"
               >
-                <Image src={card.image} alt="services image 1" className="hidden md:block" />
+                <Image
+                  src={card.image}
+                  alt="services image 1"
+                  className="hidden md:block"
+                />
                 <div className="text-center md:text-left">
                   <h1 className="mb-2 font-header text-xl">{card.title}</h1>
                   <p className="text-sm">{card.description}</p>
@@ -198,14 +222,22 @@ export default function Home() {
               </div>
             ))}
           </div>
-        </section>
+        </motion.div>
         <br />
         <br />
         <br />
 
         {/* ?? choose us */}
-        <section className="relative">
-          <h1 className="text-2xl font-header text-center md:text-left">WHY CHOOSE US</h1>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          viewport={{ once: false }}
+          className="relative"
+        >
+          <h1 className="text-2xl font-header text-center md:text-left">
+            WHY CHOOSE US
+          </h1>
           <br />
 
           <div className="w-full lg:w-[80%] bg-redbg grid grid-cols-1 lg:grid-cols-2 text-white py-6 md:py-16 pl-4 pr-0 md:pr-24 relative mb-4 lg:mb-0">
@@ -218,10 +250,16 @@ export default function Home() {
                   index === 2 ? "lg:border-t lg:border-r" : ""
                 }${index === 3 ? "lg:border-l border-t" : ""}`}
               >
-                <div className="flex justify-center md:justify-start mb-1"><Image src={item.image} alt="choose" /></div>
-                
-                <h1 className="text-xl font-bold text-center md:text-left mb-1">{item.title}</h1>
-                <p className="text-sm text-center md:text-left mb-1">{item.description}</p>
+                <div className="flex justify-center md:justify-start mb-1">
+                  <Image src={item.image} alt="choose" />
+                </div>
+
+                <h1 className="text-xl font-bold text-center md:text-left mb-1">
+                  {item.title}
+                </h1>
+                <p className="text-sm text-center md:text-left mb-1">
+                  {item.description}
+                </p>
               </div>
             ))}
           </div>
@@ -230,15 +268,26 @@ export default function Home() {
             alt="why choose us image"
             className="hidden lg:block absolute bottom-7 right-0 w-80"
           />
-          <Image src={ChooseUs} alt="why choose us image" className="block lg:hidden" />
-        </section>
+          <Image
+            src={ChooseUs}
+            alt="why choose us image"
+            className="block lg:hidden"
+          />
+        </motion.div>
         <br />
         <br />
         <br />
 
         {/* upcoming events */}
-        <section>
-          <h1 className="text-2xl font-header text-center md:text-left">UPCOMING EVENTS</h1>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          viewport={{ once: false }}
+        >
+          <h1 className="text-2xl font-header text-center md:text-left">
+            UPCOMING EVENTS
+          </h1>
           <br />
 
           <div className="w-full lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-6 bg-cardbg p-1">
@@ -329,26 +378,49 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </section>
+        </motion.div>
         <br />
         <br />
         <br />
       </div>
       {/* our partners */}
-      <section>
-        <h1 className="text-2xl font-header text-center md:text-left ml-0 md:ml-16">OUR PARTNERS</h1>
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.4 }}
+        viewport={{ once: false }}
+      >
+        <h1 className="text-2xl font-header text-center md:text-left ml-0 md:ml-16">
+          OUR PARTNERS
+        </h1>
         <br />
         <div className="bg-cardbg w-full h-[10vh] md:h-[20vh] flex items-center">
           <div className="w-full md:w-[90%] mx-auto my-0 flex justify-between items-center">
-            <Image src={mecs} alt="MECS" className="w-[25%]"  />
-            <Image src={asteven} alt="ASTEVEN" className="w-[25%]"    />
-            <Image src={enerprro} alt="ENERPRRO" className="w-[25%] md:w-40 hidden md:block" />
-            <Image src={energyaccess} alt="ENERGY ACCESS" className="w-[25%] md:w-40 hidden md:block" />
-            <Image src={mobile_enerprro} alt="ENERGY ACCESS" className="w-[25%] block md:hidden" />
-            <Image src={mobile_energyaccess} alt="ENERGY ACCESS" className="w-[25%] block md:hidden" />
+            <Image src={mecs} alt="MECS" className="w-[25%]" />
+            <Image src={asteven} alt="ASTEVEN" className="w-[25%]" />
+            <Image
+              src={enerprro}
+              alt="ENERPRRO"
+              className="w-[25%] md:w-40 hidden md:block"
+            />
+            <Image
+              src={energyaccess}
+              alt="ENERGY ACCESS"
+              className="w-[25%] md:w-40 hidden md:block"
+            />
+            <Image
+              src={mobile_enerprro}
+              alt="ENERGY ACCESS"
+              className="w-[25%] block md:hidden"
+            />
+            <Image
+              src={mobile_energyaccess}
+              alt="ENERGY ACCESS"
+              className="w-[25%] block md:hidden"
+            />
           </div>
         </div>
-      </section>
+      </motion.div>
       <br />
       <br />
       <br />

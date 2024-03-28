@@ -3,7 +3,7 @@
 import Image from "next/image";
 import heroImg from "../../public/images/services/hero_services_img.png";
 import { serviceHeaders, serviceInfo } from "@/data_models/services_detail";
-import { useState, useRef } from "react";
+import { motion } from "framer-motion";
 
 // //// SWIPER IMPORTS /////// //
 import { Pagination, Scrollbar, Navigation } from "swiper/modules";
@@ -11,6 +11,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/bundle";
 import IdenticalHero from "./hero/hero";
 import { useNavigationContext } from "@/context/navContext";
+import { useEffect } from "react";
 
 function Services() {
   const title = "OUR SERVICES";
@@ -30,8 +31,21 @@ function Services() {
   //   setSelectedIndex(swiper.activeIndex);
   //   setActiveIndex(swiper.activeIndex);
   // };
-  const { activeIndex, swiperRef, isActive, handleSwiperSlideChange } =
+  const { selectedIndex,activeIndex, swiperRef, isActive, handleSwiperSlideChange } =
     useNavigationContext();
+
+    useEffect(() => {
+      if (swiperRef.current) {
+        const swiperInstance = swiperRef.current.swiper;
+        if(swiperInstance) {
+          console.log(swiperInstance)
+        } 
+        swiperInstance.on('slideChange', () => handleSwiperSlideChange(swiperInstance));
+      }
+    }, [swiperRef, handleSwiperSlideChange]);
+    
+    
+
   return (
     <main>
       <br className="lg:hidden" />
@@ -49,7 +63,13 @@ function Services() {
       <br />
 
       <div className="w-[95%] md:w-[90%] h-auto my-0 mx-auto">
-        <div className="h-fit">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          viewport={{ once: true }}
+          className="h-fit"
+        >
           <div className="hidden lg:grid grid-cols-6 gap-4 mb-2 ">
             {serviceHeaders.map((item, index) => (
               <div
@@ -89,11 +109,11 @@ function Services() {
           <br />
           <Swiper
             ref={swiperRef}
-            onSlideChange={handleSwiperSlideChange}
+            // onSlideChange={handleSwiperSlideChange}
             modules={[Pagination, Scrollbar, Navigation]}
             slidesPerView={1}
           >
-            {serviceInfo.map((item) => (
+            {serviceInfo.map((item, index) => (
               <div className="h-auto" key={item.id}>
                 <SwiperSlide>
                   <div className="flex flex-col lg:flex-row justify-between">
@@ -111,7 +131,7 @@ function Services() {
                       />
                     </div>
 
-                    <div className="w-full lg:w-[58%] flex flex-col justify-center gap-3 order-1">
+                    <div className="w-full lg:w-[58%] flex flex-col justify-center gap-3 order-2">
                       <h1 className="font-header text-3xl font-bold mb-2 lg:mb-0">
                         {item.title}
                       </h1>
@@ -122,7 +142,7 @@ function Services() {
               </div>
             ))}
           </Swiper>
-        </div>
+        </motion.div>
       </div>
 
       <br className="hidden lg:block" />

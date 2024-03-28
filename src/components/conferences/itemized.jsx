@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import svg1 from "../../../public/images/aicess/svg1.png";
 import svg2 from "../../../public/images/aicess/svg2.png";
@@ -8,6 +10,7 @@ import svg6 from "../../../public/images/aicess/svg6.png";
 import svg7 from "../../../public/images/aicess/svg7.png";
 import svg8 from "../../../public/images/aicess/svg8.png";
 import svg9 from "../../../public/images/aicess/svg9.png";
+import { motion } from "framer-motion";
 
 const deets = [
   {
@@ -64,9 +67,16 @@ const deets = [
 
 function DetailsItemized() {
   return (
-    <div>
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, delay: 0.4 }}
+      viewport={{ once: false }}
+    >
       <div className="w-full md:w-[70%]">
-        <h1 className="text-prigreentext text-3xl font-extrabold ">AICCEES 2024</h1>
+        <h1 className="text-prigreentext text-3xl font-extrabold ">
+          AICCEES 2024
+        </h1>
         <br />
         <p className="ptag">
           The scope of the conference is both contemporary and original
@@ -87,7 +97,7 @@ function DetailsItemized() {
           </div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 }
 

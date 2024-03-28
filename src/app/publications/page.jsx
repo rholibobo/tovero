@@ -1,8 +1,11 @@
+"use client";
+
 import IdenticalHero from "@/components/hero/hero";
 import heroImg from "../../../public/images/publishers/publishers_hero.png";
 import { publisherInfo, publisherMore } from "@/data_models/publishers";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion"
 
 function Publications() {
   const title = "PUBLICATIONS";
@@ -18,13 +21,18 @@ function Publications() {
       <br />
       <br />
       <div className="w-[90%] my-0 mx-auto">
-        <div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          viewport={{ once: false }}
+        >
           <p className="ptag font-bold">
             Tonipash Sustainable Energy Talks(TSET) - Reports
           </p>
           <br />
 
-          <div className="grid grid-cols-3 gap-x-4 gap-y-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-4">
             {publisherInfo.map((card, index) => (
               <div
                 key={card.id}
@@ -43,12 +51,11 @@ function Publications() {
               </div>
             ))}
           </div>
-        </div>
+        </motion.div>
 
         <br />
         <br />
 
-        
         <br />
         <br />
         <br />

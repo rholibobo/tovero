@@ -1,6 +1,12 @@
 "use client";
 
-import React, { createContext, useContext, useRef, useState } from "react";
+import React, {
+  createContext,
+  useContext,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 
 const NavigationContext = createContext();
 
@@ -14,9 +20,13 @@ export const NavigationContextProvider = ({ children }) => {
   const isActive = (index) => {
     setActiveIndex(index);
     setSelectedIndex(index);
-    swiperRef.current?.swiper?.slideTo(index);
+
+    if (swiperRef.current && swiperRef.current.swiper) {
+      swiperRef.current.swiper?.slideTo(index);
+    }
+    // swiperRef.current?.swiper?.slideTo(index);
   };
-  
+
   const handleSwiperSlideChange = (swiper) => {
     setSelectedIndex(swiper.activeIndex);
     setActiveIndex(swiper.activeIndex);
@@ -29,6 +39,7 @@ export const NavigationContextProvider = ({ children }) => {
     isActive,
     handleSwiperSlideChange,
     swiperRef,
+    
   };
 
   return (

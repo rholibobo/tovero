@@ -4,6 +4,7 @@ import green from "../../../public/images/home/green.png";
 import Image from "next/image";
 import CustomButton from "../button/button";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const info = [
   {
@@ -28,7 +29,13 @@ const info = [
 
 function Submissions() {
   return (
-    <div className="bg-[#0A4F25] h-auto lg:h-[50vh] py-5">
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, delay: 0.4 }}
+      viewport={{ once: false }}
+      className="bg-[#0A4F25] h-auto lg:h-[50vh] py-5"
+    >
       <div className="w-[85%] my-0 mx-auto text-white">
         <p className="text-[12px] text-center">AICCEES 2024</p>
         <h1 className="text-2xl font-bold text-center font-header">
@@ -53,12 +60,15 @@ function Submissions() {
         </div>
         <br className="hidden md:block" />
         <br className="hidden md:block" />
-        
-        <Link href="https://drive.google.com/uc?export=download&id=1ELqJouaYKzQEUku8cHR0K_rup48C5I0B" className="flex justify-center">
+
+        <Link
+          href="https://drive.google.com/uc?export=download&id=1ELqJouaYKzQEUku8cHR0K_rup48C5I0B"
+          className="flex justify-center"
+        >
           <CustomButton variant="primary">DOWNLOAD BROCHURE </CustomButton>
         </Link>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

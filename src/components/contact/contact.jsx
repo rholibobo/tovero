@@ -1,9 +1,9 @@
 "use client";
 
 import { useState, useRef } from "react";
-import CustomButton from "../button/button";
 import emailjs from "@emailjs/browser";
 import { toast } from "sonner";
+import { motion } from "framer-motion";
 
 function ContactForm() {
   const [formData, setFormData] = useState({
@@ -33,6 +33,9 @@ function ContactForm() {
             ) {
               formElements[i].value = "";
             }
+            if (formElements[i].value === "") {
+              toast.info("Please enter your information");
+            }
           }
         },
         (error) => {
@@ -41,7 +44,7 @@ function ContactForm() {
       );
   };
   return (
-    <div className="w-[55%]  py-4 px-4 bxshadow">
+    <div className="w-[95%] mx-auto my-0 lg:w-[55%] py-4 px-4 bxshadow">
       <h1 className="text-2xl font-header font-extrabold text-redtext">
         Get In Touch
       </h1>
@@ -99,12 +102,13 @@ function ContactForm() {
             required=""
           />
         </div>
-        <button
+        <motion.button
+          whileTap={{ scale: 0.95 }}
           type="submit"
           className="py-2.5 px-6 rounded-[20px] font-bold bg-btn text-white text-[14px] w-full"
         >
           SUBMIT
-        </button>
+        </motion.button>
       </form>
     </div>
   );

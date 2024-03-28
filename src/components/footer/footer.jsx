@@ -65,7 +65,7 @@ function Footer() {
         </div>
 
         <div className="flex flex-col items-center md:items-start">
-          <h3 className="text-xl font-bold text-Headertext font-header">
+          <h3 className="text-2xl font-bold text-Headertext font-header">
             Our Services
           </h3>
           <br />
@@ -90,23 +90,24 @@ function Footer() {
         </div>
 
         <div className="flex flex-col items-center md:items-start">
-          <h3 className="text-xl font-bold font-header text-Headertext">
+          <h3 className="text-2xl font-bold font-header text-Headertext">
             Quick Links
           </h3>
           <br />
-          <Link href="#">
+          <Link href="/publications">
             <p className="mb-2">Publications</p>
           </Link>
-          <Link href="#">
+          <Link href="/aiccess">
             <p className="mb-2">AICCESS</p>
           </Link>
-          <Link href="#">
+          <Link href="/tovero">
             <p className="mb-2">TSET</p>
           </Link>
+          
         </div>
 
         <div className="flex flex-col items-center md:items-start">
-          <h3 className="text-xl font-bold font-header text-Headertext">
+          <h3 className="text-2xl font-bold font-header text-Headertext">
             Location
           </h3>
           <br />

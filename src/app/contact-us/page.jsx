@@ -1,3 +1,5 @@
+"use client"
+
 import IdenticalHero from "@/components/hero/hero";
 import heroImg from "../../../public/telephone.png";
 import gis from "../../../public/gis.png";
@@ -5,6 +7,7 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { TbMailFilled } from "react-icons/tb";
 import Image from "next/image";
 import ContactForm from "@/components/contact/contact";
+import { motion } from "framer-motion";
 
 function ContactUs() {
   const title = "CONTACT US";
@@ -12,6 +15,11 @@ function ContactUs() {
     "We strive to respond to all messages promptly and ensure that your experience with us is positive.";
   return (
     <main>
+      <br className="lg:hidden" />
+      <br className="lg:hidden" />
+      <br className="lg:hidden" />
+      <br className="lg:hidden" />
+      <br className="lg:hidden" />
       <IdenticalHero
         title={title}
         description={description}
@@ -21,9 +29,15 @@ function ContactUs() {
       <br />
       <br />
 
-      <div className="w-[90%] my-0 mx-auto">
-        <div className="flex items-center">
-          <div className="w-[45%] flex flex-col justify-center bg-drkgreenbg h-[90vh] text-white py-4 px-5">
+      <div className="w-full lg:w-[90%] my-0 mx-auto relative">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          viewport={{ once: false }}
+          className="flex flex-col lg:flex-row items-center"
+        >
+          <div className="w-full lg:w-[45%] flex flex-col justify-center bg-drkgreenbg h-auto lg:h-[90vh] text-white py-4 px-5 r">
             <div className="bg-drkgreencard py-4 px-3 mb-4">
               <h1 className="font-header text-xl ml-2">MAKE A CALL</h1>
               <div className="flex items-center gap-2">
@@ -56,7 +70,7 @@ function ContactUs() {
           </div>
 
           <ContactForm />
-        </div>
+        </motion.div>
       </div>
       <br />
       <br />
