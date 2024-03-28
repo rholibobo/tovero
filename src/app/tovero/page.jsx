@@ -26,7 +26,7 @@ function Tovero() {
       <br className="md:hidden" />
       <br className="md:hidden" />
       <br className="md:hidden" />
-      <div className="h-[65vh] md:h-[50vh] lg:h-screen flex relative">
+      <div className="h-auto lg:h-screen flex relative pb-8 md:pb-0 mb-8 md:mb-0">
         <div className="w-full md:w-[50%] flex flex-col items-center justify-center">
           <Image
             src={toveroImg}
@@ -53,7 +53,7 @@ function Tovero() {
         <div className="w-[50%] justify-end hidden md:flex">
           <Image src={HeroImg} alt=" hero image" />
         </div>
-        <div className="w-full md:w-[50%] h-5 bg-red-600 absolute bottom-0 pr-16"></div>
+        <div className="w-full md:w-[50%] h-5 bg-red-600 absolute -bottom-8 lg:bottom-0 pr-16"></div>
       </div>
       <br />
       <br />

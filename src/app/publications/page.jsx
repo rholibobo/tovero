@@ -13,6 +13,11 @@ function Publications() {
     "These publications are focused on energy research and aims to contribute to the discourse on sustainable energy solutions, advancements in renewable energy technologies, and the challenges facing the energy sector.";
   return (
     <main>
+      <br className="lg:hidden" />
+      <br className="lg:hidden" />
+      <br className="lg:hidden" />
+      <br className="lg:hidden" />
+      <br className="lg:hidden" />
       <IdenticalHero
         title={title}
         description={description}

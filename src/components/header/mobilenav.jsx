@@ -2,37 +2,42 @@ import Link from "next/link";
 import { ChevronDown } from "lucide-react";
 import { useNavigationContext } from "@/context/navContext";
 import { useEffect, useRef, useState } from "react";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import CustomButton from "../button/button";
 
-function MobileNavBar({closeNav}) {
+function MobileNavBar({ closeNav }) {
   const { isActive, swiperRef, handleSwiperSlideChange } =
     useNavigationContext();
   const [showServDropdown, setServShowDropdown] = useState(false);
   const [showConDropdown, setConShowDropdown] = useState(false);
-  // const headerRef = useRef(null);
+  const navRef = useRef(null);
   const pathname = usePathname();
+  const router = useRouter();
 
-  // const handleClickOutside = (event) => {
-  //   if (headerRef.current && !headerRef.current.contains(event.target)) {
-  //     setServShowDropdown(false);
-  //     setConShowDropdown(false);
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   document.addEventListener("click", handleClickOutside);
-  //   return () => document.removeEventListener("click", handleClickOutside);
-  // }, []);
   useEffect(() => {
     if (pathname === "/services") {
       window.scrollTo({ top: 580, behavior: "smooth" });
     }
   }, [pathname]);
 
+  useEffect(() => {
+    // Function to detect click outside the navbar
+    const handleClickOutside = (event) => {
+      if (navRef.current && !navRef.current.contains(event.target)) {
+        closeNav(); // Call the function passed as prop to close the navbar
+      }
+    };
+
+    // Add click event listener
+    document.addEventListener("mousedown", handleClickOutside);
+
+    // Cleanup function to remove the event listener
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
   return (
-    <div className="text-primarytext pb-4">
-      <div onClick={closeNav} className="mb-8">
+    <div ref={navRef} className="text-primarytext pb-4">
+      <div className="mb-8">
         <div
           onClick={() => {
             setServShowDropdown(!showServDropdown);
@@ -49,7 +54,7 @@ function MobileNavBar({closeNav}) {
             onClick={() => {
               isActive(0);
               router.push("/services");
-              // handleSlide(0);
+              closeNav();
             }}
             className="mb-4"
           >
@@ -59,7 +64,7 @@ function MobileNavBar({closeNav}) {
             onClick={() => {
               isActive(1);
               router.push("/services");
-              // handleSlide(0);
+              closeNav();
             }}
             className="mb-4"
           >
@@ -69,7 +74,7 @@ function MobileNavBar({closeNav}) {
             onClick={() => {
               isActive(2);
               router.push("/services");
-              // handleSlide(0);
+              closeNav();
             }}
             className="mb-4"
           >
@@ -79,7 +84,7 @@ function MobileNavBar({closeNav}) {
             onClick={() => {
               isActive(3);
               router.push("/services");
-              // handleSlide(0);
+              closeNav();
             }}
             className="mb-4"
           >
@@ -89,7 +94,7 @@ function MobileNavBar({closeNav}) {
             onClick={() => {
               isActive(4);
               router.push("/services");
-              // handleSlide(0);
+              closeNav();
             }}
             className="mb-4"
           >
@@ -99,7 +104,7 @@ function MobileNavBar({closeNav}) {
             onClick={() => {
               isActive(5);
               router.push("/services");
-              // handleSlide(0);
+              closeNav();
             }}
             className="mb-4"
           >
@@ -122,7 +127,7 @@ function MobileNavBar({closeNav}) {
         <div className={`${showConDropdown ? "block" : "hidden"} pl-4`}>
           <div className="mb-4">
             <Link href="/aiccess">
-              <p>
+              <p onClick={closeNav}>
                 Africa International Conference on Clean Energy and Energy
                 Storage (AICCEES){" "}
               </p>
@@ -131,24 +136,24 @@ function MobileNavBar({closeNav}) {
 
           <div className="mb-4">
             <Link href="/tovero">
-              <p>Tovero Sustainable Talk (TSET) </p>
+              <p onClick={closeNav}>Tovero Sustainable Talk (TSET) </p>
             </Link>
           </div>
         </div>
       </div>
       <div className="mb-8">
         <Link href="/publications">
-          <p>Publications</p>
+          <p onClick={closeNav}>Publications</p>
         </Link>
       </div>
 
       <Link href="/solutions" className="mb-8">
-        <p>Solutions</p>
+        <p onClick={closeNav}>Solutions</p>
       </Link>
       <br />
 
-      <Link href="/contact-us">
-        <CustomButton variant="secondary">CONTACT US</CustomButton>
+      <Link onClick={closeNav} href="/contact-us">
+        <CustomButton  variant="secondary">CONTACT US</CustomButton>
       </Link>
     </div>
   );

@@ -10,7 +10,7 @@ function ConferenceHero({ HeroImg, title, description, image }) {
   const isAiccess = pathname === "/tovero";
   
   return (
-    <div className="h-[60vh] md:h-[50vh] lg:h-screen flex justify-between relative">
+    <div className="h-auto lg:h-screen flex justify-between relative pb-8 mb-8 lg:mb-0 lg:pb-0">
       <div className="flex flex-col md:flex-row justify-between md:justify-center">
         <div className={`w-full md:w-[90%] lg:w-1/2 flex flex-col justify-center`}>
           <div className="w-[80%] my-0 mx-auto">
@@ -47,7 +47,7 @@ function ConferenceHero({ HeroImg, title, description, image }) {
           <Image src={HeroImg} alt="Hero Image"  />
         </div>
       </div>
-      <div className="w-full lg:w-[46.4%] h-5 bg-red-600 absolute bottom-0 pr-16"></div>
+      <div className="w-full lg:w-[46.4%] h-5 bg-red-600 absolute -bottom-8 lg:bottom-0 pr-16"></div>
     </div>
   );
 }
