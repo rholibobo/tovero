@@ -47,7 +47,7 @@ function ConferenceHero({ HeroImg, title, description, image }) {
           <Image src={HeroImg} alt="Hero Image"  />
         </div>
       </div>
-      <div className="w-full lg:w-[46.4%] h-5 bg-red-600 absolute -bottom-8 lg:bottom-0 pr-16"></div>
+      <div className="w-full h-5 bg-red-600 absolute -z-10 -bottom-8 lg:bottom-0 pr-16"></div>
     </div>
   );
 }

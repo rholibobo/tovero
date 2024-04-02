@@ -15,7 +15,7 @@ function IdenticalHero({ title, description, HeroImg }) {
       <div className="flex justify-start md:justify-center lg:justify-end">
         <Image src={HeroImg} alt="Hero Image" className="hidden md:block" />
       </div>
-      <div className="w-full lg:w-[46.8%] h-5 bg-red-600 absolute -bottom-8 md:bottom-0 pr-16"></div>
+      <div className="w-full h-5 bg-red-600 absolute -z-10 -bottom-8 md:bottom-0 pr-16"></div>
     </div>
   );
 }

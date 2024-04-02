@@ -11,18 +11,11 @@ import Link from "next/link";
 import home_services from "@/data_models/home_services";
 import chooseUs from "@/data_models/why_choose_us";
 import aicess from "../../public/images/home/aicess.png";
-import tonipash from "../../public/images/home/tonipash.png";
 import green from "../../public/images/home/green.png";
-import ltgreen from "../../public/images/home/ltgreen.png";
 import amber from "../../public/images/home/amber.png";
 import red from "../../public/images/home/red.png";
-import mecs from "../../public/images/home/mecs.png";
-import asteven from "../../public/images/home/asteven.png";
-import enerprro from "../../public/images/home/enerprro.jpg";
-import energyaccess from "../../public/images/home/trans.jpg";
-import mobile_enerprro from "../../public/images/home/mob_ener.png";
-import mobile_energyaccess from "../../public/images/home/mob_tech.png";
 import { motion } from "framer-motion";
+import SponsorsCarousel from "@/components/sponsors_carousel/carousel";
 
 export default function Home() {
   return (
@@ -194,15 +187,18 @@ export default function Home() {
                 meet the unique requirements of our clients
               </p>
             </div>
-            <Link href="/services" className="text-sm underline hover:text-ltgreentext">
-            <div className="hidden md:flex items-center gap-2 hover:text-ltgreentext">
-              <div className="flex justify-center items-center w-8 h-8 border border-white rounded-[50%]">
-                <ArrowUpRight size={16} />
-              </div>
-              
+            <Link
+              href="/services"
+              className="text-sm underline hover:text-ltgreentext"
+            >
+              <div className="hidden md:flex items-center gap-2 hover:text-ltgreentext">
+                <div className="flex justify-center items-center w-8 h-8 border border-white rounded-[50%]">
+                  <ArrowUpRight size={16} />
+                </div>
+
                 <h1>SEE MORE</h1>
-              
-            </div></Link>
+              </div>
+            </Link>
           </div>
           <br />
           <br />
@@ -293,7 +289,7 @@ export default function Home() {
           </h1>
           <br />
 
-          <div className="w-full lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-6 bg-cardbg p-1">
+          <div className="w-full lg:w-[40%] gap-x-4 gap-y-6 bg-cardbg p-1">
             <div className="">
               <div className="flex justify-center ">
                 <Image src={aicess} alt="aicess image" />
@@ -397,30 +393,9 @@ export default function Home() {
           OUR PARTNERS
         </h1>
         <br />
-        <div className="bg-cardbg w-full h-[10vh] md:h-[20vh] flex items-center">
-          <div className="w-full md:w-[90%] mx-auto my-0 flex justify-between items-center">
-            <Image src={mecs} alt="MECS" className="w-[25%]" />
-            <Image src={asteven} alt="ASTEVEN" className="w-[25%]" />
-            <Image
-              src={enerprro}
-              alt="ENERPRRO"
-              className="w-[25%] md:w-40 hidden md:block"
-            />
-            <Image
-              src={energyaccess}
-              alt="ENERGY ACCESS"
-              className="w-[25%] md:w-40 hidden md:block"
-            />
-            <Image
-              src={mobile_enerprro}
-              alt="ENERGY ACCESS"
-              className="w-[25%] block md:hidden"
-            />
-            <Image
-              src={mobile_energyaccess}
-              alt="ENERGY ACCESS"
-              className="w-[25%] block md:hidden"
-            />
+        <div className="bg-cardbg w-full h-auto flex items-center justify-between">
+          <div className="w-[90%] mx-auto my-0 flex items-center">
+            <SponsorsCarousel />
           </div>
         </div>
       </motion.div>

@@ -61,6 +61,9 @@ function Header() {
       {isMobile > 1000 ? (
         <div className="hidden lg:flex justify-between items-center text-primarytext text-sm">
           <div className="w-1/3 hidden md:flex items-center justify-between relative">
+            <Link href="/">
+              <p>Home</p>
+            </Link>
             <div
               onClick={() => {
                 setServShowDropdown(!showServDropdown);
@@ -190,9 +193,9 @@ function Header() {
             <Link href="/publications">
               <p>Publications</p>
             </Link>
-            <Link href="/solutions">
+            {/* <Link href="/solutions">
               <p>Solutions</p>
-            </Link>
+            </Link> */}
           </div>
 
           <Link href="/" className="flex md:items-center w-1/3">

@@ -12,7 +12,7 @@ const generateId = () => {
 };
 
 export const serviceHeaders = [
-  "EVENT PLANNING & AUDIT",
+  "ENERGY PLANNING & AUDIT",
   "ENERGY ADVISORY",
   "MINI-GRID DESIGN",
   "CLEAN COOKING SOLUTIONS",
@@ -24,7 +24,7 @@ export const serviceInfo = [
   {
     id: 1,
     image: img1,
-    title: "EVENT PLANNING & AUDIT",
+    title: "ENERGY PLANNING & AUDIT",
     description:
       "Our Energy Planning & Audit services provide comprehensive assessments of your energy consumption and efficiency. We conduct thorough audits of your current energy usage, identify areas of inefficiency, and develop customized plans to optimize energy consumption and reduce costs. By implementing energy-saving measures and leveraging the latest technologies, we help you achieve greater efficiency and sustainability in your energy usage.",
   },

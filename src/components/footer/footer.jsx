@@ -69,22 +69,22 @@ function Footer() {
             Our Services
           </h3>
           <br />
-          <Link href="#">
+          <Link href="/services">
             <p className="mb-2">Energy Planning & Audit</p>
           </Link>
-          <Link href="#">
+          <Link href="/services">
             <p className="mb-2">Energy Advisory</p>
           </Link>
-          <Link href="#">
+          <Link href="/services">
             <p className="mb-2">Mini-grid Design</p>
           </Link>
-          <Link href="#">
+          <Link href="/services">
             <p className="mb-2">Clean Cooking Solutions</p>
           </Link>
-          <Link href="#">
+          <Link href="/services">
             <p className="mb-2">Energy System Design & Development</p>
           </Link>
-          <Link href="#">
+          <Link href="/services">
             <p className="mb-2">Energy Education & Advocacy</p>
           </Link>
         </div>
@@ -97,8 +97,8 @@ function Footer() {
           <Link href="/publications">
             <p className="mb-2">Publications</p>
           </Link>
-          <Link href="/aiccess">
-            <p className="mb-2">AICCESS</p>
+          <Link href="/aiccees">
+            <p className="mb-2">AICCEES</p>
           </Link>
           {/* <Link href="/tovero">
             <p className="mb-2">TSET</p>
@@ -182,11 +182,11 @@ function Footer() {
           </Link>
 
           <Link href="#">
-            <p>Privacy Statement </p>
+            <p>Privacy Policy </p>
           </Link>
 
           <Link href="#">
-            <p>Data Protection </p>
+            <p>NDPR Accredited </p>
           </Link>
         </div>
       </div>
