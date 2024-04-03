@@ -27,7 +27,7 @@ export default function Home() {
       <br className="lg:hidden" />
       <br className="lg:hidden" />
       <div className="w-[95%] lg:w-full mx-auto md:mx-0 my-0 h-auto lg:h-screen flex-col lg:flex-row flex justify-between">
-        <div className="w-full lg:w-1/2 flex flex-col justify-center md:px-16">
+        <div className="w-full lg:w-1/2 flex flex-col mt-16 justify-center md:px-16">
           <div className="w-full font-header text-4xl mb-2">
             <h1 className="text-center md:text-left">
               Healing<span className="text-ltgreentext"> Earth,</span>
@@ -113,7 +113,7 @@ export default function Home() {
               className="hidden md:block"
             />
 
-            <div className="hidden w-1/2 h-[286px] absolute -bottom-20 right-0 bg-cardbg md:flex justify-between p-4 z-10 rounded-md border-white border-4">
+            <div className="hidden w-1/2 h-[276px] absolute -bottom-20 right-0 bg-cardbg md:flex justify-between p-4 z-10 rounded-md border-white border-4">
               <div className="w-[45%] flex items-end text-[14px]">
                 <div>
                   <p className="text-redtext font-header text-xl font-bold mb-3">
@@ -289,7 +289,7 @@ export default function Home() {
           </h1>
           <br />
 
-          <div className="w-full lg:w-[40%] gap-x-4 gap-y-6 bg-cardbg p-1">
+          <div className="w-full lg:w-[35%] gap-x-4 gap-y-6 bg-cardbg p-1">
             <div className="">
               <div className="flex justify-center ">
                 <Image src={aicess} alt="aicess image" />
@@ -333,7 +333,9 @@ export default function Home() {
                   <p className="font-bold text-sm">Sept. 26th & 27th, 2024</p>
                 </div>
                 <br />
-                <CustomButton variant="secondary">Register</CustomButton>
+                <Link href="https://forms.office.com/r/3Hxp8z38uA">
+                  <CustomButton variant="secondary">Register</CustomButton>
+                </Link>
               </div>
             </div>
             {/* <div className="">

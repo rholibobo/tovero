@@ -56,14 +56,12 @@ function Header() {
   return (
     <header
       ref={headerRef}
-      className="w-[95%] md:w-[90%] fixed z-50 left-1/2 -translate-x-[50%] top-4 my-0 mx-auto py-2 px-4 rounded-full bg-white shadow-lg"
+      className="w-[95%] md:w-[90%] fixed z-50 left-1/2 -translate-x-[50%] top-4 my-0 mx-auto py-3 px-4 rounded-full bg-white shadow-lg"
     >
       {isMobile > 1000 ? (
         <div className="hidden lg:flex justify-between items-center text-primarytext text-sm">
           <div className="w-1/3 hidden md:flex items-center justify-between relative">
-            <Link href="/">
-              <p>Home</p>
-            </Link>
+            
             <div
               onClick={() => {
                 setServShowDropdown(!showServDropdown);

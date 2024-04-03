@@ -38,14 +38,7 @@ function MobileNavBar({ closeNav }) {
 
   return (
     <div ref={navRef} className="text-primarytext pb-4 mt-4">
-      <motion.div
-        whileTap={{ backgroundColor: "#F1F2F3" }}
-        className="mb-8 py-2"
-      >
-        <Link href="/">
-          <p onClick={closeNav}>Home</p>
-        </Link>
-      </motion.div>
+      
       <div className="mb-8">
         <div
           onClick={() => {
@@ -144,7 +137,7 @@ function MobileNavBar({ closeNav }) {
             whileTap={{ backgroundColor: "#F1F2F3" }}
             className="mb-4 py-2"
           >
-            <Link href="/aiccess">
+            <Link href="/aiccees">
               <p onClick={closeNav}>
                 Africa International Conference on Clean Energy and Energy
                 Storage (AICCEES){" "}

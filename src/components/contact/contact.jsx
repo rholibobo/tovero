@@ -11,13 +11,18 @@ function ContactForm() {
   const sendEmail = (e) => {
     e.preventDefault();
     emailjs
-      .sendForm("service_rvq0icn", "template_5wgab8b", form.current, {
-        publicKey: "KwpzaOFfz04ncoXME",
-      })
+      .sendForm(
+        process.env.NEXT_PUBLIC_SERVICE,
+        process.env.NEXT_PUBLIC_TEMPLATE,
+        form.current,
+        {
+          publicKey: process.env.NEXT_PUBLIC_EMAIL_API_KEY,
+        }
+      )
       .then(
         () => {
-          console.log(form.current);
           console.log("SUCCESS!");
+
           toast.success("Email sent Successfully!");
           const formElements = form.current.elements;
           for (let i = 0; i < formElements.length; i++) {
@@ -34,6 +39,8 @@ function ContactForm() {
         },
         (error) => {
           console.log("FAILED...", error.text);
+
+          toast.error("Email not sent!");
         }
       );
   };
@@ -112,7 +119,7 @@ function ContactForm() {
         <motion.button
           whileTap={{ scale: 0.95 }}
           type="submit"
-          className="py-2.5 px-6 rounded-[20px] font-bold bg-btn text-white text-[14px] w-full"
+          className="py-3 px-6 rounded-[20px] font-bold bg-btn text-white text-[14px] w-full"
         >
           SUBMIT
         </motion.button>
