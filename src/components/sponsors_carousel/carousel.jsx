@@ -1,5 +1,5 @@
-import mecs from "../../../public/images/home/mecs.png";
-import asteven from "../../../public/images/home/asteven.png";
+import mecs from "../../../public/images/home/mecs_high_res.png";
+import asteven from "../../../public/images/home/asteven_high_res.png";
 import enerpro from "../../../public/images/home/enerpro-removebg.png";
 import trans from "../../../public/images/home/trans-removebg.png";
 import uniport from "../../../public/images/home/uniport-removebg_2.png";
@@ -29,7 +29,7 @@ function SponsorsCarousel() {
       }}
       breakpoints={{
         640: {
-          slidesPerView: 1,
+          slidesPerView: 2,
           spaceBetween: 20,
         },
 
@@ -40,12 +40,21 @@ function SponsorsCarousel() {
 
         1024: {
           slidesPerView: 3,
-          spaceBetween: 40,
+          spaceBetween: 20,
         },
       }}
+      
     >
       {sponsors_list.map((item) => (
-        <SwiperSlide key={item.id}>
+        <SwiperSlide
+          key={item.id}
+          style={{
+            display: "flex",
+            justifyContent: "start",
+            alignItems: "center",
+            // backgroundColor: "red"
+          }}
+        >
           <Image
             src={item.image}
             alt={`sponsor image ${item.id}`}

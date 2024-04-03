@@ -394,7 +394,7 @@ export default function Home() {
         </h1>
         <br />
         <div className="bg-cardbg w-full h-auto flex items-center justify-between">
-          <div className="w-[90%] mx-auto my-0 flex items-center">
+          <div className="w-[90%] mx-auto my-0 flex items-stretch">
             <SponsorsCarousel />
           </div>
         </div>

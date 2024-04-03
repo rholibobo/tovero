@@ -213,7 +213,7 @@ function Header() {
           </Link>
 
           {isOpen ? <X onClick={openNav} /> : <Menu onClick={openNav} />}
-          <div className="w-full bg-white fixed top-10 px-4">
+          <div className="w-full bg-white fixed top-10 left-0 px-4">
             {isOpen && <MobileNavBar closeNav={closeNav} />}
           </div>
         </div>

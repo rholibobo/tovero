@@ -4,6 +4,7 @@ import { useNavigationContext } from "@/context/navContext";
 import { useEffect, useRef, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import CustomButton from "../button/button";
+import { motion } from "framer-motion";
 
 function MobileNavBar({ closeNav }) {
   const { isActive, swiperRef, handleSwiperSlideChange } =
@@ -36,103 +37,120 @@ function MobileNavBar({ closeNav }) {
   }, []);
 
   return (
-    <div ref={navRef} className="text-primarytext pb-4">
+    <div ref={navRef} className="text-primarytext pb-4 mt-4">
+      <motion.div
+        whileTap={{ backgroundColor: "#F1F2F3" }}
+        className="mb-8 py-2"
+      >
+        <Link href="/">
+          <p onClick={closeNav}>Home</p>
+        </Link>
+      </motion.div>
       <div className="mb-8">
         <div
           onClick={() => {
             setServShowDropdown(!showServDropdown);
             setConShowDropdown(false);
           }}
-          className="flex items-center gap-[2px] cursor-pointer mb-4"
+          className="flex items-center gap-[2px] cursor-pointer mb-4 py-2"
         >
           <p>Services</p>
           <ChevronDown size={15} />
         </div>
 
         <div className={`${showServDropdown ? "block" : "hidden"} pl-4`}>
-          <div
+          <motion.div
+            whileTap={{ backgroundColor: "#F1F2F3" }}
             onClick={() => {
               isActive(0);
               router.push("/services");
               closeNav();
             }}
-            className="mb-4"
+            className="mb-4 py-2"
           >
             <p>Energy Planning & Audit</p>
-          </div>
-          <div
+          </motion.div>
+          <motion.div
+            whileTap={{ backgroundColor: "#F1F2F3" }}
             onClick={() => {
               isActive(1);
               router.push("/services");
               closeNav();
             }}
-            className="mb-4"
+            className="mb-4 py-2"
           >
             <p>Energy Advisory</p>
-          </div>
-          <div
+          </motion.div>
+          <motion.div
+            whileTap={{ backgroundColor: "#F1F2F3" }}
             onClick={() => {
               isActive(2);
               router.push("/services");
               closeNav();
             }}
-            className="mb-4"
+            className="mb-4 py-2"
           >
             <p>Mini-grid Design</p>
-          </div>
-          <div
+          </motion.div>
+          <motion.div
+            whileTap={{ backgroundColor: "#F1F2F3" }}
             onClick={() => {
               isActive(3);
               router.push("/services");
               closeNav();
             }}
-            className="mb-4"
+            className="mb-4 py-2"
           >
             <p>Clean Cooking Solutions</p>
-          </div>
-          <div
+          </motion.div>
+          <motion.div
+            whileTap={{ backgroundColor: "#F1F2F3" }}
             onClick={() => {
               isActive(4);
               router.push("/services");
               closeNav();
             }}
-            className="mb-4"
+            className="mb-4 py-2"
           >
             <p>Energy Systems Design & Development</p>
-          </div>
-          <div
+          </motion.div>
+          <motion.div
+            whileTap={{ backgroundColor: "#F1F2F3" }}
             onClick={() => {
               isActive(5);
               router.push("/services");
               closeNav();
             }}
-            className="mb-4"
+            className="mb-4 py-2"
           >
             <p>Energy Education & Advocacy</p>
-          </div>
+          </motion.div>
         </div>
       </div>
 
-      <div className="mb-8">
+      <div className="mb-8 py-2">
         <div
           onClick={() => {
             setConShowDropdown(!showConDropdown);
             setServShowDropdown(false);
           }}
-          className="flex items-center gap-[2px] cursor-pointer mb-4"
+          className="flex items-center gap-[2px] cursor-pointer mb-4 py-2"
         >
           <p>Conferences</p>
           <ChevronDown size={15} />
         </div>
         <div className={`${showConDropdown ? "block" : "hidden"} pl-4`}>
-          <div className="mb-4">
+          <motion.div
+            whileTap={{ backgroundColor: "#F1F2F3" }}
+            className="mb-4 py-2"
+          >
             <Link href="/aiccess">
               <p onClick={closeNav}>
                 Africa International Conference on Clean Energy and Energy
                 Storage (AICCEES){" "}
               </p>
             </Link>
-          </div>
+          </motion.div>
 
           {/* <div className="mb-4">
             <Link href="/tovero">
@@ -141,19 +159,22 @@ function MobileNavBar({ closeNav }) {
           </div> */}
         </div>
       </div>
-      <div className="mb-8">
+      <motion.div
+        whileTap={{ backgroundColor: "#F1F2F3" }}
+        className="mb-8 py-2"
+      >
         <Link href="/publications">
           <p onClick={closeNav}>Publications</p>
         </Link>
-      </div>
+      </motion.div>
 
-      <Link href="/solutions" className="mb-8">
+      {/* <Link href="/solutions" className="mb-8">
         <p onClick={closeNav}>Solutions</p>
-      </Link>
+      </Link> */}
       <br />
 
       <Link onClick={closeNav} href="/contact-us">
-        <CustomButton  variant="secondary">CONTACT US</CustomButton>
+        <CustomButton variant="secondary">CONTACT US</CustomButton>
       </Link>
     </div>
   );
