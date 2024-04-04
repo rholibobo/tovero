@@ -31,20 +31,18 @@ function Services() {
   //   setSelectedIndex(swiper.activeIndex);
   //   setActiveIndex(swiper.activeIndex);
   // };
-  const { selectedIndex,activeIndex, swiperRef, isActive, handleSwiperSlideChange } =
+  const { activeIndex, swiperRef, isActive, handleSwiperSlideChange } =
     useNavigationContext();
 
-    useEffect(() => {
-      if (swiperRef.current) {
-        const swiperInstance = swiperRef.current.swiper;
-        if(swiperInstance) {
-          console.log(swiperInstance)
-        } 
-        swiperInstance.on('slideChange', () => handleSwiperSlideChange(swiperInstance));
-      }
-    }, [swiperRef, handleSwiperSlideChange]);
-    
-    
+  useEffect(() => {
+    if (swiperRef.current) {
+      const swiperInstance = swiperRef.current.swiper;
+
+      swiperInstance.on("slideChange", () =>
+        handleSwiperSlideChange(swiperInstance)
+      );
+    }
+  }, [swiperRef, handleSwiperSlideChange]);
 
   return (
     <main>

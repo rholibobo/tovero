@@ -177,10 +177,10 @@ export default function Home() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: false }}
-          className="bg-drkgreenbg text-white pt-6 md:pt-4 pb-12 px-4"
+          className="bg-drkgreenbg pt-6 md:pt-4 pb-12 px-4"
         >
-          <div className="flex justify-between">
-            <div className="w-full md:w-[40%] text-center md:text-left">
+          <div className="flex justify-between items-center">
+            <div className="w-full md:w-3/4 text-center md:text-left">
               <h1 className="font-header text-3xl">OUR SERVICES</h1>
               <p className="text-sm">
                 We offer a wide range of integrated energy solutions tailored to
@@ -189,11 +189,11 @@ export default function Home() {
             </div>
             <Link
               href="/services"
-              className="text-sm underline hover:text-ltgreentext"
+              className="text-sm underline hover:text-[#0E5E2E]"
             >
-              <div className="hidden md:flex items-center gap-2 hover:text-ltgreentext">
-                <div className="flex justify-center items-center w-8 h-8 border border-white rounded-[50%]">
-                  <ArrowUpRight size={16} />
+              <div className="hidden md:flex items-center gap-2 hover:text-[#0E5E2E]">
+                <div className="flex justify-center items-center w-10 h-10 border-2 border-[#0E5E2E] rounded-[50%]">
+                  <ArrowUpRight size={18} />
                 </div>
 
                 <h1>SEE MORE</h1>
@@ -203,7 +203,7 @@ export default function Home() {
           <br />
           <br />
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-3 gap-y-3">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-3 gap-y-3 text-white">
             {home_services.map((card) => (
               <div
                 key={card.id}
@@ -395,7 +395,7 @@ export default function Home() {
           OUR PARTNERS
         </h1>
         <br />
-        <div className="bg-cardbg w-full h-auto flex items-center justify-between">
+        <div className="bg-cardbg w-full h-[20vh] flex items-center justify-between">
           <div className="w-[90%] mx-auto my-0 flex items-stretch">
             <SponsorsCarousel />
           </div>

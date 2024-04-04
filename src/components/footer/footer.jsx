@@ -181,7 +181,7 @@ function Footer() {
             <p>Terms and Conditions </p>
           </Link>
 
-          <Link href="#">
+          <Link href="https://drive.google.com/file/d/1S3dWvfSukizZceCQr3R4m-cknBAYx7Tb/view?usp=drive_link">
             <p>Privacy Policy </p>
           </Link>
 

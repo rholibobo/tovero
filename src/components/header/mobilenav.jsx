@@ -45,7 +45,7 @@ function MobileNavBar({ closeNav }) {
             setServShowDropdown(!showServDropdown);
             setConShowDropdown(false);
           }}
-          className="flex items-center gap-[2px] cursor-pointer mb-4 py-2"
+          className="flex items-center gap-[2px] cursor-pointer mb-4"
         >
           <p>Services</p>
           <ChevronDown size={15} />
@@ -59,7 +59,7 @@ function MobileNavBar({ closeNav }) {
               router.push("/services");
               closeNav();
             }}
-            className="mb-4 py-2"
+            className="mb-4"
           >
             <p>Energy Planning & Audit</p>
           </motion.div>
@@ -70,7 +70,7 @@ function MobileNavBar({ closeNav }) {
               router.push("/services");
               closeNav();
             }}
-            className="mb-4 py-2"
+            className="mb-4"
           >
             <p>Energy Advisory</p>
           </motion.div>
@@ -81,7 +81,7 @@ function MobileNavBar({ closeNav }) {
               router.push("/services");
               closeNav();
             }}
-            className="mb-4 py-2"
+            className="mb-4"
           >
             <p>Mini-grid Design</p>
           </motion.div>
@@ -92,7 +92,7 @@ function MobileNavBar({ closeNav }) {
               router.push("/services");
               closeNav();
             }}
-            className="mb-4 py-2"
+            className="mb-4"
           >
             <p>Clean Cooking Solutions</p>
           </motion.div>
@@ -103,7 +103,7 @@ function MobileNavBar({ closeNav }) {
               router.push("/services");
               closeNav();
             }}
-            className="mb-4 py-2"
+            className="mb-4"
           >
             <p>Energy Systems Design & Development</p>
           </motion.div>
@@ -114,20 +114,20 @@ function MobileNavBar({ closeNav }) {
               router.push("/services");
               closeNav();
             }}
-            className="mb-4 py-2"
+            className="mb-4"
           >
             <p>Energy Education & Advocacy</p>
           </motion.div>
         </div>
       </div>
 
-      <div className="mb-8 py-2">
+      <div className="mb-8">
         <div
           onClick={() => {
             setConShowDropdown(!showConDropdown);
             setServShowDropdown(false);
           }}
-          className="flex items-center gap-[2px] cursor-pointer mb-4 py-2"
+          className="flex items-center gap-[2px] cursor-pointer mb-4"
         >
           <p>Conferences</p>
           <ChevronDown size={15} />
@@ -135,7 +135,7 @@ function MobileNavBar({ closeNav }) {
         <div className={`${showConDropdown ? "block" : "hidden"} pl-4`}>
           <motion.div
             whileTap={{ backgroundColor: "#F1F2F3" }}
-            className="mb-4 py-2"
+            className="mb-4"
           >
             <Link href="/aiccees">
               <p onClick={closeNav}>
@@ -154,7 +154,7 @@ function MobileNavBar({ closeNav }) {
       </div>
       <motion.div
         whileTap={{ backgroundColor: "#F1F2F3" }}
-        className="mb-8 py-2"
+        className="mb-8"
       >
         <Link href="/publications">
           <p onClick={closeNav}>Publications</p>

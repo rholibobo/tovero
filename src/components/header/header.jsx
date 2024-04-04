@@ -13,8 +13,7 @@ import MobileNavBar from "./mobilenav";
 import { useWindowWidth } from "@/utils/responsiveness";
 
 function Header() {
-  const { isActive, swiperRef, handleSwiperSlideChange } =
-    useNavigationContext();
+  const { isActive } = useNavigationContext();
   const router = useRouter();
   const pathname = usePathname();
   const [showServDropdown, setServShowDropdown] = useState(false);
@@ -31,12 +30,7 @@ function Header() {
   };
 
   const handleClickOutside = (event) => {
-    if (
-      showConDropdown &&
-      showServDropdown &&
-      headerRef.current &&
-      !headerRef.current.contains(event.target)
-    ) {
+    if (headerRef.current && !headerRef.current.contains(event.target)) {
       setServShowDropdown(false);
       setConShowDropdown(false);
     }
@@ -60,8 +54,7 @@ function Header() {
     >
       {isMobile > 1000 ? (
         <div className="hidden lg:flex justify-between items-center text-primarytext text-sm">
-          <div className="w-1/3 hidden md:flex items-center justify-between relative">
-            
+          <div className="w-[28%] hidden md:flex items-center justify-between relative">
             <div
               onClick={() => {
                 setServShowDropdown(!showServDropdown);

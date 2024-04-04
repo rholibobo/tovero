@@ -1,8 +1,8 @@
-import mecs from "../../../public/images/home/mecs_high_res.png";
-import asteven from "../../../public/images/home/asteven_high_res.png";
-import enerpro from "../../../public/images/home/enerpro-removebg.png";
-import trans from "../../../public/images/home/trans-removebg.png";
-import uniport from "../../../public/images/home/uniport-removebg_2.png";
+import mecs from "../../../public/images/home/mecs.svg";
+import asteven from "../../../public/images/home/asteven.svg";
+import enerpro from "../../../public/images/home/enerpro.svg";
+import trans from "../../../public/images/home/trans.svg";
+import uniport from "../../../public/images/home/unipor.svg";
 
 // //// SWIPER IMPORTS /////// //
 import { Pagination, Scrollbar, Navigation, Autoplay } from "swiper/modules";
@@ -21,13 +21,21 @@ const sponsors_list = [
 function SponsorsCarousel() {
   return (
     <Swiper
-      modules={[Pagination, Scrollbar, Navigation, Autoplay]}
+      modules={[Autoplay]}
       //   slidesPerView={3}
       autoplay={{
         delay: 2500,
         // disableOnInteraction: false,
       }}
       breakpoints={{
+        320: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        480: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
         640: {
           slidesPerView: 2,
           spaceBetween: 20,
@@ -39,8 +47,8 @@ function SponsorsCarousel() {
         },
 
         1024: {
-          slidesPerView: 3,
-          spaceBetween: 20,
+          slidesPerView: 5,
+          spaceBetween: 50,
         },
       }}
       
@@ -50,7 +58,7 @@ function SponsorsCarousel() {
           key={item.id}
           style={{
             display: "flex",
-            justifyContent: "start",
+            justifyContent: "center",
             alignItems: "center",
             // backgroundColor: "red"
           }}
