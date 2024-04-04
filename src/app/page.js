@@ -165,64 +165,66 @@ export default function Home() {
             </div>
           </motion.div>
         </section>
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
+      </div>
+      <br />
+      <br />
+      <br />
+      <br className="hidden lg:block" />
+      <br className="hidden lg:block" />
 
-        {/*services section */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          viewport={{ once: false }}
-          className="bg-drkgreenbg pt-6 md:pt-4 pb-12 px-4"
-        >
-          <div className="flex justify-between items-center">
-            <div className="w-full md:w-3/4 text-center md:text-left">
-              <h1 className="font-header text-3xl">OUR SERVICES</h1>
-              <p className="text-sm">
-                We offer a wide range of integrated energy solutions tailored to
-                meet the unique requirements of our clients
-              </p>
+      {/*services section */}
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.4 }}
+        viewport={{ once: false }}
+        className="bg-drkgreenbg pt-6 md:pt-4 pb-12 px-4"
+      >
+        <div className="w-full md:w-[90%] mx-auto my-0 flex justify-between items-center">
+          <div className="w-full md:w-3/4 text-center md:text-left">
+            <h1 className="font-header text-3xl">OUR SERVICES</h1>
+            <p className="text-sm">
+              We offer a wide range of integrated energy solutions tailored to
+              meet the unique requirements of our clients
+            </p>
+          </div>
+          <Link
+            href="/services"
+            className="text-sm underline hover:text-[#0E5E2E]"
+          >
+            <div className="hidden md:flex items-center gap-2 hover:text-[#0E5E2E]">
+              <div className="flex justify-center items-center w-10 h-10 border-2 border-[#0E5E2E] rounded-[50%]">
+                <ArrowUpRight size={18} />
+              </div>
+
+              <h1>SEE MORE</h1>
             </div>
-            <Link
-              href="/services"
-              className="text-sm underline hover:text-[#0E5E2E]"
-            >
-              <div className="hidden md:flex items-center gap-2 hover:text-[#0E5E2E]">
-                <div className="flex justify-center items-center w-10 h-10 border-2 border-[#0E5E2E] rounded-[50%]">
-                  <ArrowUpRight size={18} />
-                </div>
-
-                <h1>SEE MORE</h1>
-              </div>
-            </Link>
-          </div>
-          <br />
-          <br />
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-3 gap-y-3 text-white">
-            {home_services.map((card) => (
-              <div
-                key={card.id}
-                className="bg-drkgreencard p-3 flex gap-2 rounded"
-              >
-                <Image
-                  src={card.image}
-                  alt="services image 1"
-                  className="hidden md:block"
-                />
-                <div className="text-center md:text-left">
-                  <h1 className="mb-2 font-header text-xl">{card.title}</h1>
-                  <p className="text-sm">{card.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </motion.div>
+          </Link>
+        </div>
         <br />
+        <br />
+
+        <div className="w-full md:w-[90%] mx-auto my-0 grid grid-cols-1 lg:grid-cols-2 gap-x-3 gap-y-3 text-white">
+          {home_services.map((card) => (
+            <div
+              key={card.id}
+              className="bg-drkgreencard p-3 flex gap-2 rounded"
+            >
+              <Image
+                src={card.image}
+                alt="services image 1"
+                className="hidden md:block"
+              />
+              <div className="text-center md:text-left">
+                <h1 className="mb-2 font-header text-xl">{card.title}</h1>
+                <p className="text-sm">{card.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </motion.div>
+
+      <div className="w-[95%] md:w-[90%] my-0 mx-auto">
         <br />
         <br />
 
@@ -275,7 +277,7 @@ export default function Home() {
         </motion.div>
         <br />
         <br />
-        <br />
+        {/* <br /> */}
 
         {/* upcoming events */}
         <motion.div
@@ -382,7 +384,7 @@ export default function Home() {
         </motion.div>
         <br />
         <br />
-        <br />
+        {/* <br /> */}
       </div>
       {/* our partners */}
       <motion.div

@@ -32,9 +32,7 @@ function ContactForm() {
             ) {
               formElements[i].value = "";
             }
-            if (formElements[i].value === "") {
-              toast.info("Please enter your information");
-            }
+            
           }
         },
         (error) => {

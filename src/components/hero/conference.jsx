@@ -17,7 +17,7 @@ function ConferenceHero({ HeroImg, title, description, image }) {
         <div
           className={`w-full md:w-[90%] lg:w-1/2 flex flex-col justify-center`}
         >
-          <div className="w-[80%] my-0 mx-auto">
+          <div className="w-[85%] my-0 mx-auto">
             <div className="flex justify-center">
               <Image src={image} alt="conference image" />
             </div>
