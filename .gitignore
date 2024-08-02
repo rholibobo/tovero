@@ -17,6 +17,7 @@
 
 # production
 /build
+tovero.zip
 
 # misc
 .DS_Store

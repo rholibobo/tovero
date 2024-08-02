@@ -26,13 +26,13 @@ const home_services = [
     },
     {
         id: 4,
-        image: serv4,
+        image: serv5,
         title: "Energy Advisory",
-        description: "Tailored energy planning and auditing services to optimize energy consumption and save costs."
+        description: "Expert guidance and consultation to navigate energy regulations and market dynamics."
     },
     {
         id: 5,
-        image: serv5,
+        image: serv4,
         title: "Clean Cooking Solutions",
         description: "Innovative technologies promoting healthier and environmentally friendly cooking methods."
     },
@@ -40,7 +40,7 @@ const home_services = [
         id: 6,
         image: serv6,
         title: "Energy Advocacy & Education",
-        description: "Tailored energy planning and auditing services to optimize energy consumption and save costs."
+        description: "Programs and initiatives promoting energy literacy and sustainable practices."
     },
 ]
 

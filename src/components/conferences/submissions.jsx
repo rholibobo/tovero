@@ -62,7 +62,7 @@ function Submissions() {
         <br className="hidden md:block" />
 
         <Link
-          href="https://drive.google.com/uc?export=download&id=1ELqJouaYKzQEUku8cHR0K_rup48C5I0B"
+          href="https://drive.google.com/uc?export=download&id=1TJEWdf3jegUaSe4FlgjKLHMUJMKKoAa-"
           className="flex justify-center"
         >
           <CustomButton variant="primary">DOWNLOAD BROCHURE </CustomButton>

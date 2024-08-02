@@ -7,15 +7,16 @@ import SolarImg from "../../public/images/home/solar.png";
 import ChooseUs from "../../public/images/home/choose_us.png";
 import CustomButton from "@/components/button/button";
 import { ArrowUpRight } from "lucide-react";
+import { CalendarDays } from "lucide-react";
 import Link from "next/link";
 import home_services from "@/data_models/home_services";
 import chooseUs from "@/data_models/why_choose_us";
-import aicess from "../../public/images/home/aicess.png";
-import green from "../../public/images/home/green.png";
-import amber from "../../public/images/home/amber.png";
-import red from "../../public/images/home/red.png";
+import upcomingEventsImg from "../../public/images/home/regimg.png";
 import { motion } from "framer-motion";
 import SponsorsCarousel from "@/components/sponsors_carousel/carousel";
+import { FaLocationDot } from "react-icons/fa6";
+import microsoftLogo from "../../public/images/home/logos_microsoft-teams.png";
+import scientific from "../../public/images/home/Scientific_2.png";
 
 export default function Home() {
   return (
@@ -277,7 +278,7 @@ export default function Home() {
         </motion.div>
         <br />
         <br />
-        {/* <br /> */}
+        <br />
 
         {/* upcoming events */}
         <motion.div
@@ -286,12 +287,176 @@ export default function Home() {
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: false }}
         >
-          <h1 className="text-2xl font-header text-center md:text-left">
-            UPCOMING EVENTS
-          </h1>
+          <div className="flex justify-between">
+            <div>
+              <h1 className="text-2xl font-header">
+                UPCOMING EVENTS
+              </h1>
+              <p>Join our upcoming events and webinars.</p>
+            </div>
+            <Link href="#" className="text-sm underline hover:text-[#0E5E2E]">
+              <div className="hidden md:flex items-center gap-2 hover:text-[#0E5E2E]">
+                <div className="flex justify-center items-center w-10 h-10 border-2 border-[#0E5E2E] rounded-[50%]">
+                  <ArrowUpRight size={18} />
+                </div>
+
+                <h1>SEE MORE</h1>
+              </div>
+            </Link>
+          </div>
+
+          <div className="flex lg:flex-row flex-col justify-between ">
+            <div className="w-full lg:w-[48%] mt-0 md:mt-4 order-2 lg:order-1">
+              <div className="hidden md:block">
+                <Image
+                  src={upcomingEventsImg}
+                  alt="Upcoming event"
+                  className=""
+                />
+                <div className="flex flex-col md:flex-row items-center md:items-start md:justify-between py-4 border-b-2 border-gray-400 text-sm">
+                  <p>
+                    Organized by:{" "}
+                    <span className="text-red-600">Tovero Energy Ltd.</span>
+                  </p>
+                  <div className="flex items-center gap-2 text-sm">
+                    {" "}
+                    <CalendarDays /> 26th & 27th September 2024
+                  </div>
+                </div>
+              </div>
+              <div className="py-3">
+                <p className="text-ltgreentext font-bold">
+                  Africa International Conference on Clean Energy & Energy
+                  Storage (AICCEES), 2024
+                </p>
+                <p>
+                  In order to achieve the Sustainable Development Goals in
+                  Africa, effective collaboration between academia and industry
+                  is necessary to create a sustainable and transformative
+                  win-win situation for all stakeholders.
+                </p>
+                <div className="flex flex-col md:flex-row justify-between mt-6 gap-y-1 md:gap-y-0">
+                  <div className="w-full md:w-[70%] bg-cardbg flex gap-1 items-center p-3 text-sm">
+                    <FaLocationDot />
+                    <p>
+                      CBN Auditorium, University of Port Harcourt, Rivers State
+                      Nigeria
+                    </p>
+                  </div>
+                  <div className="flex items-center gap-2 w-full md:w-[25%] bg-cardbg p-3 text-sm">
+                    <Image src={microsoftLogo} alt="microsoft logo" />
+                    <p>Microsoft Teams</p>
+                  </div>
+                </div>
+              </div>
+              <Link href="https://forms.office.com/r/3Hxp8z38uA">
+                <CustomButton variant="primary" className="w-full md:w-fit mt-4 md:mt-0">
+                  Register
+                </CustomButton>
+              </Link>
+            </div>
+            <div className="w-full md:w-[48%] mt-4 order-1 lg:order-2">
+            <div className="block md:hidden">
+                <Image
+                  src={upcomingEventsImg}
+                  alt="Upcoming event"
+                  className=""
+                />
+                <div className="flex flex-col md:flex-row items-center md:items-start md:justify-between py-4 border-b-2 border-gray-400 text-sm">
+                  <p>
+                    Organized by:{" "}
+                    <span className="text-red-600">Tovero Energy Ltd.</span>
+                  </p>
+                  <div className="flex items-center gap-2 text-sm">
+                    {" "}
+                    <CalendarDays /> 26th & 27th September 2024
+                  </div>
+                </div>
+              </div>
+              <div className="flex justify-between pt-6 md:pt-0 pb-6 border-b border-gray-400">
+                <div className="w-[30%] md:w-[20%] bg-prigreentext flex items-center justify-center rounded-md">
+                  <p className="text-white font-bold text-center">
+                    FEBRUARY 1,2024
+                  </p>
+                </div>
+                <div className="w-[65%] md:w-[70%]">
+                  <div className="flex gap-2 items-center mb-1">
+                    <p className="text-sm">Publisher:</p>
+                    <Image src={scientific} alt="scientific" />
+                  </div>
+                  <p className="font-bold mb-2">
+                    Abstract/Full Paper Submission
+                  </p>
+                  <p className="text-sm">
+                    Effective collaboration between academia and industry is
+                    necessary to create a sustainable and transformative win-win
+                    situation for all stakeholders.
+                  </p>
+                  <p className="text-sm">
+                    MAKE SUBMISSIONS TO:{" "}
+                    <a href="#" className="text-blue-600 underline">
+                      aiccees@uniport.edu.ng
+                    </a>
+                  </p>
+                </div>
+              </div>
+              <div className="flex justify-between py-6 border-b border-gray-400">
+                <div className="w-[30%] md:w-[20%] bg-prigreentext flex items-center justify-center rounded-md">
+                  <p className="text-white font-bold text-center">
+                    JULY 1,2024
+                  </p>
+                </div>
+                <div className="w-[65%] md:w-[70%]">
+                  <div className="flex gap-2 items-center mb-1">
+                    <p className="text-sm">Publisher:</p>
+                    <Image src={scientific} alt="scientific" />
+                  </div>
+                  <p className="font-bold mb-2">
+                    Abstract/Full Paper Submission
+                  </p>
+                  <p className="text-sm">
+                    Effective collaboration between academia and industry is
+                    necessary to create a sustainable and transformative win-win
+                    situation for all stakeholders.
+                  </p>
+                  <p className="text-sm">
+                    MAKE SUBMISSIONS TO:{" "}
+                    <a href="#" className="text-blue-600 underline">
+                      aiccees@uniport.edu.ng
+                    </a>
+                  </p>
+                </div>
+              </div>
+              <div className="flex justify-between py-6">
+                <div className="w-[30%] md:w-[20%] bg-prigreentext flex items-center justify-center rounded-md">
+                  <p className="text-white font-bold text-center">
+                    SEPTEMBER <br /> 26 & 27,
+                    <br />
+                    2024
+                  </p>
+                </div>
+                <div className="w-[65%] md:w-[70%]">
+                  <div className="flex gap-3 items-center mb-1">
+                    <p className="text-sm">Organized by:</p>
+                    <p className="text-redtext text-sm font-bold">
+                      Tovero Energy Ltd.
+                    </p>
+                  </div>
+                  <p className="font-bold mb-2">AICCEES Conference</p>
+                  <p className="text-sm">
+                    The conference will feature industry leaders, experts,
+                    researchers, government agencies, regulators, multilateral
+                    organizations, industry bodies, and more in the field of
+                    clean energy and energy storage.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <br />
 
-          <div className="w-full lg:w-[35%] gap-x-4 gap-y-6 bg-cardbg p-1">
+          {/* <div className="w-full lg:w-[35%] gap-x-4 gap-y-6 bg-cardbg p-1">
             <div className="">
               <div className="flex justify-center ">
                 <Image src={aicess} alt="aicess image" />
@@ -307,7 +472,7 @@ export default function Home() {
                 <br />
                 <div className="flex justify-between items-center bg-cardbg rounded-full w-full h-12 p-3 mb-2">
                   <div className="w-[60%] flex items-center gap-1">
-                    {/* <div className="w-3 h-3 bg-red-500 rounded-full"></div> */}
+                    
                     <Image src={red} alt="" className="w-3" />
                     <p className="text-sm">Abstract/Full Paper Submission</p>
                   </div>
@@ -316,7 +481,7 @@ export default function Home() {
                 </div>
                 <div className="flex justify-between items-center bg-cardbg rounded-full w-full h-12 p-3 mb-2">
                   <div className="w-[60%] flex  items-center gap-1">
-                    {/* <div className="w-5 h-5 bg-orange-500 rounded-[50%]"></div> */}
+                    
                     <Image src={amber} alt="" className="w-4" />
                     <p className="text-sm">
                       Abstract/Full Paper Submission Deadline
@@ -327,7 +492,7 @@ export default function Home() {
                 </div>
                 <div className="flex justify-between items-center bg-cardbg rounded-full w-full h-12 p-3 mb-2">
                   <div className="w-[30%] flex  items-center gap-1">
-                    {/* <div className="w-3 h-3 bg-green-700 rounded-full"></div> */}
+                    
                     <Image src={green} alt="" className="w-3" />
                     <p className="text-sm">Conference </p>
                   </div>
@@ -340,47 +505,8 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            {/* <div className="">
-              <div className="flex justify-center ">
-                <Image src={tonipash} alt="aicess image" />
-              </div>
-
-              <br />
-              <div className="bg-white shadow p-4">
-                <p className="text-redtext text-sm">14th Edition</p>
-                <p className="text-ltgreentext text-lg font-bold mb-5">
-                  Tovero Sustainable Energy Talk
-                </p>
-                <p className="ptag text-sm mb-4">
-                  SUSTAINABLE ENERGY IN NIGERIA: Opportunities, Challenges &
-                  Prospects
-                </p>
-                <br />
-                
-
-                <div className="flex justify-between items-center bg-cardbg rounded-full w-full h-12 p-3 mb-2">
-                  <div className="w-[60%] flex  items-center gap-1">
-                    
-                    <Image src={ltgreen} alt="" className="w-3" />
-                    <p className="text-sm">Date</p>
-                  </div>
-
-                  <p className="font-bold text-sm">Sept. 17th, 2024</p>
-                </div>
-                <div className="flex justify-between items-center bg-cardbg rounded-full w-full h-12 p-3 mb-2">
-                  <div className="w-[60%] flex  items-center gap-1">
-                   
-                    <Image src={amber} alt="" className="w-3" />
-                    <p className="text-sm">Venue </p>
-                  </div>
-
-                  <p className="font-bold text-sm">ZOOM/YOUTUBE</p>
-                </div>
-                <br />
-                <CustomButton variant="secondary">Register</CustomButton>
-              </div> 
-            </div> */}
-          </div>
+            
+          </div> */}
         </motion.div>
         <br />
         <br />
