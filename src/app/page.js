@@ -338,7 +338,7 @@ export default function Home() {
                 <div className="flex flex-col md:flex-row justify-between mt-6 gap-y-1 md:gap-y-0">
                   <div className="w-full md:w-[70%] bg-cardbg flex gap-1 items-center p-3 text-sm">
                     <FaLocationDot />
-                    <p>
+                    <p className="font-bold">
                       CBN Auditorium, University of Port Harcourt, Rivers State
                       Nigeria
                     </p>
@@ -403,7 +403,7 @@ export default function Home() {
               <div className="flex justify-between py-6 border-b border-gray-400">
                 <div className="w-[30%] md:w-[20%] bg-prigreentext flex items-center justify-center rounded-md">
                   <p className="text-white font-bold text-center">
-                    JULY 1,2024
+                    AUGUST 31,2024
                   </p>
                 </div>
                 <div className="w-[65%] md:w-[70%]">
@@ -412,7 +412,7 @@ export default function Home() {
                     <Image src={scientific} alt="scientific" />
                   </div>
                   <p className="font-bold mb-2">
-                    Abstract/Full Paper Submission
+                  Deadline for Abstract/Full Paper Submission 
                   </p>
                   <p className="text-sm">
                     Effective collaboration between academia and industry is

@@ -50,7 +50,7 @@ function Submissions() {
               key={item.id}
               className="flex items-center justify-between bg-white rounded-full h-14  text-primarytext px-3"
             >
-              <div className="w-[70%] flex items-center gap-1">
+              <div className="w-[70%] flex items-center gap-2">
                 <Image src={item.image} />
                 <p className="text-sm ">{item.text}</p>
               </div>
