@@ -11,7 +11,7 @@ export const upcomingEvents = [
     bottom: "MAKE SUBMISSIONS TO: aiccees@uniport.edu.ng",
   },
   {
-    date: "JULY 1,2024",
+    date: "AUGUST 31,2024",
     top: "Publisher:",
     header: "Abstract/Full Paper Submission",
     body: "Effective collaboration between academia and industry is necessary to create a sustainable and transformative win-win situation for all stakeholders. ",

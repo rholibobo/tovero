@@ -17,7 +17,7 @@ const info = [
     id: 2,
     image: amber,
     text: "Abstract/Full Paper Submission Deadline",
-    date: "Jul. 31st 2024",
+    date: "Aug. 31st 2024",
   },
   {
     id: 3,
@@ -50,7 +50,7 @@ function Submissions() {
               key={item.id}
               className="flex items-center justify-between bg-white rounded-full h-14  text-primarytext px-3"
             >
-              <div className="w-[70%] flex items-center gap-1">
+              <div className="w-[70%] flex items-center gap-2">
                 <Image src={item.image} />
                 <p className="text-sm ">{item.text}</p>
               </div>
@@ -62,7 +62,7 @@ function Submissions() {
         <br className="hidden md:block" />
 
         <Link
-          href="https://drive.google.com/uc?export=download&id=1TJEWdf3jegUaSe4FlgjKLHMUJMKKoAa-"
+          href="https://drive.google.com/uc?export=download&id=1ELqJouaYKzQEUku8cHR0K_rup48C5I0B"
           className="flex justify-center"
         >
           <CustomButton variant="primary">DOWNLOAD BROCHURE </CustomButton>
