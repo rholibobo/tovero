@@ -48,16 +48,16 @@ function Conference_Carousel() {
       <SwiperSlide>
         <div className="w-full md:w-[50%] bg-cardbg p-6">
           <h1 className="font-header text-center font-bold text-2xl">
-            AICESS 2023
+            AICESS 2024
           </h1>
           <p className="ptag text-center text-sm">
-            Gain access to AICCEES 2023 conference
+            Gain access to AICCEES 2024 conference
           </p>
           <br />
           {/* <br /> */}
           <div className="flex justify-between">
             {links.map((item) => (
-              <div key={item.id} className="flex items-center gap-2">
+              <div key={item.id} className="flex flex-wrap items-center gap-2">
                 <Link
                   href={item.link}
                   className="text-[12px] font-bold text-[#C10000] underline"

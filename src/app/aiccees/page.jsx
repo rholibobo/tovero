@@ -12,7 +12,10 @@ import { aicess } from "@/data_models/conferences";
 import Sponsors from "@/components/conferences/sponsors";
 import DetailsItemized from "@/components/conferences/itemized";
 import Submissions from "@/components/conferences/submissions";
+import profFoluwake from "../../../public/images/keynote_speakers/Prof_Foluwake.jpg"
+import profSokona from "../../../public/images/keynote_speakers/sokono.jpg"
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 function Aicess() {
   const title =
@@ -54,6 +57,37 @@ function Aicess() {
 
           <ConferenceStatsAicess />
         </motion.div>
+        <br />
+        <br />
+        <motion.section
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          viewport={{ once: false }}
+        >
+          <h4 className="text-center font-header uppercase md:text-3xl text-[#006547]">
+            Confirmed Keynote Speakers at the AICCEES 2024 Conference
+          </h4>
+          <br />
+          <div className="flex flex-col gap-10 items-center justify-between mx-auto w-11/12">
+            <div className="shadow-md border border-green-600 hover:border-white  flex flex-col gap-3 lg:flex-row-reverse items-start lg:items-start md:gap-6 p-4">
+              <Image className="" src={profSokona} alt="prof Sokona" />
+              <div className="">
+                <h5 className="font-semibold text-red-600 text-xl mb-2">Professor Youba Sokona</h5>
+                <p className="text-justify">Prof Sokona, with over 40 years of experience addressing energy, environment and sustainable development in Africa, has been at the heart of numerous national and continental initiatives. He was a ViceChair of the Intergovernmental Panel on Climate Change sixth assessment report after serving as Co-Chair of IPCC Working Group III for the fifth assessment report following being a Lead Author since 1990. He has a proven track record of organisational leadership and management, for example as Inaugural Coordinator of the African Climate Policy Centre and as Executive Secretary of the Sahara and the Sahel Observatory.
+              <br />
+              He is affiliated with numerous boards and organisations. For example among others he is Honorary Professor at University College London, member of The World Academy of Sciences, the African Academy of Sciences, the International Council of Science, Associate member of the National Academy of Sciences and Technology of Senegal and Honorary member of the Academy of Sciences of Mali. In short, Prof SOKONA is a global figure, with deep technical knowledge, extensive policy experience and an unreserved personal commitment to African led development.</p>
+              </div>
+            </div>
+            <div className="shadow-md border border-green-600 hover:border-white  flex flex-col gap-3 lg:flex-row-reverse items-start lg:items-start md:gap-6 p-4">
+              <Image className="lg:w-1/3" src={profFoluwake} alt="prof foluwake" />
+              <div className="">
+                <h5 className="font-semibold text-red-600 text-xl mb-2">Professor Foluke Ishola</h5>
+                <p className="text-justify"> Mofoluwake Ishola, a distinguished Chemical Engineer, graduated from Ladoke Akintola University of Technology in 2002 and earned her M.Sc. with Distinction from Obafemi Awolowo University in 2008. She completed her PhD at the University of Borås, Sweden, in record time, focusing on biofuel ethanol production from lignocellulosic feedstocks. Her postdoctoral research was conducted at Chalmers University. Her expertise spans bioenergy, waste management, biofuels, and environmental sustainability. Mofoluwake has served as a university lecturer, environmental engineer, and journal reviewer, supervising numerous postgraduate students and authoring around thirty academic publications. She has received multiple scholarships and grants, including the Carnegie Scholarship (UK) and Fredrika Bremer Scholarship (Sweden). Currently, she is the Sustainability Ambassador and Senior R&D Engineer at Scanacon AB, Sweden, and a Visiting Professor at Ajayi Crowther University, Nigeria. She is affiliated with various professional engineering societies in Nigeria and Sweden.</p>
+              </div>
+            </div>
+          </div>
+        </motion.section>
         <br />
         <br />
         <Sponsors />

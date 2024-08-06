@@ -44,7 +44,7 @@ function Submissions() {
         <br />
         <br />
 
-        <div className="hidden lg:grid grid-cols-3 gap-x-3">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-x-3 gap-y-4">
           {info.map((item) => (
             <div
               key={item.id}
@@ -58,8 +58,8 @@ function Submissions() {
             </div>
           ))}
         </div>
-        <br className="hidden md:block" />
-        <br className="hidden md:block" />
+        <br className="md:block" />
+        <br className="hidden lg:block" />
 
         <Link
           href="https://drive.google.com/uc?export=download&id=1ELqJouaYKzQEUku8cHR0K_rup48C5I0B"
