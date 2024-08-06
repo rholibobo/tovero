@@ -48,10 +48,10 @@ function Conference_Carousel() {
       <SwiperSlide>
         <div className="w-full md:w-[50%] bg-cardbg p-6">
           <h1 className="font-header text-center font-bold text-2xl">
-            AICESS 2023
+            AICESS 2024
           </h1>
           <p className="ptag text-center text-sm">
-            Gain access to AICCEES 2023 conference
+            Gain access to AICCEES 2024 conference
           </p>
           <br />
           {/* <br /> */}
