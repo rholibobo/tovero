@@ -339,7 +339,7 @@ export default function Home() {
                   <div className="w-full md:w-[70%] bg-cardbg flex gap-1 items-center p-3 text-sm">
                     <FaLocationDot />
                     <p className="font-bold">
-                      CBN Auditorium, University of Port Harcourt, Rivers State
+                      University of Port Harcourt, Rivers State
                       Nigeria
                     </p>
                   </div>
