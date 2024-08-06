@@ -57,7 +57,7 @@ function Conference_Carousel() {
           {/* <br /> */}
           <div className="flex justify-between">
             {links.map((item) => (
-              <div key={item.id} className="flex items-center gap-2">
+              <div key={item.id} className="flex flex-wrap items-center gap-2">
                 <Link
                   href={item.link}
                   className="text-[12px] font-bold text-[#C10000] underline"

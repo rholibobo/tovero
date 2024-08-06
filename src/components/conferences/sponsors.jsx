@@ -35,7 +35,7 @@ function Sponsors() {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          viewport={{ once: false }} className="w-full md:w-[80%] hidden md:flex justify-between gap-4 md:gap-6 overflow-x-auto">
+          viewport={{ once: false }} className="w-full md:w-[95%] lg:w-[80%] mx-auto hidden md:flex justify-between gap-4 md:gap-6 overflow-x-auto">
         <div className="w-[1000px] md:w-[50%] bg-cardbg hidden md:flex justify-between items-center px-2 md:px-8 py-6">
           <h1 className="font-aicess text-[#651E00] text-2xl">Publisher</h1>
 
@@ -57,7 +57,7 @@ function Sponsors() {
           {/* <br /> */}
           <div className="flex justify-between">
             {links.map((item) => (
-              <div key={item.id} className="flex items-center gap-2">
+              <div key={item.id} className="flex flex-wrap items-center gap-2">
                 <Link
                   href={item.link}
                   className="text-[12px] font-bold text-[#C10000] underline"
