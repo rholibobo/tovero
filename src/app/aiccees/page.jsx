@@ -97,7 +97,38 @@ function Aicess() {
         <br />
         <br />
       </div>
+      <div className="bg-green-100 p-6 md:p-12 mx-auto">
+        <h1 className="text-[#006547] text-2xl font-header"> Transforming Energy Access Learning Partnership (TEA-LP) Sponsorship for AICCEES 2024 Conference</h1>
+               <br />
+      <section>
+        <p>
+          Transforming Energy Access Learning Partnership (TEA-LP) is funding a limited number of 
+          sponsorships for students and researchers who would want to attend the Africa International Conference 
+          on Clean Energy and Energy Storage (AICCEES) 2024.
+        </p>
+      </section>
+        <div className="mt-2">
+      <section className="w-fit md:p-4 text-[#006547]">
+        <h3 className="font-bold text-lg text-red-600">Why Apply?</h3>
+        <ul className="list-decimal px-4 leading-loose mt-2">
+          <li>Network with top experts and industry leaders.</li>
+          <li>Learn about the latest trends in clean energy.</li>
+          <li>Innovate with cutting-edge solutions.</li>
+          <li>Develop your skills for a sustainable future.</li>
+        </ul>
+        <h3 className="font-bold text-lg text-red-600 mt-4 mb-1">How To Apply</h3>
+        <p>
+          Submit your motivation to attend here: {" "}
+          <a className="text-blue-600 underline" href="https://forms.office.com/r/7BBADFm5Yf" target="_blank" rel="noopener noreferrer">
+            https://forms.office.com/r/7BBADFm5Yf
+          </a>
+        </p>
+        <h3 className="font-bold text-lg text-red-600 mt-4 mb-1"> Deadline: August 15, 2024</h3>
+      </section>
+      </div>
 
+</div>
+  
       <Submissions />
       <br />
       <br />
