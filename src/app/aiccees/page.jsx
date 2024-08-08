@@ -12,7 +12,7 @@ import { aicess } from "@/data_models/conferences";
 import Sponsors from "@/components/conferences/sponsors";
 import DetailsItemized from "@/components/conferences/itemized";
 import Submissions from "@/components/conferences/submissions";
-import profFoluwake from "../../../public/images/keynote_speakers/Prof_Foluwake.jpg"
+import profFoluwake from "../../../public/images/keynote_speakers/Foluke_Ishola.jpg"
 import profSokona from "../../../public/images/keynote_speakers/sokono.jpg"
 import { motion } from "framer-motion";
 import Image from "next/image";
