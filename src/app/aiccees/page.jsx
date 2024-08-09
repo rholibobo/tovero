@@ -65,12 +65,12 @@ function Aicess() {
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: false }}
         >
-          <h4 className="text-center font-header uppercase md:text-3xl text-[#006547]">
+          <h4 className="text-center text-2xl font-header uppercase md:text-3xl text-[#006547]">
             Confirmed Keynote Speakers at the AICCEES 2024 Conference
           </h4>
           <br />
-          <div className="flex flex-col gap-10 items-center justify-between mx-auto w-11/12">
-            <div className="shadow-md border border-green-600 hover:border-white  flex flex-col gap-3 lg:flex-row-reverse items-start lg:items-start md:gap-6 p-4">
+          <div className="flex flex-col gap-10 items-center justify-between mx-auto md:w-11/12">
+            <div className="shadow-md border border-green-600 hover:border-white flex flex-col gap-3 lg:flex-row-reverse items-start lg:items-start md:gap-6 p-4">
               <Image className="" src={profSokona} alt="prof Sokona" />
               <div className="">
                 <h5 className="font-semibold text-red-600 text-xl mb-2">Professor Youba Sokona</h5>
