@@ -128,10 +128,9 @@ function Aicess() {
         </div>
         <br />
         <br />
-        <section>
-        <h4 className="text-center text-2xl font-header uppercase md:text-3xl text-[#006547]">Sponsors</h4>
-        <br />
-        <br />
+        <section className="w-11/12 mx-auto">
+        <h4 className="text-center text-2xl mb-4 font-header uppercase md:text-3xl text-[#006547]">Sponsors</h4>
+         <br />
       <SponsorsCarousel />
       <br />
       <br />
