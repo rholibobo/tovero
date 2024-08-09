@@ -48,10 +48,10 @@ function Sponsors() {
         </div>
         <div className="hidden md:block w-full md:w-[50%] bg-cardbg p-6">
           <h1 className="font-header text-center font-bold text-2xl">
-            AICESS 2024
+            AICESS 2023
           </h1>
           <p className="ptag text-center text-sm">
-            Gain access to AICCEES 2024 conference
+            Gain access to AICCEES 2023 conference Materials
           </p>
           <br />
           {/* <br /> */}
