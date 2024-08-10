@@ -16,6 +16,7 @@ import profFoluwake from "../../../public/images/keynote_speakers/Foluke_Ishola.
 import profSokona from "../../../public/images/keynote_speakers/sokono.jpg"
 import { motion } from "framer-motion";
 import Image from "next/image";
+import SponsorsCarousel from "@/components/sponsors_carousel/carousel";
 
 function Aicess() {
   const title =
@@ -59,24 +60,27 @@ function Aicess() {
         </motion.div>
         <br />
         <br />
+        <DetailsItemized />
+        <br />
+        <br />
         <motion.section
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: false }}
         >
-          <h4 className="text-center font-header uppercase md:text-3xl text-[#006547]">
+          <h4 className="text-center text-2xl font-header uppercase md:text-3xl text-[#006547]">
             Confirmed Keynote Speakers at the AICCEES 2024 Conference
           </h4>
           <br />
-          <div className="flex flex-col gap-10 items-center justify-between mx-auto w-11/12">
-            <div className="shadow-md border border-green-600 hover:border-white  flex flex-col gap-3 lg:flex-row-reverse items-start lg:items-start md:gap-6 p-4">
+          <div className="flex flex-col gap-10 items-center justify-between">
+            <div className="shadow-md border border-green-600 hover:border-white flex flex-col gap-3 lg:flex-row-reverse items-start lg:items-start md:gap-6 p-4">
               <Image className="" src={profSokona} alt="prof Sokona" />
               <div className="">
                 <h5 className="font-semibold text-red-600 text-xl mb-2">Professor Youba Sokona</h5>
                 <p className="text-justify">Prof Sokona, with over 40 years of experience addressing energy, environment and sustainable development in Africa, has been at the heart of numerous national and continental initiatives. He was a ViceChair of the Intergovernmental Panel on Climate Change sixth assessment report after serving as Co-Chair of IPCC Working Group III for the fifth assessment report following being a Lead Author since 1990. He has a proven track record of organisational leadership and management, for example as Inaugural Coordinator of the African Climate Policy Centre and as Executive Secretary of the Sahara and the Sahel Observatory.
-              <br />
-              He is affiliated with numerous boards and organisations. For example among others he is Honorary Professor at University College London, member of The World Academy of Sciences, the African Academy of Sciences, the International Council of Science, Associate member of the National Academy of Sciences and Technology of Senegal and Honorary member of the Academy of Sciences of Mali. In short, Prof SOKONA is a global figure, with deep technical knowledge, extensive policy experience and an unreserved personal commitment to African led development.</p>
+                  <br />
+                  He is affiliated with numerous boards and organisations. For example among others he is Honorary Professor at University College London, member of The World Academy of Sciences, the African Academy of Sciences, the International Council of Science, Associate member of the National Academy of Sciences and Technology of Senegal and Honorary member of the Academy of Sciences of Mali. In short, Prof SOKONA is a global figure, with deep technical knowledge, extensive policy experience and an unreserved personal commitment to African led development.</p>
               </div>
             </div>
             <div className="shadow-md border border-green-600 hover:border-white  flex flex-col gap-3 lg:flex-row-reverse items-start lg:items-start md:gap-6 p-4">
@@ -87,51 +91,58 @@ function Aicess() {
               </div>
             </div>
           </div>
-        </motion.section>
-        <br />
-        <br />
-        <Sponsors />
-        <br />
-        <br />
-        <DetailsItemized />
-        <br />
-        <br />
+        </motion.section>  
       </div>
+      <br />
+      <br />
       <div className="bg-green-100 p-6 md:p-12 mx-auto">
-        <h1 className="text-[#006547] text-2xl font-header"> Transforming Energy Access Learning Partnership (TEA-LP) Sponsorship for AICCEES 2024 Conference</h1>
-               <br />
-      <section>
-        <p>
-          Transforming Energy Access Learning Partnership (TEA-LP) is funding a limited number of 
-          sponsorships for students and researchers who would want to attend the Africa International Conference 
-          on Clean Energy and Energy Storage (AICCEES) 2024.
-        </p>
-      </section>
-        <div className="mt-2">
-      <section className="w-fit md:p-4 text-[#006547]">
-        <h3 className="font-bold text-lg text-red-600">Why Apply?</h3>
-        <ul className="list-decimal px-4 leading-loose mt-2">
-          <li>Network with top experts and industry leaders.</li>
-          <li>Learn about the latest trends in clean energy.</li>
-          <li>Innovate with cutting-edge solutions.</li>
-          <li>Develop your skills for a sustainable future.</li>
-        </ul>
-        <h3 className="font-bold text-lg text-red-600 mt-4 mb-1">How To Apply</h3>
-        <p>
-          Submit your motivation to attend here: {" "}
-          <a className="text-blue-600 underline" href="https://forms.office.com/r/7BBADFm5Yf" target="_blank" rel="noopener noreferrer">
-            https://forms.office.com/r/7BBADFm5Yf
-          </a>
-        </p>
-        <h3 className="font-bold text-lg text-red-600 mt-4 mb-1"> Deadline: August 15, 2024</h3>
-      </section>
-      </div>
+          <h1 className="text-center text-2xl font-header uppercase md:text-3xl text-[#006547]"> Transforming Energy Access Learning Partnership (TEA-LP) Sponsorship for AICCEES 2024 Conference</h1>
+          <br />
+          <section>
+            <p>
+              Transforming Energy Access Learning Partnership (TEA-LP) is funding a limited number of
+              sponsorships for students and researchers who would want to attend the Africa International Conference
+              on Clean Energy and Energy Storage (AICCEES) 2024.
+            </p>
+          </section>
+          <div className="mt-2">
+            <section className="w-fit md:p-4 text-[#006547]">
+              <h3 className="font-bold text-lg text-red-600">Why Apply?</h3>
+              <ul className="list-decimal px-4 leading-loose mt-2">
+                <li>Network with top experts and industry leaders.</li>
+                <li>Learn about the latest trends in clean energy.</li>
+                <li>Innovate with cutting-edge solutions.</li>
+                <li>Develop your skills for a sustainable future.</li>
+              </ul>
+              <h3 className="font-bold text-lg text-red-600 mt-4 mb-1">How To Apply</h3>
+              <p>
+                Submit your motivation to attend here: {" "}
+                <a className="text-blue-600 underline" href="https://forms.office.com/r/7BBADFm5Yf" target="_blank" rel="noopener noreferrer">
+                  https://forms.office.com/r/7BBADFm5Yf
+                </a>
+              </p>
+              <h3 className="font-bold text-lg text-red-600 mt-4 mb-1"> Deadline: August 15, 2024</h3>
+            </section>
+          </div>
 
-</div>
-  
+        </div>
+        <br />
+        <br />
+        <section className="w-11/12 mx-auto">
+        <h4 className="text-center text-2xl mb-4 font-header uppercase md:text-3xl text-[#006547]">Sponsors</h4>
+         <br />
+      <SponsorsCarousel />
+      <br />
+      <br />
+        <Sponsors />
+      </section>
+        <br />
+        <br />
       <Submissions />
       <br />
       <br />
+      
+     
     </main>
   );
 }
