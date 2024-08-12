@@ -48,7 +48,7 @@ function ConferenceHero({ HeroImg, title, description, image }) {
               <Link href="#sponsorship">
                 <CustomButton
                   
-                  className="w-full order-2 md:order-1 bg-[#006547]"
+                  className="w-full order-2 md:order-1 !bg-[#006547]"
                 >
                   Register for sponsorship
                 </CustomButton>
