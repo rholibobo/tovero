@@ -23,7 +23,7 @@ function Aicess() {
     "Africa International Conference on Clean Energy & Energy Storage";
   const description = "AICCEES 2024";
   return (
-    <main>
+    <main className="scroll-smooth">
       <br className="md:hidden" />
       <br className="md:hidden" />
       <br className="md:hidden" />
@@ -95,7 +95,7 @@ function Aicess() {
       </div>
       <br />
       <br />
-      <div className="bg-green-100 p-6 md:p-12 mx-auto">
+      <div id="sponsorship" className="bg-green-100 p-6 md:p-12 mx-auto">
           <h1 className="text-center text-2xl font-header uppercase md:text-3xl text-[#006547]"> Transforming Energy Access Learning Partnership (TEA-LP) Sponsorship for AICCEES 2024 Conference</h1>
           <br />
           <section>
