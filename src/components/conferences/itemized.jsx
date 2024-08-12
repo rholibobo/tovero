@@ -79,10 +79,9 @@ function DetailsItemized() {
         </h1>
         <br />
         <p className="ptag">
-          The scope of the conference is both contemporary and original
-          research, innovative solutions for the clean energy sector, and energy
-          storage systems. The conference will feature 10 topics as follows;
+          The scope of the conference includes contemporary and original research, as well as innovative solutions for the clean energy sector and energy storage systems. Manuscripts which cut across the conference sub-themes should be between 6 to 12 pages, including references. Once submitted, papers are promptly forwarded to our reviewers, with decisions typically provided within 48 hours. The sub-themes are:
         </p>
+
       </div>
       <br />
 
