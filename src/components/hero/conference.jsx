@@ -35,26 +35,15 @@ function ConferenceHero({ HeroImg, title, description, image }) {
             </div>
             <br />
 
-            <div className="flex flex-col gap-4 md:gap-10">
-              <div className="flex flex-col md:flex-row items-center justify-between gap-10">
+            <div className="flex flex-col items-center gap-4 md:gap-10">
               <Link href="https://forms.office.com/r/3Hxp8z38uA">
                 <CustomButton
                   variant="primary"
-                  className="w-full order-2 md:order-1"
+                  className="order-2 md:order-1"
                 >
                   Register
                 </CustomButton>
               </Link>
-              <Link href="#sponsorship">
-                <CustomButton
-                  
-                  className="w-full order-2 md:order-1 bg-[#006547]"
-                >
-                  Register for sponsorship
-                </CustomButton>
-              </Link>
-              </div>
-
               <div className="w-full gap-2 flex items-center justify-center bg-cardbg py-5 md:py-1 order-1 md:order-2">
                 <Image src={clockIcon} alt="clock icon" />
                 <CountdownTimer />
