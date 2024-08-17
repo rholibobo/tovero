@@ -74,7 +74,7 @@ function Aicess() {
           </h4>
           <br />
           <div className="flex flex-col gap-10 items-center justify-between">
-            <div className="shadow-md border border-green-600 hover:border-white flex flex-col gap-3 lg:flex-row-reverse items-start lg:items-start md:gap-6 p-4">
+            <div className="shadow rounded-md bg-green-100 text-green-800  hover:border-white flex flex-col gap-3 lg:flex-row-reverse items-start lg:items-start md:gap-6 p-4">
               <Image className="" src={profSokona} alt="prof Sokona" />
               <div className="">
                 <h5 className="font-semibold text-red-600 text-xl mb-2">Professor Youba Sokona</h5>
@@ -83,7 +83,7 @@ function Aicess() {
                   He is affiliated with numerous boards and organisations. For example among others he is Honorary Professor at University College London, member of The World Academy of Sciences, the African Academy of Sciences, the International Council of Science, Associate member of the National Academy of Sciences and Technology of Senegal and Honorary member of the Academy of Sciences of Mali. In short, Prof SOKONA is a global figure, with deep technical knowledge, extensive policy experience and an unreserved personal commitment to African led development.</p>
               </div>
             </div>
-            <div className="shadow-md border border-green-600 hover:border-white  flex flex-col gap-3 lg:flex-row-reverse items-start lg:items-start md:gap-6 p-4">
+            <div className="shadow rounded-md bg-green-100 text-green-800 hover:border-white flex flex-col gap-3 lg:flex-row-reverse items-start lg:items-start md:gap-6 p-4">
               <Image className="lg:w-1/3" src={profFoluwake} alt="prof foluwake" />
               <div className="">
                 <h5 className="font-semibold text-red-600 text-xl mb-2">Professor Foluke Ishola</h5>
@@ -95,38 +95,7 @@ function Aicess() {
       </div>
       <br />
       <br />
-      <div id="sponsorship" className="bg-green-100 p-6 md:p-12 mx-auto">
-          <h1 className="text-center text-2xl font-header uppercase md:text-3xl text-[#006547]"> Transforming Energy Access Learning Partnership (TEA-LP) Sponsorship for AICCEES 2024 Conference</h1>
           <br />
-          <section>
-            <p>
-              Transforming Energy Access Learning Partnership (TEA-LP) is funding a limited number of
-              sponsorships for students and researchers who would want to attend the Africa International Conference
-              on Clean Energy and Energy Storage (AICCEES) 2024.
-            </p>
-          </section>
-          <div className="mt-2">
-            <section className="w-fit md:p-4 text-[#006547]">
-              <h3 className="font-bold text-lg text-red-600">Why Apply?</h3>
-              <ul className="list-decimal px-4 leading-loose mt-2">
-                <li>Network with top experts and industry leaders.</li>
-                <li>Learn about the latest trends in clean energy.</li>
-                <li>Innovate with cutting-edge solutions.</li>
-                <li>Develop your skills for a sustainable future.</li>
-              </ul>
-              <h3 className="font-bold text-lg text-red-600 mt-4 mb-1">How To Apply</h3>
-              <p>
-                Submit your motivation to attend here: {" "}
-                <a className="text-blue-600 underline" href="https://forms.office.com/r/7BBADFm5Yf" target="_blank" rel="noopener noreferrer">
-                  https://forms.office.com/r/7BBADFm5Yf
-                </a>
-              </p>
-              <h3 className="font-bold text-lg text-red-600 mt-4 mb-1"> Deadline: August 15, 2024</h3>
-            </section>
-          </div>
-
-        </div>
-        <br />
         <br />
         <section className="w-11/12 mx-auto">
         <h4 className="text-center text-2xl mb-4 font-header uppercase md:text-3xl text-[#006547]">Sponsors</h4>
