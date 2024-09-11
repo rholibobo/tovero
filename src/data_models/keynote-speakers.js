@@ -2,6 +2,8 @@ import profFoluwake from "../../public/images/keynote_speakers/Foluke_Ishola.jpg
 import profSokona from "../../public/images/keynote_speakers/sokono.jpg"
 import emeka from "../../public/images/keynote_speakers/emeka.jpg"
 import robinah from "../../public/images/keynote_speakers/robinah.jpeg"
+import amina from "../../public/images/keynote_speakers/amina.jpeg"
+import Ioannis from "../../public/images/keynote_speakers/Ioannis.jpeg"
 
 // export interface KeynoteSpeakerProps {
 //     name: string
@@ -34,6 +36,20 @@ export const keynoteSpeakerData= [
         name: "Professor Emeka Oguzie",
         picture: emeka,
         description1: "Emeka Oguzie is a Professor of Physical Chemistry at the Federal University of Technology Owerri (FUTO). He earned his Ph.D. in Physical Chemistry from the University of Calabar. He has held significant research positions, including being a visiting post-doctoral research fellow at the State Key Laboratory for Corrosion and Protection in China and a TWAS-UNESCO Associate. Prof. Oguzie is recognized as a Young Affiliate of TWAS, a Fellow of the OPEC Fund for International Development (OFID), and serves as Nigeria's Battery Ambassador for the Faraday Institution in the UK. His research focuses on Electrochemistry/Electrochemical Technology and Environmental & Occupational Hazards Management, with his research group known as the Electrochemistry & Materials Science Research Unit (EMRU-FUTO).",
+
+    },
+    {
+        name: "Professor Amina Lawal Batagarawa",
+        picture: amina,
+        description1: "Amina Lawal Batagarawa is a distinguished specialist in Sustainable Built Environment with over 12 years of experience in Nigeria's educational sector. She holds a Doctor of Philosophy in Architecture from Newcastle University, a Masters of Science in Environmental Design of Buildings from Cardiff University, and a Bachelor's of Science in Architecture from Ahmadu Bello University. Her educational qualifications and extensive experience highlight her expertise in the field.",
+        description2: "Currently, Amina serves as an Associate Professor of Architecture at Baze University in Abuja. She has previously held positions at Ahmadu Bello University and Applied Science University in Bahrain. Her leadership extends to roles in various organizations, including the World Renewable Energy Network and the Women in Renewable Energy Association of Nigeria. Beyond her professional achievements, Amina is a dedicated strategist, presenter, and mentor, actively involved in several organizations such as Muslimah Foundation and the ASTEVEN Energy Institute.",
+
+    },
+    {
+        name: "Professor Ioannis Tsipouridis",
+        picture: Ioannis,
+        description1: "Professor Ioannis Tsipouridis is a distinguished expert in renewable energy with over 45 years of experience. He holds a B.Sc. in Chemical Engineering, an M.Sc. in Fuel and Energy, and a Ph.D. in Solar Energy from the University of Leeds. Throughout his career, he has been a key advocate for decarbonizing the global energy system and advancing renewable energy deployment. As CEO of Public Power Corporation Renewables in Greece, he expanded the company’s project pipeline from 600 MW to 4,200 MW, leading initiatives in wind, solar, geothermal, and biomass energy during a period of national financial crisis. He also held leadership roles as Vice Chairman of the European Wind Energy Association and Chairman of the Hellenic Wind Energy Association. His advocacy has extended to global platforms, including COP21 in Paris and subsequent climate conferences, where he called for accelerated climate action.",
+        description2: "Currently, Professor Tsipouridis directs the Renewable Energy & Climate Change Research Center at the Technical University of Mombasa and is a Visiting Professor and Technical Advisor at Meru University of Science and Technology in Kenya. He is deeply involved in promoting renewable energy in Sub-Saharan Africa through his consultancy, RED PRO Climate & Energy Consultants Ltd., and his leadership in organizations like the Loss & Damage Collaboration Group and the Fossil Fuel Non-Proliferation Treaty. An active voice in the climate movement, he also runs the e-mc2.gr platform to raise awareness of climate issues. His contributions to the field have earned him multiple awards, including the AIOLOS Prize for his work in wind energy and the Greek Green Award for lifetime achievement. He continues to mentor African students and contribute to the global dialogue on clean energy and sustainability.",
 
     },
 ]

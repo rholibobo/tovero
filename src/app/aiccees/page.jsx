@@ -75,7 +75,7 @@ function Aicess() {
             Confirmed Keynote Speakers at the AICCEES 2024 Conference
           </h4>
           <br />
-          <div className="flex flex-col gap-10 items-center justify-between">
+          <div className="grid lg:grid-cols-2 gap-10 items-stretch justify-between">
            {keynoteSpeakerData.map(keynotespeaker=>(
             <KeynoteSpeakerCard name={keynotespeaker.name} picture={keynotespeaker.picture} description1={keynotespeaker.description1} description2={keynotespeaker.description2} />
            ))}
