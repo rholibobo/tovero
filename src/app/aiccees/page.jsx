@@ -17,7 +17,6 @@ import Image from "next/image";
 import SponsorsCarousel from "@/components/sponsors_carousel/carousel";
 import KeynoteSpeakerCard from "@/components/keynote-speaker/KeynoteSpeakerCard";
 import { keynoteSpeakerData } from "@/data_models/keynote-speakers";
-import StudentBonus from "@/components/student-bonus/StudentBonus";
 
 
 function Aicess() {
@@ -84,9 +83,6 @@ function Aicess() {
       </div>
       <br />
       <br />
-      <StudentBonus />
-          <br />
-        <br />
         <section className="w-11/12 mx-auto">
         <h4 className="text-center text-2xl mb-4 font-header uppercase md:text-3xl text-[#006547]">Sponsors</h4>
          <br />
