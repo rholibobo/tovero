@@ -36,7 +36,8 @@ function ConferenceHero({ HeroImg, title, description, image }) {
             <br />
 
             <div className="flex flex-col items-center gap-4 md:gap-10">
-              <Link href="https://forms.office.com/r/3Hxp8z38uA">
+              <Link href="">
+              {/* <Link href="https://forms.office.com/r/3Hxp8z38uA"> */}
                 <CustomButton
                   variant="primary"
                   className="order-2 md:order-1"
@@ -45,8 +46,9 @@ function ConferenceHero({ HeroImg, title, description, image }) {
                 </CustomButton>
               </Link>
               <div className="w-full gap-2 flex items-center justify-center bg-cardbg py-5 md:py-1 order-1 md:order-2">
-                <Image src={clockIcon} alt="clock icon" />
-                <CountdownTimer />
+                {/* <Image src={clockIcon} alt="clock icon" />
+                <CountdownTimer /> */}
+                <a download href="../../../public/Conference agenda and BOA.pdf" className="bg-green-700 text-white px-4 py-2 rounded-lg text-center">Download Conference Program</a>
               </div>
             </div>
           </div>
