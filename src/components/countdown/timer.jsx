@@ -1,24 +1,11 @@
-"use client";
-
+"use client"
 import { useEffect, useState } from "react";
 
 function CountdownTimer() {
   const isBrowser = typeof window !== "undefined";
 
   const getTargetTime = () => {
-    if (!isBrowser) {
-      return new Date().getTime() + 175 * 24 * 60 * 60 * 1000;
-    }
-    // Check if the target time is stored in localStorage
-    const savedTargetTime = localStorage.getItem("targetTime");
-    if (savedTargetTime) {
-      return new Date(savedTargetTime).getTime();
-    } else {
-      // If not, calculate the target time as 175 days from now and save it
-      const targetTime = new Date().getTime() + 175 * 24 * 60 * 60 * 1000;
-      localStorage.setItem("targetTime", new Date(targetTime).toISOString());
-      return targetTime;
-    }
+    return new Date("2024-09-26T00:00:00").getTime(); // Fixed event date
   };
 
   const calculateTimeLeft = (targetTime) => {
@@ -44,10 +31,7 @@ function CountdownTimer() {
   });
 
   useEffect(() => {
-    if (!isBrowser) {
-      // If not in the browser, do not set up the interval
-      return;
-    }
+    if (!isBrowser) return;
 
     const targetTime = getTargetTime();
     setTimeLeft(calculateTimeLeft(targetTime));
